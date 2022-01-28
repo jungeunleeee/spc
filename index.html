@@ -10,8 +10,13 @@
   <meta name="description" content="SPC 웹사이트" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="fa/css/all.min.css" />
+  <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
+  <link rel="stylesheet" href="css/style-m.css" media="screen and (max-width: 1023.9px)" />
   <!-- 웹 폰트 -->
-  <link rel="stylesheet" href="css/style-pc.css">
+  <link href="//db.onlinewebfonts.com/c/f797b34c6bb4fdc383eaf58b6980ce02?family=entypo-fontello" rel="stylesheet"
+    type="text/css" />
+  <!-- js -->
+  <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="main">
@@ -19,13 +24,17 @@
     <a href="#" id="skip-nav">본문 바로가기</a>
     <header id="header">
       <div class="content-box">
-        <h1><a href="#"><img src="img/gnb_logo_new.png" alt="SPC" /></a></h1>
+        <h1>
+          <a href="#">
+            <img src="img/gnb_logo_new.png" alt="SPC" />
+          </a>
+        </h1>
         <nav id="gnb">
           <ul>
-            <li>
+            <li class="on">
               <a href="#">SPC GROUP</a>
-              <ul>
-                <li><a href="#">CEO 인삿말</a></li>
+              <ul class="sub">
+                <li class><a href="#">CEO 인삿말</a></li>
                 <li><a href="#">SPC WAY</a></li>
                 <li><a href="#">연혁</a></li>
                 <li><a href="#">CI</a></li>
@@ -33,7 +42,7 @@
             </li>
             <li>
               <a href="#">BUSIENSS</a>
-              <ul>
+              <ul class="sub">
                 <li><a href="#">글로벌</a></li>
                 <li><a href="#">계열사</a></li>
                 <li><a href="#">브랜드</a></li>
@@ -42,7 +51,7 @@
             </li>
             <li>
               <a href="#">MEDIA HUB</a>
-              <ul>
+              <ul class="sub">
                 <li><a href="#">패밀리채널</a></li>
                 <li><a href="#">뉴스</a></li>
                 <li><a href="#">SPC매거진</a></li>
@@ -53,7 +62,7 @@
             </li>
             <li>
               <a href="#">CSR</a>
-              <ul>
+              <ul class="sub move">
                 <li><a href="#">SPC 행복한재단</a></li>
                 <li><a href="#">사회공헌 소개</a></li>
                 <li><a href="#">사회공헌 소식</a></li>
@@ -62,14 +71,14 @@
             </li>
             <li>
               <a href="#">CAREERS</a>
-              <ul>
+              <ul class="sub">
                 <li><a href="#">인재채용</a></li>
                 <li><a href="#">인재양성</a></li>
               </ul>
             </li>
             <li>
               <a href="#">CONTACT</a>
-              <ul>
+              <ul class="sub">
                 <li><a href="#">창업정보</a></li>
                 <li><a href="#">오시는 길</a></li>
               </ul>
@@ -83,82 +92,83 @@
           <li><a href="#">CH</a></li>
         </ul>
       </div>
+      <div class="bg"></div>
     </header>
+
     <main id="main">
       <section id="main-visual">
         <div class="banner-slide">
-          <div class="image-slide">
-            <div class="title">
-              <P>Happy Sinnerity</P>
-              <h3>SPC그룹과 함께 세상은 더 행복해 집니다.</h3>
-            </div>
-            <ul class="sns">
-              <li><a href="#"><img src="img/main_happy.png" alt="happypoint" /></a></li>
-              <li><a href="#"><img src="img/main_sns_insta.png" alt="instagram" /></a></li>
-              <li><a href="#"><img src="img/main_sns_facebook.png" alt="facebook" /></a></li>
-              <li><a href="#"><img src="img/main_sns_youtube.png" alt="youtube" /></a></li>
+          <p class="dummy">
+            <img src="img/main-slide-01.jpg" alt="main-slide-01" />
+          </p>
+          <div class="title">
+            <P>Happy Sinnerity</P>
+            <span>SPC그룹과 함께 세상은</span><br /><span>더 행복해 집니다.</span>
+          </div>
+          <ul class="sns">
+            <li><a href="#"><img src="img/main_happy.png" alt="happypoint" /></a></li>
+            <li><a href="#"><img src="img/main_sns_insta.png" alt="instagram" /></a></li>
+            <li><a href="#"><img src="img/main_sns_facebook.png" alt="facebook" /></a></li>
+            <li><a href="#"><img src="img/main_sns_youtube.png" alt="youtube" /></a></li>
+          </ul>
+          <ul class="slide">
+            <li><img src="img/main-slide-01.jpg" alt="main-slide-01" /></li>
+            <li><img src="img/main-slide-02.png" alt="main-slide-02" /></li>
+            <li><img src="img/main-slide-03.png" alt="main-slide-03"></li>
+            <li><img src="img/main-slide-04.jpg" alt="main-slide-04"></li>
+          </ul>
+          <div class="indicator">
+            <ul>
+              <li><a href="#">1번 슬라이드</a></li>
+              <li><a href="#">2번 슬라이드</a></li>
+              <li><a href="#">3번 슬라이드</a></li>
+              <li><a href="#">4번 슬라이드</a></li>
             </ul>
-            <ul class="slide">
-              <li><img src="img/main-slide-01.jpg" alt="main-slide-01" /></li>
-              <li><img src="img/main-slide-02.png" alt="main-slide-02" /></li>
-              <li><img src="img/main-slide-03.png" alt="main-slide-03"></li>
-              <li><img src="img/main-slide-04.jpg" alt="main-slide-04"></li>
-            </ul>
-            <div class="indicator">
-              <ul>
-                <li><a href="#">1번 슬라이드</a></li>
-                <li><a href="#">2번 슬라이드</a></li>
-                <li><a href="#">3번 슬라이드</a></li>
-                <li><a href="#">4번 슬라이드</a></li>
-              </ul>
-              <a href="#" class="play">
-                <i class="fas fa-pause"><span>정지</span></i>
-                <i class="fas fa-play"><span>시작</span></i>
-              </a>
-              <p class="control">
-                <a href="#" class="next" title="다음"><i class="fas fa-angle-right"><span>다음 버튼</span></i></a>
-                <a href="#" class="prev" title="이전"><i class="fas fa-angle-left"><span>이전 버튼</span></i></a>
-              </p>
-            </div>
+            <p class="control">
+              <a href="#" class="next" title="다음"><i class="fas fa-angle-right"><span>다음 버튼</span></i></a>
+              <a href="#" class="prev" title="이전"><i class="fas fa-angle-left"><span>이전 버튼</span></i></a>
+            </p>
           </div>
         </div>
       </section>
 
       <section class="spc-group">
-        <div class="title">
-          <h3>SPC GROUP</h3>
-          <P>SPC 그룹은 언제나 고객의 행복을 향합니다.</P>
-        </div>
-        <div class="banner-slide">
-          <div class="box">
-            <ul class="slide">
-              <li>
-                <a href="#">
-                  <p class="title"><em>SPC WAY</em></p>
-                  <p class="text">최고의 품질과 고객중심 창의적 도전으로 세상을 행복하게 합니다.</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p class="title"><em>GLOBAL SPC</em></p>
-                  <p class="text">국경을 초월하여 행복의 맛을 더 넓은 세상에 전하고 있습니다.</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p class="title"><em>SPC HISTORY</em></p>
-                  <p class="text">SPC그루븐 1945년 이래 고객과 함께 해온 종합식품기업입니다.</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p class="title"><em>SPC 정도경영</em></p>
-                  <p class="text">SPC 전 임직원은 공정하고 투명한기업 경영을 위해 최손의 노력을 다하고 있습니다.</p>
-                </a>
-              </li>
-            </ul>
+       <div class="content-box">
+          <div class="title">
+            <h3>SPC GROUP</h3>
+            <P>SPC 그룹은 언제나 고객의 행복을 향합니다.</P>
           </div>
-        </div>
+          <div class="banner-slide">
+            <div class="box">
+              <ul class="slide">
+                <li>
+                  <a href="#">
+                    <p class="title"><em>SPC WAY</em></p>
+                    <p class="text">최고의 품질과 고객중심 창의적 도전으로 세상을 행복하게 합니다.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="title"><em>GLOBAL SPC</em></p>
+                    <p class="text">국경을 초월하여 행복의 맛을 더 넓은 세상에 전하고 있습니다.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="title"><em>SPC HISTORY</em></p>
+                    <p class="text">SPC그루븐 1945년 이래 고객과 함께 해온 종합식품기업입니다.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="title"><em>SPC 정도경영</em></p>
+                    <p class="text">SPC 전 임직원은 공정하고 투명한기업 경영을 위해 최손의 노력을 다하고 있습니다.</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+       </div>
       </section>
 
       <section class="spc-brand">
@@ -476,47 +486,47 @@
       </section>
 
       <section class="spc-news">
-          <div class="content-box">
-            <div class="title">
-              <h3>SPC NEWS</h3>
-              <P>SPC 그룹의 최신뉴스를 확인해보세요.</P>
-              <a href="#">VIEW ALL</a>
-            </div>
-            <div class="banner-slide">
-              <div class="box">
-                <ul class="slide">
-                  <li>
-                    <a href="#"><img src="img/main-04-딸기.jpg" alt="딸기농부 지원" /></a>
-                    <a href="#"><em>SPC그룹, 딸기 청년농부 지원… ‘ESG행복상생’ 확대</em></a>
-                    <p class="date">2022.01.12</p>
-                    <a href="#" class="btn">MORE VIEW</a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="img/main-04-쉐이크쉑.jpg" alt="쉐이크쉑 말레이시아 사업권 획득" /></a>
-                    <a href="#"><em>SPC그룹, ‘쉐이크쉑’ 말레이시아 사업권 획득</em></a>
-                    <p class="date">2022.01.07</p>
-                    <a href="#" class="btn">MORE VIEW</a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="img/main-04-파리크라상.jpg" alt="파리크라상 서강대" /></a>
-                    <a href="#"><em>파리크라상, 서강대와 AI(인공지능), 빅데이터 산학협력 연구</em></a>
-                    <p class="date">2022.01.07</p>
-                    <a href="#" class="btn">MORE VIEW</a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="img/main-04-배라도곡.jpg" alt="배스킨라빈스 도곡" /></a>
-                    <a href="#"><em>SPC 배스킨라빈스, 무인 매장 플로우 2호점 도곡 오픈</em></a>
-                    <p class="date">2022.01.03</p>
-                    <a href="#" class="btn">MORE VIEW</a>
-                  </li>
-                </ul>
-                <p class="control">
-                  <a href="#" class="next" title="다음"><i class="fas fa-angle-right"><span>다음 버튼</span></i></a>
-                  <a href="#" class="prev" title="이전"><i class="fas fa-angle-left"><span>이전 버튼</span></i></a>
-                </p>
-              </div>
+        <div class="content-box">
+          <div class="title">
+            <h3>SPC NEWS</h3>
+            <P>SPC 그룹의 최신뉴스를 확인해보세요.</P>
+            <a href="#">VIEW ALL</a>
+          </div>
+          <div class="banner-slide">
+            <div class="box">
+              <ul class="slide">
+                <li>
+                  <a href="#"><img src="img/main-04-딸기.jpg" alt="딸기농부 지원" /></a>
+                  <a href="#"><em>SPC그룹, 딸기 청년농부 지원… ‘ESG행복상생’ 확대</em></a>
+                  <p class="date">2022.01.12</p>
+                  <a href="#" class="btn">MORE VIEW</a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/main-04-쉐이크쉑.jpg" alt="쉐이크쉑 말레이시아 사업권 획득" /></a>
+                  <a href="#"><em>SPC그룹, ‘쉐이크쉑’ 말레이시아 사업권 획득</em></a>
+                  <p class="date">2022.01.07</p>
+                  <a href="#" class="btn">MORE VIEW</a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/main-04-파리크라상.jpg" alt="파리크라상 서강대" /></a>
+                  <a href="#"><em>파리크라상, 서강대와 AI(인공지능), 빅데이터 산학협력 연구</em></a>
+                  <p class="date">2022.01.07</p>
+                  <a href="#" class="btn">MORE VIEW</a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/main-04-배라도곡.jpg" alt="배스킨라빈스 도곡" /></a>
+                  <a href="#"><em>SPC 배스킨라빈스, 무인 매장 플로우 2호점 도곡 오픈</em></a>
+                  <p class="date">2022.01.03</p>
+                  <a href="#" class="btn">MORE VIEW</a>
+                </li>
+              </ul>
+              <p class="control">
+                <a href="#" class="next" title="다음"><i class="fas fa-angle-right"><span>다음 버튼</span></i></a>
+                <a href="#" class="prev" title="이전"><i class="fas fa-angle-left"><span>이전 버튼</span></i></a>
+              </p>
             </div>
           </div>
+        </div>
       </section>
 
       <section class="spc-magazine">
@@ -680,11 +690,11 @@
         <div class="banner-slide">
           <div class="box">
             <ul class="slide">
-              <li><img src="img/main-08-삼.png" alt="SPC 삼립" /></li>
+              <li><img src="img/main-08-삼립.png" alt="SPC 삼립" /></li>
               <li><img src="img/main-08-PACK.png" alt="SPC PACK" /></li>
               <li><img src="img/main-08-logistics.png" alt="SPC Logistics" /></li>
               <li><img src="img/main-08-GFS.png" alt="SPC GFS" /></li>
-              <li><img src="img/main-08-삼.png" alt="SPC 삼립" /></li>
+              <li><img src="img/main-08-삼립.png" alt="SPC 삼립" /></li>
             </ul>
           </div>
         </div>

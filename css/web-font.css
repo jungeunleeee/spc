@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NEXT ART' ;
+    font-size: normal;
+    font-weight: 300;
+    src:  local('※'),
+    url(../font/NEXT\ ART_Light.otf) format('opentype'),
+}
+
+@font-face {
+    font-family: 'NEXT ART' ;
+    font-size: normal;
+    font-weight: 400;
+    src:  local('※'),
+    url(../font/NEXT\ ART_Regular.otf) format('opentype'),
+}
+
+@font-face {
+    font-family: 'NEXT ART' ;
+    font-size: normal;
+    font-weight: 700;
+    src:  local('※'),
+    url(../font/NEXT\ ART_Bold.otf) format('opentype'),
+}
