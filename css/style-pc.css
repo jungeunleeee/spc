@@ -33,7 +33,8 @@ body {font-family: 'NEXT ART', sans-serif; font-size: 14px; color: #000000; back
 /* header 밑의 메뉴 */
 #gnb {position: absolute; left: 50%; top: 0; transform: translate(-50%,0);}
 #gnb > ul > li {float: left; padding: 0 1px;  position: relative; transition: border-bottom 0.3s;}
-#gnb > ul > li > a:hover {border-bottom: 2px solid #23AFE3; color: #23AFE3;}
+#gnb > ul > li > a:hover::after {border-bottom: 2px solid #23AFE3; color: #23AFE3;}
+#gnb > ul > li > a::after {content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: transparent;}
 #gnb > ul > li:nth-child(4) {padding: 0 29px;}
 #gnb > ul > li > a {display: block;   height: 100%; line-height: 86px; font-weight: 700; font-size: 17px; color: #000000; padding: 0 30px; transition: all 0.3s;}
 #gnb > ul > li > ul.sub {position: absolute; width: 100%; z-index: 500; padding-top: 20px; display: none;}
@@ -75,7 +76,7 @@ left: 53px; bottom: 60px; z-index: 5;}
 #main-visual div.banner > ul.sns > li > a > img {width: 61px; height: 61px;}
 
 /* spc group */
-#spc-group {padding: 125px 130px; background-color: #ffffff;}
+#spc-group {padding: 125px 174.5px; background-color: #ffffff;}
 #spc-group div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px;}
 #spc-group div.content-box > div.title {}
 #spc-group div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
@@ -104,7 +105,7 @@ left: 53px; bottom: 60px; z-index: 5;}
 
 
 /* spc-brand */
-#spc-brand {padding: 125px 130px; background-color: #f8f8f8;}
+#spc-brand {padding: 125px 174.50px; background-color: #f8f8f8;}
 #spc-brand div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px; position: relative;}
 #spc-brand div.content-box > div.title { display: inline-block;  min-width: 365px;}
 #spc-brand div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
@@ -119,12 +120,12 @@ left: 53px; bottom: 60px; z-index: 5;}
 #spc-brand div.content-box > dl > dt em {display: block; font-size: 17px; font-weight: 700; text-align: center;}
 #spc-brand div.content-box > dl > dt a img {width: 34px; margin:5px 0 5px;}
 #spc-brand div.content-box > dl dd > ul {padding: 70px 0; overflow: hidden; box-sizing: border-box; width: 6000px;}
-#spc-brand div.content-box > dl dd > ul > li {float: left; margin-right: 58.0px; box-sizing: border-box;}
+#spc-brand div.content-box > dl dd > ul > li {float: left; margin-right: 35.0px; box-sizing: border-box;}
 #spc-brand div.content-box > dl dd > ul.dining {display: none;}
 #spc-brand div.content-box > dl dd > ul.cafe {display: none;}
 #spc-brand div.content-box > dl dd > ul.service {display: none;}
 #spc-brand div.content-box > dl dd > ul > li > a {display: block; min-width: 262px; height: 262px; border-radius: 50%; background-color: #fff; text-align: center;  position: relative; transition: all 0.3s; }
-#spc-brand div.content-box > dl dd > ul > li > a:hover > img {cursor:pointer; -webkit-transform:scale(0.5) translate(-100%,-50%); position: absolute; left: 50%; top: 0; }
+#spc-brand div.content-box > dl dd > ul > li > a:hover > img {cursor:pointer; -webkit-transform:scale(0.4) translate(-120%,-70%); position: absolute; left: 50%; top: 0; }
 #spc-brand div.content-box > dl dd > ul > li > a:hover {border-radius: 25px;}
 #spc-brand div.content-box > dl dd > ul > li > a:hover > p {display: block;}
 #spc-brand div.content-box > dl dd > ul > li a img {position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%);}
@@ -139,12 +140,138 @@ left: 53px; bottom: 60px; z-index: 5;}
 #spc-ad img {transition: all 0.7s; width: 100%;}
 
 /* spc-happy */
-#spc-happy {padding: 70px 0;}
-#spc-happy div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px; position: relative;}
+#spc-happy {padding: 125px 174.50px;}
+#spc-happy div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px; position: relative; overflow: hidden;}
 #spc-happy div.content-box > div.title { display: inline-block;  min-width: 365px;}
 #spc-happy div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
 #spc-happy div.content-box > div.title > p {font-size: 20px; color: #7d7d7d; font-weight: 700;}
+#spc-happy div.content-box > div.banner-slide {position: relative; padding: 70px 0;}
+#spc-happy div.content-box > div.banner-slide a.btn.white {position: absolute; right: 0; top: -11.5%;}
+#spc-happy div.content-box > div.banner-slide > div.box {width: 1460px; margin: 0 auto; overflow: hidden;}
+#spc-happy div.content-box > div.banner-slide ul.slide {overflow: hidden; width: 3000px;}
+#spc-happy div.content-box > div.banner-slide ul.slide > li{ float: left; display: inline-block; text-align: center; padding-bottom: 20px; border-radius: 25px; margin-right: 15px; overflow: hidden; transition: all 0.7s; position: relative; box-sizing: border-box; box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);}
+#spc-happy div.content-box > div.banner-slide ul.slide > li div.image { width: 100%; height: 280px; overflow: hidden; margin-bottom: 20px;}
+#spc-happy div.content-box > div.banner-slide ul.slide > li:hover img {-webkit-transform:scale(1.2);}
+#spc-happy div.content-box > div.banner-slide ul.slide > li em { display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 220px; font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 10px;}
+
+
+#spc-happy div.content-box > div.banner-slide p.control > a {font-size: 20px;}
+#spc-happy div.content-box > div.banner-slide p.control > a.next {position: absolute; top:50% ;right: -50px;}
+#spc-happy div.content-box > div.banner-slide p.control > a.prev {position: absolute; left: -50px; top: 50%;}
+
+
+/* spc-news */
+#spc-news {background-color: #d1ebfa; padding: 125px 174.50px;}
+#spc-news div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px; position: relative; overflow: hidden;}
+#spc-news div.content-box > div.title { display: inline-block;  min-width: 365px;}
+#spc-news div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
+#spc-news div.content-box > div.title > p {font-size: 20px; color: #7d7d7d; font-weight: 700;}
+#spc-news div.content-box a.btn.white {position: absolute; right: 0; top: -11.5%;}
+#spc-news div.content-box > div.banner-slide {padding: 70px 0; position: relative;}
+#spc-news div.content-box > div.banner-slide {}
+#spc-news div.content-box > div.banner-slide > div.box {overflow: hidden;}
+#spc-news div.content-box > div.banner-slide  ul.slide { width: 3000px;}
+#spc-news div.content-box > div.banner-slide  ul.slide > li {float: left; background-color: #fff; border-radius: 25px; margin-right: 30px;}
+#spc-news div.content-box > div.banner-slide  ul.slide > li div.image {overflow: hidden; border-radius: 25px 25px 0 0; width: 100%; height: 262px;}
+#spc-news div.content-box > div.banner-slide ul.slide > li:hover img {-webkit-transform:scale(1.2);}
+#spc-news div.content-box > div.banner-slide  ul.slide > li div.text { text-align: center; box-sizing: border-box; }
+#spc-news div.content-box > div.banner-slide  ul.slide > li div.text em{ display: inline-block; margin: 20px 0; width: 420px; font-size: 20px; font-weight: 700; box-sizing: border-box; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+#spc-news div.content-box > div.banner-slide  ul.slide > li div.text p { display: inline-block; position: relative; left: -100px; font-size: 14px; font-weight: 700; color:#7d7d7d; }
+#spc-news div.content-box > div.banner-slide  ul.slide > li div.text a.btn.graymini {margin-bottom: 20px;  position: relative; right: -100px; }
+#spc-news div.content-box > div.banner-slide p.control {position: absolute; right: 194px;top: -11.5%;}
+#spc-news div.content-box > div.banner-slide p.control a {display: inline-block; width: 65px; height: 65px; background-color: #fff; border-radius: 100px; text-align: center; line-height: 55px; font-size: 25px; margin-right: 25px;}
+
+/* spc-magazine */
+#spc-magazine {padding: 125px 174.50px;}
+#spc-magazine div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px; position: relative; overflow: hidden;}
+#spc-magazine div.content-box > div.title { display: inline-block;  min-width: 365px;}
+#spc-magazine div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
+#spc-magazine div.content-box > div.title > p {font-size: 20px; color: #7d7d7d; font-weight: 700;}
+#spc-magazine div.content-box > div.banner-slide {position: relative; padding: 70px 0;}
+#spc-magazine div.content-box > div.banner-slide a.btn.white {position: absolute; right: 0; top: -11.5%;}
+#spc-magazine div.content-box > div.banner-slide ul.slide {overflow: hidden; box-sizing: border-box;}
+#spc-magazine div.content-box > div.banner-slide ul.slide > li {float: left; width: calc(25% - 45.75px); height: 100%; margin-right: 60px; position: relative; box-sizing: border-box;}
+#spc-magazine div.content-box > div.banner-slide ul.slide > li:last-child {margin:0}
+#spc-magazine div.content-box > div.banner-slide ul.slide > li:not(:last-child)::after {content: ''; width: 1px; height: 100%; border: 1px solid #f8f8f8; position: absolute; top: 30px; right: 0; margin: -30px; box-sizing: border-box;}
+#spc-magazine div.content-box > div.banner-slide ul.slide > li img {width: 100%; margin-bottom: 20px;}
+#spc-magazine div.content-box > div.banner-slide ul.slide > li span {font-size: 16px; font-weight: 700; color: #7d7d7d;}
+#spc-magazine div.content-box > div.banner-slide p.control > a {font-size: 20px;}
+#spc-magazine div.content-box > div.banner-slide p.control > a.next {position: absolute; top:50% ;right: -50px;}
+#spc-magazine div.content-box > div.banner-slide p.control > a.prev {position: absolute; left: -50px; top: 50%;}
+
+/* spc-youtube */
+#spc-youtube {padding: 70px 174.50px; background-color: #fff; position: relative;}
+#spc-youtube::before {content: ''; position: absolute; width: 45%; height: 100%; background-color: #fff0c3; left: 0; top: 0; border-bottom-right-radius: 50px; z-index: 0;}
+#spc-youtube div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px;}
+#spc-youtube div.content-box div#spc-youtube-title { display: inline-block;  min-width: 365px;}
+#spc-youtube div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px; color: #000;}
+#spc-youtube div.content-box > div.title > p {font-size: 20px; color: #7d7d7d; font-weight: 700;}
+#spc-youtube div.banner-slide {position: relative;}
+#spc-youtube div.banner-slide a.btn.white {position: absolute; top: 50%; left: 50px; transform: translateY(-50%);}
+#spc-youtube div.banner-slide div.box { overflow: hidden;}
+#spc-youtube div.banner-slide ul.slide {overflow: hidden; width: 6000px; margin-left: 500px;}
+#spc-youtube  div.banner-slide ul.slide li { float: left; max-width: 315px; margin-right: 50px; text-align: left; border-radius: 25px; overflow: hidden; box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1); background-color: #fff; box-sizing: border-box;}
+#spc-youtube  div.banner-slide ul.slide li:hover {background-color: #303030; color: #fff;}
+#spc-youtube div.banner-slide ul.slide li div.image {width: 100%; height: 180px;}
+#spc-youtube  div.banner-slide ul.slide li img {width: 100%; margin-bottom: 20px;}
+#spc-youtube  div.banner-slide ul.slide li div.text {padding: 20px 30px; box-sizing: border-box;}
+#spc-youtube  div.banner-slide ul.slide li p.title {font-size: 20px; font-weight: 700; margin-bottom: 30px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+#spc-youtube  div.banner-slide ul.slide li span {font-size: 16px; font-weight: 700; color: #7d7d7d;}
+#spc-youtube div.banner-slide p.control {display: inline-block; position: absolute; bottom: 25px; left: 280px;}
+#spc-youtube div.banner-slide p.control a{display: inline-block; width: 65px; height: 65px; background-color: #fff; border-radius: 100px; text-align: center; line-height: 55px; font-size: 25px; }
+#spc-youtube div.banner-slide p.control a.prev {margin-right: 25px;}
+
+/* #spc-youtube {padding: 125px 174.50px; background-color: pink; position: relative; overflow: hidden;}
+#spc-youtube div {float: left;}
+#spc-youtube div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px;}
+#spc-youtube div.content-box > div.title { display: inline-block;  min-width: 365px; background-color: skyblue;}
+#spc-youtube div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
+#spc-youtube div.content-box > div.title > p {font-size: 20px; color: #7d7d7d; font-weight: 700;}
+#spc-youtube div.content-box > div.banner-slide {background-color: lightgreen;}
+#spc-youtube div.content-box > div.banner-slide ul.slide {overflow: hidden; background-color: blue; width: 6000px;}
+#spc-youtube div.content-box > div.banner-slide ul.slide li {float: left; background-color: blue;} */
+
+/* spc-sns */
+#spc-sns {background: linear-gradient(to top, #edf6fb, #ffffff); padding: 125px 174.50px;}
+#spc-sns  div.content-box {max-width: 1554px; margin: 0 auto; padding: 0 50px; position: relative; overflow: hidden;}
+#spc-sns  div.content-box > div.title { display: inline-block;  min-width: 365px;}
+#spc-sns  div.content-box > div.title > h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
+#spc-sns  div.content-box > div.title > p {font-size: 20px; color: #7d7d7d; font-weight: 700;}
+#spc-sns div.content-box a.btn.white {position: absolute; right: 50px; top: 10px;}
+
+#spc-sns  div.content-box > div.banner-slide {padding: 70px 0;}
+#spc-sns  div.content-box > div.banner-slide > div.box {}
+#spc-news div.content-box > div.banner-slide a.btn.white {position: absolute; right: 0; top: -11.5%;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide {overflow: hidden;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li {float: left; max-width: 255px; height: 255px; border-radius: 40px; overflow: hidden; transition: all 0.3s; margin-right: 40px; box-sizing: border-box;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li:nth-child(5n) {margin: 0;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li:hover {border-radius: 0;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li img {width: 100%;}
+#spc-sns div.content-box > div.banner-slide p.control {position: absolute; right: 250px; top: 10px ;}
+#spc-sns div.content-box > div.banner-slide p.control a {display: inline-block; width: 65px; height: 65px; background-color: #fff; border-radius: 100px; text-align: center; line-height: 55px; font-size: 25px; margin-right: 25px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* button */
-a.btn.white {min-width: 194px; height: 65px; border-radius: 100px; box-sizing: border-box; background-color: #fff; color: #000; padding: 10px 20px; display: inline-block; font-weight: 700; text-align: center; line-height: 40px;}
+a.btn.white {min-width: 194px; height: 65px; border-radius: 100px; box-sizing: border-box; background-color: #fff; color: #000; padding: 10px 20px; display: inline-block; font-weight: 700; text-align: center; line-height: 40px; box-shadow: 1px 5px 5px 2px rgba(0,0,0,0.1);}
 a.btn.white:hover {}
+a.btn.gray {display: inline-block; padding: 12px 0; text-align: center; min-width: 200px; height: 45px; background-color: #f8f8f8; line-height: 23px; font-size: 14px; font-weight: 700; border-radius: 100px; box-sizing: border-box; transition: all 0.3s;}
+a.btn.gray:hover {background-color: #1E2432; color: #f8f8f8;}
+a.btn.graymini {display: inline-block; padding: 12px 30px; border-radius: 40px; background-color: #f8f8f8; color: #1e2432; font-size: 14px; font-weight: 700; }
+a.btn.graymini:hover {background-color: #1e2432; color: #f8f8f8;}
