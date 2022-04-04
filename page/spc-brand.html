@@ -17,6 +17,7 @@
     type="text/css" />
   <!-- js -->
   <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/euni.js"></script>
 </head>
 
 <body class="sub spc business brand">
@@ -26,7 +27,10 @@
       <div class="content-box">
         <h1>
           <a href="#">
-            <img src="../img/gnb_logo_new.png" alt="SPC" />
+            <img src="../img/gnb_logo_newwhite.png" alt="SPC" />
+            <span class="white-logo">
+              <img src="../img/gnb_logo_new.png" alt="spc" />
+            </span>
           </a>
         </h1>
         <nav id="gnb">
@@ -85,410 +89,532 @@
             </li>
           </ul>
         </nav>
-        <a href="#"><i class="fas fa-globe"><span>언어 지원(한국어, 영어, 중국어)</span></i></a>
-        <ul class="language">
-          <li><a href="#">KR</a></li>
-          <li><a href="#">EN</a></li>
-          <li><a href="#">CH</a></li>
-        </ul>
+        <div class="language-box">
+          <a href="#">
+              <span>
+                <img src="../img/icon_global.png" alt="" />
+              </span>
+              <span class="global">
+                <img src="../img/icon_global_b.png" alt="" />
+              </span>
+          </a>
+          <ul class="language">
+            <li><a href="#">KR</a></li>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">CH</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="bg"></div>
     </header>
 
     <main id="main">
       <div class="content-box">
-        <section class="spc-business-brand">
-          <h3>SPC BRAND</h3>
-          <ul class="spc-brand-list">
-            <li><a href="#">ALL BRAND</a></li>
-            <li>
-              <a href="#">베이커리/디저트</a>
-              <ul class="sub">
-                <li><a href="#">파리바게뜨</a></li>
-                <li><a href="#">던킨</a></li>
-                <li><a href="#">파리크라상</a></li>
-                <li><a href="#">빚은</a></li>
-                <li><a href="#">베이커리 팩토리</a></li>
-                <li><a href="#">베스킨라빈스</a></li>
-                <li><a href="#">삼립</a></li>
-                <li><a href="#">패션5</a></li>
-                <li><a href="#">샤니</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">외식/다이닝</a>
-              <ul class="sub">
-                <li><a href="#">쉐이크쉑</a></li>
-                <li><a href="#">라그릴리아</a></li>
-                <li><a href="#">시티델리</a></li>
-                <li><a href="#">베라</a></li>
-                <li><a href="#">그릭슈바인</a></li>
-                <li><a href="#">디.퀸즈</a></li>
-                <li><a href="#">한상차림</a></li>
-                <li><a href="#">에그슬럿</a></li>
-                <li><a href="#">피그인더가든</a></li>
-                <li><a href="#">퀸즈파크</a></li>
-                <li><a href="#">라뜰리에</a></li>
-                <li><a href="#">스트릿</a></li>
-                <li><a href="#">리나스</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">커피/음료</a>
-              <ul class="sub">
-                <li><a href="#">파스쿠찌</a></li>
-                <li><a href="#">잠바주스</a></li>
-                <li><a href="#">커피앳웍스</a></li>
-                <li><a href="#">티트라</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">유통/서비스</a>
-              <ul class="sub">
-                <li><a href="#">해피포인트</a></li>
-                <li><a href="#">더월드바인</a></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section class="all-brand">
-          <h3>ALL BRAND</h3>
-          <dl>
-            <dt class="bakery">
-              <em>베이커리/디저트</em>
-            </dt>
-            <dd>
-              <ul class="bakery">
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-parisbaguette-01.png" alt="파리바게트" /></div>
-                    <div class="text">
-                      <em>파리바게뜨</em>
-                      <p class="brand">"농가상생, 가맹점주와 동반성장, 친환경 등 ESG경영 강화"<br /> 대한민국 베이커리 문화를 선도하는 NO.1 브랜드</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-br-02.png" alt="베스킨라빈스" /></div>
-                    <div class="text">
-                      <em>배스킨라빈스</em>
-                      <p class="brand"> 당신이 행복해지는 순간, 배스킨라빈스가 늘 함께 합니다.<br />당신의 요즘 행복, 배스킨라빈스</p>
-                      <span>비알코리아(주)</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-dunkin-03.png" alt="던킨" /></div>
-                    <div class="text">
-                      <em>던킨</em>
-                      <p class="brand">"잠깐의 여유와 달콤한 행복" 세계 최대의 커피&amp;도넛 전문 브랜드</p>
-                      <span>비알코리아(주)</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-samlip-04.png" alt="삼립" /></div>
-                    <div class="text">
-                      <em>삼립</em>
-                      <p class="brand">
-                        <strong>Good Food, Happy Life</strong><br />좋은 음식으로 행복한 내일을 만드는 종합식품브랜드, 삼립</p>
-                      <span>(주)SPC삼립</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-pk-05.png" alt="파리크라상" /></div>
-                    <div class="text">
-                      <em>파리크라상</em>
-                      <p class="brand">
-                        정통 프렌치 스타일의 프리미엄 베이커리</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-passion-06.png" alt="패션5" /></div>
-                    <div class="text">
-                      <em>패션5</em>
-                      <p class="brand">
-                        고품격 디저트 갤러리</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-빚은-07.png" alt="빚은" /></div>
-                    <div class="text">
-                      <em>빚은</em>
-                      <p class="brand">
-                        전통떡부터 퓨전제품까지 갖춘 신개념 떡카페 프랜차이즈 브랜드</p>
-                      <span>(주)SPC삼립</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-shany-08.png" alt="샤니" /></div>
-                    <div class="text">
-                      <em>샤니</em>
-                      <p class="brand">
-                        1972년 고급케이크 전문 회사로 출발, 현재 국내 최대 재빵 생산 기업</p>
-                      <span>(주)SPC삼립</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-bakeryF-09.png" alt="베이커리 팩토리" /></div>
-                    <div class="text">
-                      <em>베이커리 팩토리</em>
-                      <p class="brand">
-                        매일매일 매장에서 직접 구워 더 신선하고 맛있는 빵을 선사하는 브랜드</p>
-                      <span>(주)SPC삼립</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </dd>
-            <dt class="dining">
-              <em>외식/다이닝</em>
-            </dt>
-            <dd>
-              <ul class="dining">
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-shakeshack-01.png" alt="쉐이크쉑" /></div>
-                    <div class="text">
-                      <em>쉐이크쉑</em>
-                      <p class="brand">
-                        뉴욕에서 온 파인 캐쥬얼 레스토랑</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-eggslut-02.png" alt="에그슬럿" /></div>
-                    <div class="text">
-                      <em>에그슬럿</em>
-                      <p class="brand">
-                        LA 오리지널 에그 샌드위치</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-lagrillia-03.png" alt="라그릴리아" /></div>
-                    <div class="text">
-                      <em>라그릴리아</em>
-                      <p class="brand">
-                        이탈리안 캐주얼 레스토랑</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-pig-04.png" alt="피그인더가든" /></div>
+        <div class="spc-sub-content">
+          <section class="spc-business-brand">
+            <h3>SPC BRAND</h3>
+            <ul class="spc-brand">
+              <li><a href="#">ALL BRAND</a></li>
+              <li>
+                <a href="#">베이커리/디저트</a>
+                <ul class="sub">
+                  <li><a href="#">파리바게뜨</a></li>
+                  <li><a href="#">던킨</a></li>
+                  <li><a href="#">파리크라상</a></li>
+                  <li><a href="#">빚은</a></li>
+                  <li><a href="#">베이커리 팩토리</a></li>
+                  <li><a href="#">베스킨라빈스</a></li>
+                  <li><a href="#">삼립</a></li>
+                  <li><a href="#">패션5</a></li>
+                  <li><a href="#">샤니</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">외식/다이닝</a>
+                <ul class="sub">
+                  <li><a href="#">쉐이크쉑</a></li>
+                  <li><a href="#">라그릴리아</a></li>
+                  <li><a href="#">시티델리</a></li>
+                  <li><a href="#">베라</a></li>
+                  <li><a href="#">그릭슈바인</a></li>
+                  <li><a href="#">디.퀸즈</a></li>
+                  <li><a href="#">한상차림</a></li>
+                  <li><a href="#">에그슬럿</a></li>
+                  <li><a href="#">피그인더가든</a></li>
+                  <li><a href="#">퀸즈파크</a></li>
+                  <li><a href="#">라뜰리에</a></li>
+                  <li><a href="#">스트릿</a></li>
+                  <li><a href="#">리나스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">커피/음료</a>
+                <ul class="sub">
+                  <li><a href="#">파스쿠찌</a></li>
+                  <li><a href="#">잠바주스</a></li>
+                  <li><a href="#">커피앳웍스</a></li>
+                  <li><a href="#">티트라</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">유통/서비스</a>
+                <ul class="sub">
+                  <li><a href="#">해피포인트</a></li>
+                  <li><a href="#">더월드바인</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section class="all-brand">
+            <dl>
+              <dt class="bakery">
+                <h3>ALL BRAND</h3>
+                <em class="bakery">베이커리/디저트</em>
+              </dt>
+              <dd>
+                <ul class="bakery sub">
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-parisbaguette-01.png" alt="파리바게트" /></div>
                       <div class="text">
-                        <em>피그인더가든</em>
-                        <p class="brand">
-                          다양한 고메샐러드를 합리적인 가격에 즐기는 Fine-casual 샐러드 전문점</p>
-                        <span>(주)파리크라상</span>
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>파리바게뜨</em>
+                            <p class="brand">"농가상생, 가맹점주와 동반성장, 친환경 등 ESG경영 강화"<br /> 대한민국 베이커리 문화를 선도하는 NO.1 브랜드</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
                       </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-city-05.png" alt="시티델리" /></div>
-                    <div class="text">
-                      <em>시티델리</em>
-                      <p class="brand">
-                        프리미엄 간편식 편집숍<br />(캐주얼 레스토랑과 편의점의 장점을 결합한 신개념 푸드 플래그십 스토어) 브랜드</p>
-                      <span>(주)SPC삼립</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-queens-06.png" alt="퀸즈파크" /></div>
-                    <div class="text">
-                      <em>퀸즈파크</em>
-                      <p class="brand">
-                        영국풍 자연주의 다이닝 레스토랑</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-vera-07.png" alt="베라" /></div>
-                    <div class="text">
-                      <em>베라</em>
-                      <p class="brand">
-                        나폴리 정통 피자와 이탈리안 퀴진을 함께 즐기는 <em>Modern Italian Dining</em></p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-latelier-08.png" alt="라뜰리에" /></div>
-                    <div class="text">
-                      <em>라뜰리에</em>
-                      <p class="brand">
-                        경양식 올데이 다이닝</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-glucks-09.png" alt="그릭슈바인" /></div>
-                    <div class="text">
-                      <em>그릭슈바인</em>
-                      <p class="brand">
-                        저온숙성한 국내산 냉장신선육으로 본연의 맛과 풍미를 살린 프리미엄 델리미트</p>
-                      <span>(주)SPC삼립</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-streat-10.png" alt="스트릿" /></div>
-                    <div class="text">
-                      <em>스트릿</em>
-                      <p class="brand">
-                        가볍고 편하게 즐기는 아시아 누들&amp;라이스 전문점</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-dq-11.png" alt="디.퀸즈" /></div>
-                    <div class="text">
-                      <em>디.퀸즈</em>
-                      <p class="brand">
-                        캐주얼 다이닝 레스토랑</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-lina-12.png" alt="리나스" /></div>
-                    <div class="text">
-                      <em>리나스</em>
-                      <p class="brand">
-                        <strong>Sandwich &amp; Salad</strong></p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-b-hs-13.png" alt="한상차림" /></div>
-                    <div class="text">
-                      <em>한상차림</em>
-                      <p class="brand">
-                        갖추어 정성으로 전한다.</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </dd>
-            <dt class="cafe">
-              <em>카페/음료</em>
-            </dt>
-            <dd>
-              <ul class="cafe">
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-c-pascucci-01.png" alt="파스쿠찌" /></div>
-                    <div class="text">
-                      <em>파스쿠찌</em>
-                      <p class="brand">
-                        정통 이탈리안 에스프레소 커피전문점</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-c-jamba-02.png" alt="잠바주스" /></div>
-                    <div class="text">
-                      <em>잠바주스</em>
-                      <p class="brand">
-                        캘리포니아에서 온 건강 라이프스타일 브랜드</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-c-cw-03.png" alt="커피앳웍스" /></div>
-                    <div class="text">
-                      <em>커피앳웍스</em>
-                      <p class="brand">
-                        산지에서 추출까지 전문가의 유기적인 작업을 거쳐 최고의 품질로 완성된 스페셜티 커피 브랜드</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-c-teatra-04.png" alt="티트라" /></div>
-                    <div class="text">
-                      <em>티트라</em>
-                      <p class="brand">
-                        세계 곳곳에서 직접 찾아낸 원료를 새로운 감성, 색다른 감각으로 만든 블렌딩 tea</p>
-                      <span>(주)파리크라상</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </dd>
-            <dt class="service">
-              <em>유통/서비스</em>
-            </dt>
-            <dd>
-              <ul class="service">
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-d-happy-01.png" alt="해피포인트" /></div>
-                    <div class="text">
-                      <em>해피포인트</em>
-                      <p class="brand">
-                        "Find Your Happy Place!"</p>
-                      <span>(주)섹타나인</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="image"><img src="../img/main-03-d-theworld-02.png" alt="더월드바인" /></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-br-02.png" alt="베스킨라빈스" /></div>
                       <div class="text">
-                        <em>더월드바인</em>
-                        <p class="brand">
-                          전문 소믈리에가 엄선한 와인 컬렉션</p>
-                        <span>(주)타이거인터내셔날</span>
+                       <div class="table">
+                          <div class="table-cell">
+                            <em>배스킨라빈스</em>
+                            <p class="brand"> 당신이 행복해지는 순간, 배스킨라빈스가 늘 함께 합니다.<br />당신의 요즘 행복, 배스킨라빈스</p>
+                            <span>비알코리아(주)</span>
+                          </div>
+                       </div>
                       </div>
-                  </a>
-                </li>
-              </ul>
-            </dd>
-          </dl>
-        </section>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-dunkin-03.png" alt="던킨" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>던킨</em>
+                            <p class="brand">"잠깐의 여유와 달콤한 행복" 세계 최대의 커피&amp;도넛 전문 브랜드</p>
+                            <span>비알코리아(주)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-samlip-04.png" alt="삼립" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>삼립</em>
+                            <p class="brand">
+                              <strong>Good Food, Happy Life</strong><br />좋은 음식으로 행복한 내일을 만드는 종합식품브랜드, 삼립</p>
+                            <span>(주)SPC삼립</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-pk-05.png" alt="파리크라상" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>파리크라상</em>
+                            <p class="brand">
+                              정통 프렌치 스타일의 프리미엄 베이커리</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-passion-06.png" alt="패션5" /></div>
+                      <div class="text">
+                       <div class="table">
+                          <div class="table-cell">
+                            <em>패션5</em>
+                            <p class="brand">
+                              고품격 디저트 갤러리</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                       </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-빚은-07.png" alt="빚은" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>빚은</em>
+                            <p class="brand">
+                              전통떡부터 퓨전제품까지 갖춘 신개념 떡카페 프랜차이즈 브랜드</p>
+                            <span>(주)SPC삼립</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-shany-08.png" alt="샤니" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>샤니</em>
+                            <p class="brand">
+                              1972년 고급케이크 전문 회사로 출발, 현재 국내 최대 재빵 생산 기업</p>
+                            <span>(주)SPC삼립</span>
+                          </div>
+                          </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-bakeryF-09.png" alt="베이커리 팩토리" /></div>
+                      <div class="text">
+                       <div class="table">
+                          <div class="table-cell">
+                            <em>베이커리 팩토리</em>
+                            <p class="brand">
+                              매일매일 매장에서 직접 구워 더 신선하고 맛있는 빵을 선사하는 브랜드</p>
+                            <span>(주)SPC삼립</span>
+                          </div>
+                       </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </dd>
+              <dt class="dining">
+                <em>외식/다이닝</em>
+              </dt>
+              <dd>
+                <ul class="dining sub">
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-shakeshack-01.png" alt="쉐이크쉑" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>쉐이크쉑</em>
+                            <p class="brand">
+                              뉴욕에서 온 파인 캐쥬얼 레스토랑</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-eggslut-02.png" alt="에그슬럿" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>에그슬럿</em>
+                            <p class="brand">
+                              LA 오리지널 에그 샌드위치</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-lagrillia-03.png" alt="라그릴리아" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>라그릴리아</em>
+                            <p class="brand">
+                              이탈리안 캐주얼 레스토랑</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-pig-04.png" alt="피그인더가든" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>피그인더가든</em>
+                            <p class="brand">
+                              다양한 고메샐러드를 합리적인 가격에 즐기는 Fine-casual 샐러드 전문점</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-city-05.png" alt="시티델리" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>시티델리</em>
+                            <p class="brand">
+                              프리미엄 간편식 편집숍<br />(캐주얼 레스토랑과 편의점의 장점을 결합한 신개념 푸드 플래그십 스토어) 브랜드</p>
+                            <span>(주)SPC삼립</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-queens-06.png" alt="퀸즈파크" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>퀸즈파크</em>
+                            <p class="brand">
+                              영국풍 자연주의 다이닝 레스토랑</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-vera-07.png" alt="베라" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>베라</em>
+                            <p class="brand">
+                              나폴리 정통 피자와 이탈리안 퀴진을 함께 즐기는 <strong>Modern Italian Dining</strong></p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-latelier-08.png" alt="라뜰리에" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>라뜰리에</em>
+                            <p class="brand">
+                              경양식 올데이 다이닝</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-glucks-09.png" alt="그릭슈바인" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>그릭슈바인</em>
+                            <p class="brand">
+                              저온숙성한 국내산 냉장신선육으로 본연의 맛과 풍미를 살린 프리미엄 델리미트</p>
+                            <span>(주)SPC삼립</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-streat-10.png" alt="스트릿" /></div>
+                      <div class="text">
+                       <div class="table">
+                          <div class="table-cell">
+                            <em>스트릿</em>
+                            <p class="brand">
+                              가볍고 편하게 즐기는 아시아 누들&amp;라이스 전문점</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                       </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-dq-11.png" alt="디.퀸즈" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>디.퀸즈</em>
+                            <p class="brand">
+                              캐주얼 다이닝 레스토랑</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-lina-12.png" alt="리나스" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>리나스</em>
+                            <p class="brand">
+                              <strong>Sandwich &amp; Salad</strong></p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-b-hs-13.png" alt="한상차림" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>한상차림</em>
+                            <p class="brand">
+                              갖추어 정성으로 전한다.</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </dd>
+              <dt class="cafe">
+                <em>카페/음료</em>
+              </dt>
+              <dd>
+                <ul class="cafe sub">
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-c-pascucci-01.png" alt="파스쿠찌" /></div>
+                      <div class="text">
+                       <div class="table">
+                          <div class="table-cell">
+                            <em>파스쿠찌</em>
+                            <p class="brand">
+                              정통 이탈리안 에스프레소 커피전문점</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                       </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-c-jamba-02.png" alt="잠바주스" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>잠바주스</em>
+                            <p class="brand">
+                              캘리포니아에서 온 건강 라이프스타일 브랜드</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-c-cw-03.png" alt="커피앳웍스" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>커피앳웍스</em>
+                            <p class="brand">
+                              산지에서 추출까지 전문가의 유기적인 작업을 거쳐 최고의 품질로 완성된 스페셜티 커피 브랜드</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-c-teatra-04.png" alt="티트라" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>티트라</em>
+                            <p class="brand">
+                              세계 곳곳에서 직접 찾아낸 원료를 새로운 감성, 색다른 감각으로 만든 블렌딩 tea</p>
+                            <span>(주)파리크라상</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </dd>
+              <dt class="service">
+                <em>유통/서비스</em>
+              </dt>
+              <dd>
+                <ul class="service sub">
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-d-happy-01.png" alt="해피포인트" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>해피포인트</em>
+                            <p class="brand">
+                              "Find Your Happy Place!"</p>
+                            <span>(주)섹타나인</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="image"><img src="../img/main-03-d-theworld-02.png" alt="더월드바인" /></div>
+                      <div class="text">
+                        <div class="table">
+                          <div class="table-cell">
+                            <em>더월드바인</em>
+                            <p class="brand">
+                              전문 소믈리에가 엄선한 와인 컬렉션</p>
+                            <span>(주)타이거인터내셔날</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </section>
+        </div>
       </div>
     </main>
 
@@ -496,94 +622,111 @@
 
 
 
-  <footer id="footer">
-    <div class="content-box">
-      <section class="logo">
-        <h2><img src="../img/footer_logo_new.png" alt="SPC" /></h2>
-      </section>
-      <section class="footer-contactCopyright">
-        <h3 class="ir-hidden">푸터 정보 및 저작권</h3>
-        <ul class="regulation-link">
-          <li class="on"><a href="#"><em>개인정보처리방침</em></a></li>
-          <li><a href="#"><em>이메일수집 거부</em></a></li>
-          <li><a href="#"><em>거래희망사전등록</em></a></li>
-          <li><a href="#"><em>오시는길</em></a></li>
-        </ul>
-        <address>
-          <ul class="contact">
-            <li>서울시 서초구 양재동 남부순환로 2620(양재동 11-149) SPC그룹</li>
+    <footer id="footer">
+      <div class="content-box">
+        <section class="logo">
+          <h2><img src="../img/footer_logo_new.png" alt="SPC" /></h2>
+        </section>
+        <section class="footer-contactCopyright">
+          <h3 class="ir-hidden">푸터 정보 및 저작권</h3>
+          <ul class="regulation-link">
+            <li class="on"><a href="#"><em>개인정보처리방침</em></a></li>
+            <li><a href="#"><em>이메일수집 거부</em></a></li>
+            <li><a href="#"><em>거래희망사전등록</em></a></li>
+            <li><a href="#"><em>오시는길</em></a></li>
           </ul>
-        </address>
-        <p class="copyright">Copyright SPC All rights reserverd.</p>
-      </section>
-      <section class="footer-sns">
-        <h3 class="ir-hidden">관련 SNS</h3>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../img/footer_happy.png" alt="해피포인트" />
-              <img class="on" src="../img/footer_happy_hov.png" alt="해피포인트에 호버했을 때" />
-              <span>Happypoint</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../img/footer_sns_insta.png" alt="인스타그램" />
-              <img class="on" src="../img/footer_sns_insta_hov.png" alt="인스타그램에 호버했을 때" />
-              <span>Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../img/footer_sns_facebook.png" alt="페이스북" />
-              <img class="on" src="../img/footer_sns_facebook_hov.png" alt="페이스북에 호버했을 때" />
-              <span>Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../img/footer_sns_youtube.png" alt="유투브" />
-              <img class="on" src="../img/footer_sns_youtube_hov.png" alt="유투브에 호버했을 때" />
-              <span>Youtube</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="footer-spc-brands">
-        <h3 class="ir-hidden">SPC 계열사</h3>
-        <div class="button">
-          <p class="updown">
-            <a href="#" class="on">FAMILY SITE<i class="fas fa-angle-up open"><span>열기</span></i>
-              <i class="fas fa-angle-down close"><span>닫기</span></i></a>
-          </p>
-        </div>
-        <ul>
-          <li><a href="#">비알코리아(주)</a></li>
-          <li><a href="#">(주)SPC삼립</a></li>
-          <li><a href="#">파리바게뜨</a></li>
-          <li><a href="#">파리크라상</a></li>
-          <li><a href="#">배스킨라빈스</a></li>
-          <li><a href="#">던킨도너츠</a></li>
-          <li><a href="#">쉐이크쉑</a></li>
-          <li><a href="#">파스쿠찌</a></li>
-          <li><a href="#">잠바주스</a></li>
-          <li><a href="#">피그인더가든</a></li>
-          <li><a href="#">그릭슈바인</a></li>
-          <li><a href="#">빚은</a></li>
-          <li><a href="#">SPC외식브랜드</a></li>
-          <li><a href="#">디퀸즈케이터링</a></li>
-          <li><a href="#">SPC컬러너리아카데미</a></li>
-          <li><a href="#">해피포인트카드</a></li>
-          <li><a href="#">하이카페몰</a></li>
-          <li><a href="#">SPC GFS</a></li>
-          <li><a href="#">(주)섹타나인</a></li>
-          <li><a href="#">SPC PACK</a></li>
-        </ul>
-      </section>
-    </div>
-  </footer>
+          <address>
+            <ul class="contact">
+              <li>서울시 서초구 양재동 남부순환로 2620(양재동 11-149) SPC그룹</li>
+            </ul>
+          </address>
+          <p class="copyright">Copyright SPC All rights reserverd.</p>
+        </section>
+        <section class="footer-sns">
+          <h3 class="ir-hidden">관련 SNS</h3>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="../img/footer_happy.png" alt="해피포인트" />
+                <img class="on" src="../img/footer_happy_hov.png" alt="해피포인트에 호버했을 때" />
+                <span>Happypoint</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/footer_sns_insta.png" alt="인스타그램" />
+                <img class="on" src="../img/footer_sns_insta_hov.png" alt="인스타그램에 호버했을 때" />
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/footer_sns_facebook.png" alt="페이스북" />
+                <img class="on" src="../img/footer_sns_facebook_hov.png" alt="페이스북에 호버했을 때" />
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/footer_sns_youtube.png" alt="유투브" />
+                <img class="on" src="../img/footer_sns_youtube_hov.png" alt="유투브에 호버했을 때" />
+                <span>Youtube</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-spc-brands">
+          <h3 class="ir-hidden">SPC 계열사</h3>
+          <div class="button">
+            <p class="updown">
+              <a href="#" class="on">FAMILY SITE<i class="fas fa-angle-up open"><span>열기</span></i>
+                <i class="fas fa-angle-down close"><span>닫기</span></i></a>
+            </p>
+          </div>
+          <ul >
+            <li><a href="#">비알코리아(주)</a></li>
+            <li><a href="#">(주)SPC삼립</a></li>
+            <li><a href="#">파리바게뜨</a></li>
+            <li><a href="#">파리크라상</a></li>
+            <li><a href="#">배스킨라빈스</a></li>
+            <li><a href="#">던킨도너츠</a></li>
+            <li><a href="#">쉐이크쉑</a></li>
+            <li><a href="#">파스쿠찌</a></li>
+            <li><a href="#">잠바주스</a></li>
+            <li><a href="#">피그인더가든</a></li>
+            <li><a href="#">그릭슈바인</a></li>
+            <li><a href="#">빚은</a></li>
+            <li><a href="#">SPC외식브랜드</a></li>
+            <li><a href="#">디퀸즈케이터링</a></li>
+            <li><a href="#">SPC컬러너리아카데미</a></li>
+            <li><a href="#">해피포인트카드</a></li>
+            <li><a href="#">하이카페몰</a></li>
+            <li><a href="#">SPC GFS</a></li>
+            <li><a href="#">(주)섹타나인</a></li>
+            <li><a href="#">SPC PACK</a></li>
+          </ul>
+        </section>
+      </div>
+    </footer>
   </div>
   <a href="#" class="scrolltop"><i class="fas fa-arrow-up"><span>제일 위로 이동하기 버튼</span></i></a>
+
+  <script>
+    'use strict'; 
+
+    // $('ul.spc-brand > li > a ').on('click', function() {
+    //   var height = 0;
+    //   $(this).next().find('> li').each(function() {
+    //     height += $(this).outerHeight(true);
+    //   });
+    //   $(this).next().css({'height' : height + 'px'});
+    //   $(this).parent().siblings().each(function() {
+    //     $(this).find('ul').css({'height' : '0px'});
+    //   });
+    // });
+  </script>
+
+
 </body>
 
 </html>

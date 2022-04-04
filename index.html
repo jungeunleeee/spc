@@ -8,6 +8,7 @@
   <meta name="apple-mobile-web-app-title" content="SPC" />
   <title>SPC</title>
   <meta name="description" content="SPC 웹사이트" />
+
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="fa/css/all.min.css" />
   <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
@@ -16,7 +17,9 @@
   <link href="//db.onlinewebfonts.com/c/f797b34c6bb4fdc383eaf58b6980ce02?family=entypo-fontello" rel="stylesheet"
     type="text/css" />
   <!-- js -->
+  <script src="https://kit.fontawesome.com/882832d0ff.js" crossorigin="anonymous"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/euni.js"></script>
 </head>
 
 <body class="main">
@@ -26,7 +29,10 @@
       <div class="content-box">
         <h1>
           <a href="#">
-            <img src="img/gnb_logo_new.png" alt="SPC" />
+            <img src="img/gnb_logo_newwhite.png" alt="SPC" />
+            <span class="white-logo">
+              <img src="img/gnb_logo_new.png" alt="spc" />
+            </span>
           </a>
         </h1>
         <nav id="gnb">
@@ -86,56 +92,78 @@
           </ul>
         </nav>
         <div class="language-box">
-          <a href="#"><i class="fas fa-globe"><span>언어 지원(한국어, 영어, 중국어)</span></i>
+          <a href="#">
+            <span>
+              <img src="img/icon_global.png" alt="" />
+            </span>
+            <span class="global">
+              <img src="img/icon_global_b.png" alt="" />
+            </span>
+          </a>
+          <div class="box">
             <ul class="language">
               <li><a href="#">KR</a></li>
               <li><a href="#">EN</a></li>
               <li><a href="#">CH</a></li>
             </ul>
-          </a>
+          </div>
         </div>
+        <div class="nav-hamburger mobile"><a href="#"><span></span></a></div>
       </div>
-      <div class="bg"></div>
     </header>
 
     <main id="main">
       <section id="main-visual">
-        <h3 class="ir-hidden">SPC 메인페이지 소개</h3>
-        <div class="banner">
-          <p class="dummy">
-            <img src="img/main-slide-02.png" alt="main-slide-01" />
-          </p>
-          <div class="slide-box">
-            <ul class="slide">
-              <li><img src="img/main-slide-01.jpg" alt="main-slide-01" /></li>
-              <li><img src="img/main-slide-02.png" alt="main-slide-02" /></li>
-              <li><img src="img/main-slide-03.png" alt="main-slide-03"></li>
-              <li><img src="img/main-slide-04.jpg" alt="main-slide-04"></li>
+        <div class="container-box">
+          <div class="slide-inner">
+            <p class="dummy"><img src="img/main-slide-01.jpg" class="ls-bg" alt="main-slide-01"></p>
+            <ul class="slide-layers">
+              <li class="on">
+                <img src="img/main-slide-01.jpg" class="ls-bg" alt="main-slide-01">
+              </li>
+              <li>
+                <img src="img/main-slide-02.png" class="ls-bg" alt="main-slide-02" />
+              </li>
+
+              <li>
+                <img src="img/main-slide-03.png" />
+              </li>
+
+              <li>
+                <img src="img/main-slide-04.jpg" />
+              </li>
+
             </ul>
-            <div class="indicator">
-              <ul>
-                <li><a href="#">1번 슬라이드</a></li>
-                <li><a href="#">2번 슬라이드</a></li>
-                <li><a href="#">3번 슬라이드</a></li>
-                <li><a href="#">4번 슬라이드</a></li>
-              </ul>
-              <p class="control">
-                <a href="#" class="next" title="다음"><i class="fas fa-angle-right"><span>다음 버튼</span></i></a>
-                <a href="#" class="prev" title="이전"><i class="fas fa-angle-left"><span>이전 버튼</span></i></a>
-              </p>
-            </div>
           </div>
-          <div class="title">
-            <P>Happy Sinnerity</P>
-            <span>SPC그룹과 함께</span><br /><span>세상은 더 행복해 집니다.</span>
-          </div>
-          <ul class="sns">
-            <li><a href="#"><img src="img/main_happy.png" alt="happypoint" /></a></li>
-            <li><a href="#"><img src="img/main_sns_insta.png" alt="instagram" /></a></li>
-            <li><a href="#"><img src="img/main_sns_facebook.png" alt="facebook" /></a></li>
-            <li><a href="#"><img src="img/main_sns_youtube.png" alt="youtube" /></a></li>
+
+          <a href="#" class="prev"></a>
+          <a href="#" class="next"></a>
+
+          <ul class="indicator">
+            <li class="on"><a href="#" aria-label="jump to slide 1" class=""></a></li>
+            <li><a href="#" aria-label="jump to slide 2" class=""></a></li>
+            <li><a href="#" aria-label="jump to slide 3" class=""></a></li>
+            <li><a href="#" aria-label="jump to slide 4" class=""></a></li>
           </ul>
         </div>
+
+        <div class="main-text">
+          <p class="small-txt txt-ani">
+            Happy Sincerity
+            <span class="slide-bar">line</span>
+          </p>
+          <p class="big-txt txt-ani">
+            <b class="on"><span class="t">SPC그룹과 함께 </span></b>
+            <b><span class="t">세상은 더 행복해집니다.</span></b>
+          </p>
+        </div>
+
+        <ul class="sns">
+          <li><a href="#"><img src="img/main_happy.png" alt="happypoint" /></a></li>
+          <li><a href="#"><img src="img/main_sns_insta.png" alt="instagram" /></a></li>
+          <li><a href="#"><img src="img/main_sns_facebook.png" alt="facebook" /></a></li>
+          <li><a href="#"><img src="img/main_sns_youtube.png" alt="youtube" /></a></li>
+        </ul>
       </section>
 
       <section id="spc-group">
@@ -148,29 +176,65 @@
             <div class="box">
               <ul class="slide">
                 <li>
-                  <a href="#">
-                    <p class="title"><em>SPC WAY</em></p>
-                    <!-- <img src="img/main_group1_crop.png" alt="SPC WAY" /> -->
-                    <p class="text"><em>최고의 품질과<br />고객중심 창의적 도전으로<br />세상을 행복하게
-                        합니다.ddddddddddddddddddddddddddddddddddddddddddd</em></p>
-                  </a>
+                  <div class="first">
+                    <a href="#">
+                      <p class="title"><em>SPC WAY</em></p>
+                      <p><img src="img/main_group1_crop.png" alt=""></p>
+                      <p class="text"><em>최고의 품질과<br />고객중심 창의적 도전으로<br />세상을 행복하게
+                          합니다.ddddddddddddddddddddddddddddddddddddddddddd</em></p>
+                    </a>
+                  </div>
+                  <div class="second">
+                    <a href="#">
+                      <img src="img/main_group1_bg.jpg" alt="" />
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="first">
+                    <a href="#">
+                      <p class="title"><em>GLOBAL SPC</em></p>
+                      <p><img src="img/main_group2_crop.png" alt=""></p>
+                      <p class="text"><em>국경을 초월하여 행복의 맛을<br>더 넓은 세상에 전하고 있습니다.</em></p>
+                    </a>
+                  </div>
+                  <div class="second">
+                    <a href="#">
+                      <img src="img/main_group2_bg.jpg" alt="" />
+                      </svg>
+                    </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="#">
-                    <p class="title"><em>GLOBAL SPC</em></p>
-                    <p class="text"><em>국경을 초월하여 행복의 맛을<br />더 넓은 세상에 전하고 있습니다.</em></p>
-                  </a>
+                  <div class="first">
+                    <a href="#">
+                      <p class="title"><em>SPC HISTORY</em></p>
+                      <p><img src="img/main_group3_crop.png" alt=""></p>
+                      <p class="text"><em>SPC그룹은 1945년 이래<br />고객과 함께 해온<br />종합식품기업입니다.</em></p>
+                    </a>
+                  </div>
+                  <div class="second">
+                    <a href="#">
+                      <img src="img/main_group3_bg.jpg" alt="" />
+                      </svg>
+                    </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="#">
-                    <p class="title"><em>SPC HISTORY</em></p>
-                    <p class="text"><em>SPC그룹은 1945년 이래<br />고객과 함께 해온<br />종합식품기업입니다.</em></p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p class="title"><em>SPC 정도경영</em></p>
-                    <p class="text"><em>SPC 전 임직원은 공정하고<br />투명한기업 경영을 위해<br />최손의 노력을 다하고 있습니다.</em></p>
+                  <div class="first">
+                    <a href="#">
+                      <p class="title"><em>SPC 정도경영</em></p>
+                      <p><img src="img/main_group4_crop.png" alt=""></p>
+                      <p class="text"><em>SPC 전 임직원은 공정하고<br />투명한기업 경영을 위해<br />최손의 노력을 다하고 있습니다.</em></p>
+                    </a>
+                  </div>
+                  <div class="second">
+                    <a href="#">
+                      <img src="img/main_group4_bg.jpg" alt="" />
+                      </svg>
+                    </a>
+                  </div>
                   </a>
                 </li>
               </ul>
@@ -186,25 +250,25 @@
             <p>SPC그룹의 다양한 브랜드를 만나보세요.</p>
           </div>
           <ul class="indicator">
-            <li class="on">
+            <li data-menu="bakery">
               <a href="#">
                 <img src="img/main03_icon01.png" alt="베이커리/디저트" />
                 <em>베이커리/디저트</em>
               </a>
             </li>
-            <li>
+            <li data-menu="dining">
               <a href="#">
                 <img src="img/main03_icon02.png" alt="외식/다이닝" />
                 <em>외식/다이닝</em>
               </a>
             </li>
-            <li>
+            <li data-menu="cafe">
               <a href="#">
                 <img src="img/main03_icon03.png" alt="카페/음료" />
                 <em>카페/음료</em>
               </a>
             </li>
-            <li>
+            <li data-menu="service">
               <a href="#">
                 <img src="img/main03_icon04.png" alt="유통/서비스" />
                 <em>유통/서비스</em>
@@ -212,217 +276,411 @@
             </li>
           </ul>
 
-          <div class="brand-list">
-            <ul class="sub" data-menu="bakery">
+          <div class="brand-list ">
+            <ul class="sub bakery" data-menu="bakery">
               <li>
-                <a href="#">
-                  <p class="image"><img src="img/main-03-parisbaguette-01.png" alt="파리바게트" /></p>
-                  <p class="brand"><em>파리바게뜨</em>
-                    "농가상생, 가맹점주와 동반성장, 친환경 등 ESG경영 강화"<br /> 대한민국 베이커리 문화를 선도하는 NO.1 브랜드</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-parisbaguette-01.png" alt="파리바게트" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>파리바게뜨</em>
+                      "농가상생, 가맹점주와 동반성장, 친환경 등 ESG경영 강화"<br /> 대한민국 베이커리 문화를 선도하는 NO.1 브랜드</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-br-02.png" alt="베스킨라빈스" />
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-br-02.png" alt="베스킨라빈스" />
+                  </a>
+                </div>
+                <div class="text">
                   <p class="brand"><em>배스킨라빈스</em>
                     당신이 행복해지는 순간, 배스킨라빈스가 늘 함께 합니다.<br />당신의 요즘 행복, 배스킨라빈스</p>
-                </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-dunkin-03.png" alt="던킨" />
-                  <p class="brand"><em>던킨</em>
-                    "잠깐의 여유와 달콤한 행복" 세계 최대의 커피&amp;도넛 전문 브랜드</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-dunkin-03.png" alt="던킨" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>던킨</em>
+                      "잠깐의 여유와 달콤한 행복" 세계 최대의 커피&amp;도넛 전문 브랜드</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-samlip-04.png" alt="삼립" />
-                  <p class="brand"><em>삼립</em>
-                    <strong>Good Food, Happy Life</strong><br />좋은 음식으로 행복한 내일을 만드는 종합식품브랜드, 삼립</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-samlip-04.png" alt="삼립" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>삼립</em>
+                      <strong>Good Food, Happy Life</strong><br />좋은 음식으로 행복한 내일을 만드는 종합식품브랜드, 삼립</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-pk-05.png" alt="파리크라상" />
-                  <p class="brand"><em>파리크라상</em>
-                    정통 프렌치 스타일의 프리미엄 베이커리</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-pk-05.png" alt="파리크라상" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>파리크라상</em>
+                      정통 프렌치 스타일의 프리미엄 베이커리</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-passion-06.png" alt="패션5" />
-                  <p class="brand"><em>패션5</em>
-                    고품격 디저트 갤러리</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-passion-06.png" alt="패션5" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>패션5</em>
+                      고품격 디저트 갤러리</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-빚은-07.png" alt="빚은" />
-                  <p class="brand"><em>빚은</em>
-                    전통떡부터 퓨전제품까지 갖춘 신개념 떡카페 프랜차이즈 브랜드</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-빚은-07.png" alt="빚은" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>빚은</em>
+                      전통떡부터 퓨전제품까지 갖춘 신개념 떡카페 프랜차이즈 브랜드</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-shany-08.png" alt="샤니" />
-                  <p class="brand"><em>샤니</em>
-                    1972년 고급케이크 전문 회사로 출발, 현재 국내 최대 재빵 생산 기업</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-shany-08.png" alt="샤니" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>샤니</em>
+                      1972년 고급케이크 전문 회사로 출발, 현재 국내 최대 재빵 생산 기업</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-bakeryF-09.png" alt="베이커리 팩토리" />
-                  <p class="brand"><em>베이커리 팩토리</em>
-                    매일매일 매장에서 직접 구워 더 신선하고 맛있는 빵을 선사하는 브랜드</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-bakeryF-09.png" alt="베이커리 팩토리" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>베이커리 팩토리</em>
+                      매일매일 매장에서 직접 구워 더 신선하고 맛있는 빵을 선사하는 브랜드</p>
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+
+            <ul class="sub dining" data-menu="dining">
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-shakeshack-01.png" alt="쉐이크쉑" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>쉐이크쉑</em>
+                      뉴욕에서 온 파인 캐쥬얼 레스토랑</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-eggslut-02.png" alt="에그슬럿" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>에그슬럿</em>
+                      LA 오리지널 에그 샌드위치</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-lagrillia-03.png" alt="라그릴리아" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>라그릴리아</em>
+                      이탈리안 캐주얼 레스토랑</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-pig-04.png" alt="피그인더가든" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>피그인더가든</em>
+                      다양한 고메샐러드를 합리적인 가격에 즐기는 Fine-casual 샐러드 전문점</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-city-05.png" alt="시티델리" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>시티델리</em>
+                      프리미엄 간편식 편집숍<br />(캐주얼 레스토랑과 편의점의 장점을 결합한 신개념 푸드 플래그십 스토어) 브랜드</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-queens-06.png" alt="퀸즈파크" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>퀸즈파크</em>
+                      영국풍 자연주의 다이닝 레스토랑</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-vera-07.png" alt="베라" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>베라</em>
+                      나폴리 정통 피자와 이탈리안 퀴진을 함께 즐기는 <em>Modern Italian Dining</em></p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-latelier-08.png" alt="라뜰리에" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>라뜰리에</em>
+                      경양식 올데이 다이닝</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-glucks-09.png" alt="그릭슈바인" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>그릭슈바인</em>
+                      저온숙성한 국내산 냉장신선육으로 본연의 맛과 풍미를 살린 프리미엄 델리미트</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-streat-10.png" alt="스트릿" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>스트릿</em>
+                      가볍고 편하게 즐기는 아시아 누들&amp;라이스 전문점</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-dq-11.png" alt="디.퀸즈" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>디.퀸즈</em>
+                      캐주얼 다이닝 레스토랑</p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-lina-12.png" alt="리나스" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>리나스</em>
+                      <strong>Sandwich &amp; Salad</strong></p>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-b-hs-13.png" alt="한상차림" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>한상차림</em>
+                      갖추어 정성으로 전한다.</p>
+                  </a>
+                </div>
               </li>
             </ul>
 
-            <ul class="sub" data-menu="dining">
+            <ul class="sub cafe" data-menu="cafe">
               <li>
-                <a href="#">
-                  <img src="img/main-03-b-shakeshack-01.png" alt="쉐이크쉑" />
-                  <p class="brand"><em>쉐이크쉑</em>
-                    뉴욕에서 온 파인 캐쥬얼 레스토랑</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-c-pascucci-01.png" alt="파스쿠찌" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>파스쿠찌</em>
+                      정통 이탈리안 에스프레소 커피전문점</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-b-eggslut-02.png" alt="에그슬럿" />
-                  <p class="brand"><em>에그슬럿</em>
-                    LA 오리지널 에그 샌드위치</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-c-jamba-02.png" alt="잠바주스" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>잠바주스</em>
+                      캘리포니아에서 온 건강 라이프스타일 브랜드</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-b-lagrillia-03.png" alt="라그릴리아" />
-                  <p class="brand"><em>라그릴리아</em>
-                    이탈리안 캐주얼 레스토랑</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-c-cw-03.png" alt="커피앳웍스" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>커피앳웍스</em>
+                      산지에서 추출까지 전문가의 유기적인 작업을 거쳐 최고의 품질로 완성된 스페셜티 커피 브랜드</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-b-pig-04.png" alt="피그인더가든" />
-                  <p class="brand"><em>피그인더가든</em>
-                    다양한 고메샐러드를 합리적인 가격에 즐기는 Fine-casual 샐러드 전문점</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-city-05.png" alt="시티델리" />
-                  <p class="brand"><em>시티델리</em>
-                    프리미엄 간편식 편집숍<br />(캐주얼 레스토랑과 편의점의 장점을 결합한 신개념 푸드 플래그십 스토어) 브랜드</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-queens-06.png" alt="퀸즈파크" />
-                  <p class="brand"><em>퀸즈파크</em>
-                    영국풍 자연주의 다이닝 레스토랑</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-vera-07.png" alt="베라" />
-                  <p class="brand"><em>베라</em>
-                    나폴리 정통 피자와 이탈리안 퀴진을 함께 즐기는 <em>Modern Italian Dining</em></p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-latelier-08.png" alt="라뜰리에" />
-                  <p class="brand"><em>라뜰리에</em>
-                    경양식 올데이 다이닝</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-glucks-09.png" alt="그릭슈바인" />
-                  <p class="brand"><em>그릭슈바인</em>
-                    저온숙성한 국내산 냉장신선육으로 본연의 맛과 풍미를 살린 프리미엄 델리미트</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-streat-10.png" alt="스트릿" />
-                  <p class="brand"><em>스트릿</em>
-                    가볍고 편하게 즐기는 아시아 누들&amp;라이스 전문점</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-dq-11.png" alt="디.퀸즈" />
-                  <p class="brand"><em>디.퀸즈</em>
-                    캐주얼 다이닝 레스토랑</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-lina-12.png" alt="리나스" />
-                  <p class="brand"><em>리나스</em>
-                    <strong>Sandwich &amp; Salad</strong></p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-b-hs-13.png" alt="한상차림" />
-                  <p class="brand"><em>한상차림</em>
-                    갖추어 정성으로 전한다.</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-c-teatra-04.png" alt="티트라" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>티트라</em>
+                      세계 곳곳에서 직접 찾아낸 원료를 새로운 감성, 색다른 감각으로 만든 블렌딩 tea</p>
+                  </a>
+                </div>
               </li>
             </ul>
 
-            <ul class="sub" data-menu="cafe">
+            <ul class="sub service" data-menu="service">
               <li>
-                <a href="#">
-                  <img src="img/main-03-c-pascucci-01.png" alt="파스쿠찌" />
-                  <p class="brand"><em>파스쿠찌</em>
-                    정통 이탈리안 에스프레소 커피전문점</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-d-happy-01.png" alt="해피포인트" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>해피포인트</em>
+                      "Find Your Happy Place!"</p>
+                  </a>
+                </div>
               </li>
+
               <li>
-                <a href="#">
-                  <img src="img/main-03-c-jamba-02.png" alt="잠바주스" />
-                  <p class="brand"><em>잠바주스</em>
-                    캘리포니아에서 온 건강 라이프스타일 브랜드</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-c-cw-03.png" alt="커피앳웍스" />
-                  <p class="brand"><em>커피앳웍스</em>
-                    산지에서 추출까지 전문가의 유기적인 작업을 거쳐 최고의 품질로 완성된 스페셜티 커피 브랜드</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-c-teatra-04.png" alt="티트라" />
-                  <p class="brand"><em>티트라</em>
-                    세계 곳곳에서 직접 찾아낸 원료를 새로운 감성, 색다른 감각으로 만든 블렌딩 tea</p>
-                </a>
+                <div class="logo">
+                  <a href="#">
+                    <img src="img/main-03-d-theworld-02.png" alt="더월드바인" />
+                  </a>
+                </div>
+                <div class="text">
+                  <a href="#">
+                    <p class="brand"><em>더월드바인</em>
+                      전문 소믈리에가 엄선한 와인 컬렉션</p>
+                  </a>
+                </div>
               </li>
             </ul>
-
-            <ul class="sub" data-menu="service">
-              <li>
-                <a href="#">
-                  <img src="img/main-03-d-happy-01.png" alt="해피포인트" />
-                  <p class="brand"><em>해피포인트</em>
-                    "Find Your Happy Place!"</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/main-03-d-theworld-02.png" alt="더월드바인" />
-                  <p class="brand"><em>더월드바인</em>
-                    전문 소믈리에가 엄선한 와인 컬렉션</p>
-                </a>
-              </li>
-            </ul>
-
           </div>
-          <p><a class="btn white" href="#">VIEW ALL</a></>
+          <p><a class="btn white" href="#">VIEW ALL</a></p>
+          <p class="control-small ">
+            <a href="#" class="prev on"><i class="fa-solid fa-angle-left"><span>이전버튼</span></i></a>
+            <a href="#" class="next"><i class="fa-solid fa-angle-right"><span>다음버튼</span></i></a>
+          </p>
         </div>
       </section>
 
@@ -436,14 +694,16 @@
           <div class="title">
             <h3>SPC HAPPY</h3>
             <P>해피포인트 APP에서 다양한 신제품을 만나보세요.</P>
-            <a class="btn white" href="#">VIEW ALL</a>
           </div>
           <div class="banner-slide">
+            <a class="btn white" href="#">VIEW ALL</a>
             <div class="box">
               <ul class="slide">
                 <li>
                   <div class="image">
-                    <a href="#"></a>
+                    <a href="#">
+                      <img src="img/point-img01.jpg" alt="" />
+                    </a>
                   </div>
                   <div class="text">
                     <a href="#"><em>가나슈 쇼콜라 케이크(조각)+블랙포레스트 케이크(조각)+아메리카노(시그니처)2잔</em></a>
@@ -452,28 +712,44 @@
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/point-img02.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>달달한 디저트 세트(클래식 치즈 케이크(조각)+아메리카노(시그니처)1잔)</em></a><br />
                     <a href="#" class="btn-gray">구매하러 가기</a>
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/point-img03.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>엄마는 외계인 세트</em></a><br />
                     <a href="#" class="btn-gray">구매하러 가기</a>
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/point-img04.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>기운 센 콘푸로스트 블라스트 (Regular)</em></a><br />
                     <a href="#" class="btn-gray">구매하러 가기</a>
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/point-img05.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>오레오 쿨라타</em></a><br />
                     <a href="#" class="btn-gray">구매하러 가기</a>
@@ -481,7 +757,9 @@
                 </li>
                 <li>
                   <div class="image">
-                    <a href="#"></a>
+                    <a href="#">
+                      <img src="img/point-img06.jpg" alt="" />
+                    </a>
                   </div>
                   <div class="text">
                     <a href="#"><em>오레오! 홀리데이 세트(오레오 크림치즈필드&오레오 초코링&오레오 민트링필드&오레오 쿨라타)</em></a><br />
@@ -489,14 +767,21 @@
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"><img src="img/point-img07.jpg" alt="타이어 롤케익"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/point-img07.jpg" alt="타이어 롤케익">
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>타이어 롤케익</em></a><br />
                     <a href="#" class="btn gray">구매하러 가기</a>
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"><img src="img/point-img08.jpg" alt="타이거 밀크 쉐이크"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/point-img08.jpg" alt="타이거 밀크 쉐이크"></a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>타이거 밀크 쉐이크</em></a><br />
                     <a href="#" class="btn gray">구매하러 가기</a>
@@ -505,9 +790,9 @@
               </ul>
             </div>
           </div>
-          <p class="control">
-            <a href="#" class="next" title="다음"><i class="fas fa-angle-right"><span>다음 버튼</span></i></a>
-            <a href="#" class="prev" title="이전"><i class="fas fa-angle-left"><span>이전 버튼</span></i></a>
+          <p class="control-small ">
+            <a href="#" class="prev on"><i class="fas fa-angle-left"><span>이전버튼</span></i></a>
+            <a href="#" class="next"><i class="fas fa-angle-right"><span>다음버튼</span></i></a>
           </p>
         </div>
       </section>
@@ -518,12 +803,20 @@
             <h3>SPC NEWS</h3>
             <P>SPC 그룹의 최신뉴스를 확인해보세요.</P>
           </div>
+          <p class="control">
+            <a href="#" class="prev" title="이전"><i class="fas fa-arrow-left"><span>이전 버튼</span></i></a>
+            <a href="#" class="next" title="다음"><i class="fas fa-arrow-right"><span>다음 버튼</span></i></a>
+          </p>
           <div class="banner-slide">
+            <a class="btn white" href="#">VIEW ALL</a>
             <div class="box">
-              <a class="btn white" href="#">VIEW ALL</a>
               <ul class="slide">
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/main-04-딸기.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>SPC그룹, 딸기 청년농부 지원… ‘ESG행복상생’ 확대</em></a><br />
                     <p class="date">2022.01.12</p>
@@ -531,7 +824,11 @@
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/main-04-배라도곡.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>SPC그룹, ‘쉐이크쉑’ 말레이시아 사업권 획득</em></a><br />
                     <p class="date">2022.01.07</p>
@@ -539,7 +836,11 @@
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/main-04-쉐이크쉑.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>파리크라상, 서강대와 AI(인공지능), 빅데이터 산학협력 연구</em></a><br />
                     <p class="date">2022.01.07</p>
@@ -547,7 +848,11 @@
                   </div>
                 </li>
                 <li>
-                  <div class="image"><a href="#"></a></div>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/main-04-파리크라상.jpg" alt="" />
+                    </a>
+                  </div>
                   <div class="text">
                     <a href="#"><em>SPC 배스킨라빈스, 무인 매장 플로우 2호점 도곡 오픈</em></a><br />
                     <p class="date">2022.01.03</p>
@@ -555,10 +860,6 @@
                   </div>
                 </li>
               </ul>
-              <p class="control">
-                <a href="#" class="prev" title="이전"><i class="fas fa-arrow-left"><span>이전 버튼</span></i></a>
-                <a href="#" class="next" title="다음"><i class="fas fa-arrow-right"><span>다음 버튼</span></i></a>
-              </p>
             </div>
           </div>
         </div>
@@ -571,8 +872,8 @@
             <P>SPC매거진 뉴스레터로 새소식을 접해보세요</P>
           </div>
           <div class="banner-slide">
+            <a href="#" class="btn white">VIEW ALL</a>
             <div class="box">
-              <a href="#" class="btn white">VIEW ALL</a>
               <ul class="slide">
                 <li>
                   <a href="#">
@@ -599,10 +900,6 @@
                   </a>
                 </li>
               </ul>
-              <p class="control">
-                <a href="#" class="next" title="다음"><i class="fas fa-angle-right"><span>다음 버튼</span></i></a>
-                <a href="#" class="prev" title="이전"><i class="fas fa-angle-left"><span>이전 버튼</span></i></a>
-              </p>
             </div>
           </div>
         </div>
@@ -611,106 +908,124 @@
         <div class="content-box">
           <div class="title" id="spc-youtube-title">
             <h3>YOUTUBE</h3>
-            <P>SPC그룹의 다양한 영상콘텐츠를 즐기세요.</P>
+            <P>"SPC그룹의 다양한 영상콘텐츠를 즐기세요."
+              <br>
+              <a href="#" class="btn white">VIEW ALL</a>
+            </P>
           </div>
-        </div>
-        <div class="banner-slide">
-          <div class="box">
-            <a href="#" class="btn white">VIEW ALL</a>
-            <ul class="slide">
-              <li>
-                <div class="image">
-                  <a href="#" title="[Teatra 브랜드 홍보영상]"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <em>[Teatra 브랜드 홍보영상]</em>
-                    <p class="date">2022-01-24</p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="image">
-                  <a href="#" title="[Teatra 브랜드 홍보영상"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <em>[Teatra 브랜드 홍보영상]</em>
-                    <p class="date">2022-01-24</p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="image">
-                  <a href="#" title="[SPC MAGAZINE]커피앳웍스 발효커피 세미나 현장"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <em>[SPC MAGAZINE]커피앳웍스 발효커피 세미나 현장</em>
-                    <p class="date">2021-11-30</p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="image">
-                  <a href="#" title="[SPC MAGAZINE]SPC그룹만의 커피 문화공간, OCS에 가다"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <em>[SPC MAGAZINE]SPC그룹만의 커피 문화공간, OCS에 가다</em>
-                    <p class="date">2022-11-16</p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="image">
-                  <a href="#"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <em>[SPC MAGAZINE]SPC삼립이 운영하는 가평휴게소로 오세요!</em>
-                    <p class="date">2022-01-24</p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="image">
-                  <a href="#"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <p class="title">[SPC MAGAZINE]파리바게뜨 캄보디아 1호점 오픈!</p>
-                    <p class="date">2021-06-24</p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="image">
-                  <a href="#"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <p class="title">[SPC MAGAZINE]토종효모 상미종의 수상 현장!</p>
-                    <p class="date">2021-04-28</p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="image">
-                  <a href="#"></a>
-                </div>
-                <div class="text">
-                  <a href="#">
-                    <p class="title">[SPC MAGAZINE]행복 상생 프로젝트 제3탄!</p>
-                    <p class="date">2021-03-25</p>
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <p class="control">
-              <a href="#" class="prev" title="이전"><i class="fas fa-arrow-left"><span>이전 버튼</span></i></a>
-              <a href="#" class="next" title="다음"><i class="fas fa-arrow-right"><span>다음 버튼</span></i></a>
-            </p>
+          <div class="banner-slide">
+            <div class="box">
+              <ul class="slide">
+                <li>
+                  <div class="image">
+                    <a href="#" title="[Teatra 브랜드 홍보영상]">
+                      <img src="img/mqdefault.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <em>[Teatra 브랜드 홍보영상]</em>
+                      <p class="date">2022-01-24</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <a href="#" title="[Teatra 브랜드 홍보영상">
+                      <img src="img/mqdefault2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <em>[Teatra 브랜드 홍보영상]</em>
+                      <p class="date">2022-01-24</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <a href="#" title="[SPC MAGAZINE]커피앳웍스 발효커피 세미나 현장">
+                      <img src="img/mqdefault-1.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <em>[SPC MAGAZINE]커피앳웍스 발효커피 세미나 현장</em>
+                      <p class="date">2021-11-30</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <a href="#" title="[SPC MAGAZINE]SPC그룹만의 커피 문화공간, OCS에 가다">
+                      <img src="img/mqdefault-2.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <em>[SPC MAGAZINE]SPC그룹만의 커피 문화공간, OCS에 가다</em>
+                      <p class="date">2022-11-16</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/mqdefault-3.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <em>[SPC MAGAZINE]SPC삼립이 운영하는 가평휴게소로 오세요!</em>
+                      <p class="date">2022-01-24</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/mqdefault-4.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <p class="title">[SPC MAGAZINE]파리바게뜨 캄보디아 1호점 오픈!</p>
+                      <p class="date">2021-06-24</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/mqdefault-5.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <p class="title">[SPC MAGAZINE]토종효모 상미종의 수상 현장!</p>
+                      <p class="date">2021-04-28</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <a href="#">
+                      <img src="img/mqdefault-6.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <a href="#">
+                      <p class="title">[SPC MAGAZINE]행복 상생 프로젝트 제3탄!</p>
+                      <p class="date">2021-03-25</p>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <p class="control">
+                <a href="#" class="prev" title="이전"><i class="fas fa-arrow-left"><span>이전 버튼</span></i></a>
+                <a href="#" class="next" title="다음"><i class="fas fa-arrow-right"><span>다음 버튼</span></i></a>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -722,8 +1037,8 @@
             <P>푸드 트렌드와 레시피, 다양한 이벤트를 만나보세요.</P>
           </div>
           <div class="banner-slide">
+            <a href="#" class="btn white">VIEW ALL</a>
             <div class="box">
-              <a href="#" class="btn white">VIEW ALL</a>
               <ul class="slide">
                 <li><a href="#"><img src="img/main-07-01.jpg" alt="파리바게뜨-설 선물세트" /></a></li>
                 <li><a href="#"><img src="img/main-07-02.jpg" alt="잠바주스" /></a></li>
@@ -731,12 +1046,12 @@
                 <li><a href="#"><img src="img/main-07-04.jpg" alt="에그슬럿-신메뉴:스파이스BBQ치즈버거" /></a></li>
                 <li><a href="#"><img src="img/main-07-05.jpg" alt="빚은" /></a></li>
               </ul>
-              <p class="control">
-                <a href="#" class="prev" title="이전"><i class="fas fa-arrow-left"><span>이전 버튼</span></i></a>
-                <a href="#" class="next" title="다음"><i class="fas fa-arrow-right"><span>다음 버튼</span></i></a>
-              </p>
             </div>
           </div>
+          <p class="control">
+            <a href="#" class="prev" title="이전"><i class="fas fa-arrow-left"><span>이전 버튼</span></i></a>
+            <a href="#" class="next" title="다음"><i class="fas fa-arrow-right"><span>다음 버튼</span></i></a>
+          </p>
         </div>
       </section>
 
@@ -823,7 +1138,7 @@
               </a>
             </p>
           </div>
-          <ul>
+          <ul class="spc-brand-list">
             <li><a href="#">비알코리아(주)</a></li>
             <li><a href="#">(주)SPC삼립</a></li>
             <li><a href="#">파리바게뜨</a></li>
@@ -850,6 +1165,259 @@
     </footer>
   </div>
   <a href="#" class="scrolltop"><i class="fas fa-arrow-up"><span>제일 위로 이동하기 버튼</span></i></a>
-</body>
 
+
+  <script>
+    'use strict';
+    $(document).ready(function () {
+      headerGnb();
+      prevnextBtn();
+      setImageSlide('#main-visual', 1, true, 3000);
+    });
+
+    // gnb 영역 
+    $(window).on('resize', function () {
+      var windowWidth = $(window).width();
+      // if (windowWidth >= 1024) {
+      //   $('#header ul.gnb-list > li').removeClass('on');
+      //   $('#header div.table-right').removeClass('open');
+      // }
+      headerGnb();
+      prevnextBtn();
+      setImageSlide('#main-visual', 1, true, 3000);
+    });
+
+
+    function headerGnb() {
+      $('#header').on('mouseenter focusin', function () {
+        $('#header ul.sub').css({
+          'height': '200px'
+        });
+        $(this).addClass('open');
+        $('#header span.global').css({
+          'opacity': 1
+        });
+      });
+
+      $('#header').on('mouseleave focusout', function () {
+        $('#header ul.sub').css({
+          'height': '0px'
+        });
+        $(this).removeAttr('class');
+        $('#header span.global').css({
+          'opacity': 0
+        });
+      });
+
+      $('#header div.language-box').on('mouseenter focusin', function () {
+        $('#header div.language-box > ul.language').addClass('on');
+      });
+
+      $('#header div.language-box').on('mouseleave', function () {
+        $('#header div.language-box > ul.language').removeClass('on');
+      });
+    }
+
+    // 스크롤 발생 시 header 고정
+
+    $(window).on('scroll', function () {
+      // console.log('scroll');
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop === 0) {
+        $('#header').removeClass('on');
+        $('#header span.global').css({
+          'opacity': 0
+        });
+      } else {
+        $('#header').addClass('on');
+        $('#header span.global').css({
+          'opacity': 1
+        });
+        $('#header div.language-box > ul.language').addClass('on');
+      }
+
+
+    });
+
+
+
+    // main-visual prev/next button 작동방법
+    function prevnextBtn() {
+      $('#main-visual > div.container-box > a.next').on('mouseenter', function () {
+        $('#main-visual > div.container-box').addClass('arrow-go-r');
+      });
+
+      $('#main-visual > div.container-box > a.next').on('mouseleave', function () {
+        $('#main-visual > div.container-box').removeClass('arrow-go-r');
+      });
+
+      $('#main-visual > div.container-box > a.prev').on('mouseenter', function () {
+        $('#main-visual > div.container-box').addClass('arrow-go-l');
+      });
+
+      $('#main-visual > div.container-box > a.prev').on('mouseleave', function () {
+        $('#main-visual > div.container-box').removeClass('arrow-go-l');
+      });
+    }
+
+
+    // main-visual: 이미지 슬라이드
+    function setImageSlide(selector, first, status, speed) {
+      $(selector).each(function () {
+        var $selector = $(this);
+        var numSlide = $selector.find('.slide-layers > li').length;
+        var slideNow = 0;
+        var slidePrev = 0;
+        var slideNext = 0;
+        var slideFirst = first;
+        var timerId = '';
+        var timerSpeed = speed;
+        var isTimerOn = status;
+        var onAnimation = false;
+
+        showSlide(slideFirst);
+
+        $selector.find('.indicator li a').on('click', function () {
+          var index = $selector.find('.indicator li').index($(this).parent());
+          showSlide(index + 1);
+        });
+
+        $selector.find('.slide-layers li a').on('focus', function () {
+          var index = $selector.find('.slide-layers li').index($(this).parent());
+          $selector.find('div.slide-inner').scrollLeft(0);
+          showSlide(index + 1);
+        });
+
+        $selector.find('a.prev').on('click', function () {
+          showSlide(slidePrev);
+        });
+
+        $selector.find('a.next').on('click', function () {
+          showSlide(slideNext);
+        });
+
+
+        function startTimer() {
+          timerId = setTimeout(function () {
+            showSlide(slideNext);
+          }, timerSpeed);
+          isTimerOn = true;
+        }
+
+        function stopTimer() {
+          clearTimeout(timerId);
+          isTimerOn = false;
+        }
+
+        function resetTimer() {
+          clearTimeout(timerId);
+          if (isTimerOn === true) {
+            timerId = setTimeout(function () {
+              showSlide(slideNext);
+            }, timerSpeed);
+          }
+        }
+
+        function showSlide(n) {
+          if (slideNow === n || onAnimation === true) return false;
+          resetTimer();
+          if (slideNow === 0) {
+            $selector.find('.slide-layers li:eq(' + (n - 1) + ')').addClass('on');
+          } else {
+            onAnimation = true;
+            $selector.find('.slide-layers li:eq(' + (slideNow - 1) + ')').removeClass().addClass('hide').one(
+              'animationend',
+              function () {
+                $(this).removeClass();
+                onAnimation = false;
+              });
+            $selector.find('.slide-layers li:eq(' + (n - 1) + ')').addClass('show');
+          }
+          $selector.find('.indicator li').removeClass('on');
+          $selector.find('.indicator li:eq(' + (n - 1) + ')').addClass('on');
+          slideNow = n;
+          slidePrev = (n === 1) ? numSlide : (n - 1);
+          slideNext = (n === numSlide) ? 1 : (n + 1);
+
+          // 1번 이미지 일 때 텍스트 변화
+          if (slideNow === 1) {
+            $('#main-visual > div.main-text').addClass('active');
+          } else {
+            $('#main-visual > div.main-text').removeClass('active');
+          }
+
+
+        }
+
+      });
+    }
+
+    // 처음 상태
+    $('#spc-brand ul.indicator > li:eq(0)').addClass('on');
+    $('#spc-brand ul.sub:eq(0)').addClass('on');
+
+    //spc-brand: 클릭했을 때 탭 메뉴 바뀌기
+    $('#spc-brand ul.indicator > li > a').on('click', function () {
+      // 클릭했을 때 indicator 변화
+      var index = $('#spc-brand ul.indicator > li').index($(this).parent());
+      $('#spc-brand ul.indicator > li').removeClass('on');
+      $('#spc-brand ul.indicator > li:eq(' + index + ')').addClass('on');
+
+      // 클릭했을 때 sub메뉴 변화
+      $('#spc-brand ul.sub').removeClass('on');
+      $('#spc-brand ul.sub:eq(' + index + ')').addClass('on');
+
+    });
+
+    //배너 슬라이드: 예시 spc-brand
+
+    var numBanner = $('#spc-brand ul.sub.on > li').length;
+    // alert(numBanner);
+    var bannerNow = 0;
+    var bannerPrev = 0;
+    var bannerNext = 0;
+    var offsetLeft = 0;
+    var widthBox = 0;
+    var widthBar = 0;
+    var offsetLeftMin = 0;
+    var loadCounter = 0;
+    var throttleCounter = 0;
+    
+    setStatus();
+
+    $('#spc-brand p.control-small > a.prev').on('click', function() {
+      showBanner(bannerPrev);
+    });
+
+    $('#spc-brand p.control-small > a.next').on('click', function() {
+     showBanner(bannerNext);
+    });
+
+
+    function setStatus() {
+      widthBox = $('#spc-brand div.brand-list').innerWidth();
+      widthBar = 0;
+      $('#spc-brand .brand-list > ul.sub > li').each(function() {
+        widthBar += $(this).outerWidth(true);
+      });
+      offsetLeftMin = widthBox - widthBar;
+      $('#spc-brand ul.sub').css({'width' : (widthBar + 5) + 'px'});
+    }
+
+    function showBanner(n) {
+      offsetLeft = -$('#spc-brand ul.sub > li:eq('+ (n - 1) +')').position().left;
+      $('#spc-brand ul.sub').css({'left' : offsetLeft + 'px', 'transition': 'left 0.3s'});
+      // numBanner = $('#spc-brand ul.sub.on').hasClass('on')
+
+      // 상태정보 저장
+      bannerNow = n;
+      bannerPrev = (n === 1) ? 1 : (n - 1);
+      bannerNext = (n === numBanner) ? numBanner : (n + 1);
+    }
+
+
+
+
+  </script>
+</body>
 </html>
