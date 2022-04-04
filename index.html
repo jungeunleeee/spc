@@ -9,10 +9,11 @@
   <title>SPC</title>
   <meta name="description" content="SPC 웹사이트" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="fa/css/all.min.css" />
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+  <!-- <link rel="stylesheet" href="fa/css/all.min.css" /> -->
   <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
   <link rel="stylesheet" href="css/style-m.css" media="screen and (max-width: 1023.9px)" />
+  <link rel="stylesheet" href="css/style-mm.css" media="screen and (max-width: 500px)">
   <!-- 웹 폰트 -->
   <link href="//db.onlinewebfonts.com/c/f797b34c6bb4fdc383eaf58b6980ce02?family=entypo-fontello" rel="stylesheet"
     type="text/css" />
@@ -119,18 +120,18 @@
             <p class="dummy"><img src="img/main-slide-01.jpg" class="ls-bg" alt="main-slide-01"></p>
             <ul class="slide-layers">
               <li class="on">
-                <img src="img/main-slide-01.jpg" class="ls-bg" alt="main-slide-01">
+                <img src="img/main_slide_022.jpg" class="ls-bg" alt="main-slide-01">
               </li>
               <li>
                 <img src="img/main-slide-02.png" class="ls-bg" alt="main-slide-02" />
               </li>
 
               <li>
-                <img src="img/main-slide-03.png" />
+                <img src="img/spc-banner-3.png" />
               </li>
 
               <li>
-                <img src="img/main-slide-04.jpg" />
+                <img src="img/main-slide-04.jpg"/>
               </li>
 
             </ul>
@@ -1394,6 +1395,7 @@
     });
 
 
+
     function setStatus() {
       widthBox = $('#spc-brand div.brand-list').innerWidth();
       widthBar = 0;
@@ -1414,6 +1416,8 @@
       bannerPrev = (n === 1) ? 1 : (n - 1);
       bannerNext = (n === numBanner) ? numBanner : (n + 1);
     }
+
+
 
 
 

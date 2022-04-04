@@ -51,7 +51,6 @@ div.content-box > div.banner-slide {position: relative; padding: 50px 0; }
 div.content-box > div.banner-slide > div.box {width: 100%;  overflow: hidden; margin: -10px; padding: 10px;}
 div.content-box > div.banner-slide ul.slide {display: flex; width: 3000px; }
 div.content-box > div.banner-slide ul.slide > li{ text-align: center; padding-bottom: 20px;  overflow: hidden; transition: all 0.7s; position: relative; box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; transform:perspective(500px) rotate(.001deg); border-color: #ebebeb;} 
-/* div.content-box > div.banner-slide ul.slide > li::after {content: ''; width: 100%; height: 100%; position: absolute; left: 0; top: 0; box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.03); } */
 div.content-box > div.banner-slide  ul.slide > li + li {}
 div.content-box > div.banner-slide ul.slide > li div.image {width: 100%; overflow: hidden;  position: relative;}
 div.content-box > div.banner-slide ul.slide > li > div.image > a {display: block; width: 100%; height: 100%;;}
@@ -120,6 +119,13 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 #header div.language-box ul.language li + li {margin-top: 5px;}
 #header div.language-box ul.language > li > a {font-size: 16px; font-weight: 700; transition: color 0.3s;}
 
+@media only screen and (max-width: 1320px) {
+  #header > div.content-box > #gnb > ul > li > a { font-size: 14px;
+    padding: 0 15px;}
+}
+
+
+
 
 /* footer */
 #footer {padding: 15px 0 30px; background-color: #fff; z-index: 10000; border-top: 1px solid #d2d2d2;}
@@ -165,11 +171,11 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 #main-visual > div.container-box::after {content: ''; display: block; width: 100%; height: 120%; background-color: #1e2432; z-index: 35; position: absolute; left: auto; right: 50%; top: -10%; border-radius: 100%; transform: scaleX(0); -webkit-transition: all 0.5s ease-in-out; }
 #main-visual > div.container-box >  div.slide-inner {position: relative;}
 #main-visual > div.container-box >  div.slide-inner > p.dummy {}
-#main-visual > div.container-box >  div.slide-inner > p.dummy > img {opacity: 0; width: 100%; height: 942px; display: block; }
+#main-visual > div.container-box >  div.slide-inner > p.dummy > img {opacity: 0; width: 100%; display: block; }
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
 
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
-#main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li img {width: 100%; height: 942px;}
+#main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li img {width: 100%;}
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.on {display: block;}
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.show {animation: show-slide 1s ease 0s 1 normal forwards; display: block;}
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.hide {animation: hide-slide 1s ease 0s 1 normal forwards; display: block;}
