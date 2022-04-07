@@ -34,15 +34,13 @@ div.content-box > div.banner-slide  > a.btn.white {position: absolute; right: 10
 /* 슬라이드 */
 div.content-box > div.banner-slide {position: relative; padding: 50px 0; } 
 div.content-box > div.banner-slide > div.box {width: 100%;  overflow: hidden; margin: -10px; padding: 10px;}
-div.content-box > div.banner-slide ul.slide {display: flex; width: 3000px; }
-div.content-box > div.banner-slide ul.slide > li{ text-align: center; padding-bottom: 20px;  overflow: hidden; transition: all 0.7s; position: relative; box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; transform:perspective(500px) rotate(.001deg); border-color: #ebebeb;} 
+div.content-box > div.banner-slide ul.slide {width: 3000px;}
+div.content-box > div.banner-slide ul.slide::after {content:''; display: block; clear: both;}
+div.content-box > div.banner-slide ul.slide > li{float: left;  text-align: center; padding-bottom: 20px;  overflow: hidden; transition: all 0.7s; position: relative; box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; transform:perspective(500px) rotate(.001deg); border-color: #ebebeb;} 
 div.content-box > div.banner-slide  ul.slide > li + li {}
 div.content-box > div.banner-slide ul.slide > li div.image {width: 100%; overflow: hidden;  position: relative;}
 div.content-box > div.banner-slide ul.slide > li > div.image > a {display: block; width: 100%; height: 100%;;}
 div.content-box > div.banner-slide ul.slide > li > div.image > a > img {height: 100%; transition: 0.5s;}
-/* div.content-box > div.banner-slide ul.slide > li:hover > div.image img {-webkit-transform:scale(1.1);} 
-div.content-box > div.banner-slide ul.slide > li:hover > div.text a.btn-gray,
-div.content-box > div.banner-slide ul.slide > li:hover > div.text a.btn.graymini {background-color: #1E2432; color: #fff;} */
 
 /* common:button */
 a.btn.white {display: block; margin: 0 auto; background-color: #fff; overflow: hidden; position: relative; z-index: 3; text-align: center; border-radius: 50px; font-size: 14px; font-weight: 700; width: 194px; height: 65px;line-height: 65px; letter-spacing: 0.05em; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%);}
@@ -206,7 +204,6 @@ margin: 0 0 0.2em;}
 #spc-brand div.brand-list li div.logo a {display: block; width: 100%; height: 100%;}
 #spc-brand div.brand-list li div.logo img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%;}
 #spc-brand div.brand-list li:hover .logo {width: 45%; height: 45%;}
-
 #spc-brand div.brand-list li div.text {background: inherit; position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; color: #000; font-size: 1.2vw; border-radius: 50%; opacity: 0; transition: 0.5s; box-sizing: border-box; padding: 8.5vw 1vw;}
 #spc-brand div.brand-list li:hover div.text {opacity: 1; border-radius: 30px;}
 #spc-brand div.brand-list > ul.sub > li {}
@@ -242,19 +239,13 @@ margin: 0 0 0.2em;}
 #spc-news div.content-box {position: relative;}
 #spc-news div.content-box::before {content: ''; background: #fff0c3; border-radius: 50%; position: absolute; top: -90%; right: -35%; width: 500px; height: 500px;}
 #spc-news div.content-box > div.banner-slide {padding: 70px 0;}
-#spc-news div.content-box > div.banner-slide  ul.slide > li {width: 28vw; height: 30vw; box-sizing: border-box;  border-radius: 25px;} 
+#spc-news div.content-box > div.banner-slide  ul.slide > li {width: 28vw; height: 33vw; box-sizing: border-box;  border-radius: 15px;  background-color: #ffffff; } 
 #spc-news div.content-box > div.banner-slide  ul.slide > li + li {margin-left: 3vw;}
-#spc-news div.content-box > div.banner-slide  ul.slide > li div.image {height: 20vw;}
-
-
-
-#spc-news div.content-box > div.banner-slide ul.slide > li div.text {height: 20vw; background-color: #ffffff; padding: 15px 25px 10px; text-align: left; background-color:  #fff; position: relative; box-sizing: border-box;}
-#spc-news div.content-box > div.banner-slide ul.slide > li div.text em {font-size: 1.5vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;background-color: green;}
-
-#spc-news div.content-box > div.banner-slide ul.slide > li div.text p.date {font-size: 0.8vw; background-color: skyblue; position: relative; top: -12px;}
-#spc-news div.content-box > div.banner-slide ul.slide > li div.text a.btn.graymini {width: 10vw; height: 4vw; font-size: 0.8vw; transition: all 0.3s; text-align: center; line-height: 4vw;} 
-
-
+#spc-news div.content-box > div.banner-slide  ul.slide > li div.image {height: 18vw;}
+#spc-news div.content-box > div.banner-slide ul.slide > li div.text {padding: 15px 25px 10px; text-align: left; position: relative; box-sizing: border-box;}
+#spc-news div.content-box > div.banner-slide ul.slide > li div.text em {font-size: 2.0vw; font-weight: 700;  text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 100%; display: inline-block; margin-bottom: 0.3vw;}
+#spc-news div.content-box > div.banner-slide ul.slide > li div.text p.date {font-size: 1.4vw; font-weight: 700; color: #7d7d7d; margin-bottom: 1vw;}
+#spc-news div.content-box > div.banner-slide ul.slide > li div.text a.btn.graymini {margin: 15px 0 0; font-size: 1.4vw; letter-spacing: 1.0px; width: 70%; padding: 16px 0; line-height: 8px; box-sizing: border-box; text-align: center;} 
 #spc-news div.content-box > p.control {position: absolute; right: 300px;top: 33px;}
 #spc-news div.content-box > p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
 #spc-news div.content-box > p.control > a + a {margin-left: 30px;}
@@ -263,7 +254,71 @@ margin: 0 0 0.2em;}
 #spc-news div.content-box > p.control > a:hover {background-color: #fece00; color: #fff;}
 #spc-news div.content-box > p.control > a i {position: relative; vertical-align: middle; display: inline-block;}
 
+/* spc-magazine */
+#spc-magazine {padding: 110px 0 160px;}
+#spc-magazine > div.content-box {}
+#spc-magazine > div.content-box > div.banner-slide {position: relative;}
+#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide {width: 100%;}
+#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide::after {content: ''; display: block; clear: both; }
+#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li {float: left; width: 48%; margin-bottom: 35px;}
+#spc-magazine > div.content-box > div.banner-slide  ul.slide > li + li:before {
+content: ''; width: 1px; height: 100%; background: #eaeaea; position: absolute;
+top: 0; left: -9.5%;}
+#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li:nth-child(2n) {margin-left: 4%;} 
+#spc-magazine > div.content-box > div.banner-slide  ul.slide > li > a {display: block;}
+#spc-magazine > div.content-box > div.banner-slide ul.slide > li img {max-width: 100%; padding-bottom: 15px;}
+#spc-magazine > div.content-box > div.banner-slide  ul.slide > li span {font-size: 14px; font-weight: 700; color: #7d7d7d; display: block; text-align: left;}
 
+/* spc-youtube */
+#spc-youtube {position: relative; box-sizing: border-box;}
+#spc-youtube::before {content: ''; width: 40.3%; height: 100%; border-radius: 0 0 50px 0; background-color: #fff0c3; position: absolute;top: 0;left: 0; z-index: -1;}
+#spc-youtube::after {content: ''; width: 480px; height: 170px; background: url(/img/main03_bg.png) center no-repeat; background-size: 100%; position: absolute;top: -35px; right: -65px; z-index: -1;}
+#spc-youtube > div.content-box { z-index: 3; padding: 100px 30px; position: relative;}
+#spc-youtube > div.content-box::after {content: ''; clear: both; display: block;}
+#spc-youtube > div.content-box div.title {float: left; width: 33%; }
+#spc-youtube > div.content-box p > a {margin: 50px 0;}
+#spc-youtube > div.content-box > div.banner-slide {width: 60%; float: right; padding: 0 30px 0 0;}
+#spc-youtube > div.content-box > div.banner-slide > div.box {overflow: initial; height: 100%;}
+
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide {}
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 29vw; height: 25vw; border-radius: 25px; box-sizing: border-box;}
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 3vw;}
+#spc-youtube div.banner-slide ul.slide > li > div.image {height: 15vw;}
+#spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
+#spc-youtube div.banner-slide ul.slide > li > div.text {height: 10vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;}
+#spc-youtube div.banner-slide ul.slide > li:hover > div.text {background-color: #1e2432; color: #fff; }
+#spc-youtube div.banner-slide  ul.slide > li > div.text  em {font-size: 1vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;}
+#spc-youtube  div.banner-slide  ul.slide > li > div.text  p.date {font-size: 0.8vw; text-align: left; margin-top: 2vw; color: #7d7d7d; font-weight: 700;}
+#spc-youtube div.banner-slide  ul.slide > li:hover p.date {color: #fff;}
+#spc-youtube  div.banner-slide  p.control {position: absolute; left: -250px; bottom: -100px;}
+#spc-youtube  div.banner-slide p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%); border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
+#spc-youtube  div.banner-slide p.control > a + a {margin-left: 30px;}
+#spc-youtube  div.banner-slide p.control > a::before {content: ''; width: 97px; height: 97px; background-color: #fece00; position: absolute; left: 50%; top: 50%; margin: -49px 0 0 -49px; border-radius: 50%; transform: scale(0); transition: all 0.4s; opacity: 0.2;} 
+#spc-youtube  div.banner-slide p.control > a:hover::before {transform: scale(1);}
+#spc-youtube  div.banner-slide p.control > a:hover {background-color: #fece00; color: #fff;}
+
+/* spc-sns */
+#spc-sns {background: linear-gradient(to top, #edf6fb, #ffffff); padding: 105px 0 115px;}
+#spc-sns > div.content-box {position: relative;}
+#spc-sns  div.content-box > div.banner-slide {padding: 70px 0; }
+#spc-sns  div.content-box > div.banner-slide > div.box {width: 100%; overflow: hidden;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide {overflow: hidden; width: 3000px;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li {float: left; text-align: center; padding-bottom: 20px; border-radius: 25px; margin-right: 2.1vw; overflow: hidden; transition: all 0.7s; position: relative; box-sizing: border-box; box-shadow: 5px 5px 3px 5px rgba(216, 217, 218, 0.2); width: 20vw; height: 20vw; transition: all 0.3s; background-color: #fff;} 
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 1.2vw;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li:hover {border-radius: 0;}
+#spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li img {width: 100%;}
+
+/* sns-brandslide */
+#spc-brandslide {background-color: #fff; padding: 20px 0; border-bottom: 1px solid #ebebeb;}
+#spc-brandslide div.banner-slide {position: relative;  background-color: #fff; width: 100%;}
+#spc-brandslide div.banner-slide > div.box {background-color: skyblue; box-sizing: border-box; overflow: hidden;}
+#spc-brandslide div.banner-slide ul.slide {overflow: hidden; width: 3000px;}
+#spc-brandslide div.banner-slide ul.slide > li {float: left; margin-right: 1px; box-sizing: border-box; background-color: pink;}
+#spc-brandslide div.banner-slide ul.slide > li img {height: 60px; width: auto;}
+#spc-brandslide div.banner-slide p.control > a {font-size: 15px; position: absolute; top: 50%; transform: translateY(-50%);}
+#spc-brandslide div.banner-slide p.control > a.on {opacity: 0.3;}
+#spc-brandslide div.banner-slide p.control > a.next {right: -50px;}
+#spc-brandslide div.banner-slide p.control > a.prev {left: -50px;}
 
 
 
@@ -289,4 +344,58 @@ margin: 0 0 0.2em;}
   #spc-brand div.brand-list ul.sub > li + li {margin-left: 2.5vw;}
   #spc-brand div.brand-list li div.text {display: none;}
 
+  /* spc-youtube */
+  #spc-youtube {}
+  #spc-youtube::after {content: ''; width: 360px; height: 125px; ;top: -15px; right: -40px;}
+  #spc-youtube > div.content-box {clear: both;}
+  #spc-youtube > div.content-box div.title {width: 100%; display: inline-block;}
+  #spc-youtube > div.content-box > div.banner-slide {padding: 30px 0 60px; width: 100%; overflow: hidden;}
+  #spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide {width: 300000px;}
+  #spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 44vw; height: 38vw; border-radius: 15px; box-sizing: border-box;}
+  #spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 3vw;}
+  #spc-youtube div.banner-slide ul.slide > li > div.image {height: 25vw;}
+  #spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
+  #spc-youtube div.banner-slide ul.slide > li > div.text {height: 13vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;}
 }
+
+
+
+/*
+#spc-youtube {position: relative;}
+#spc-youtube::before {content: ''; width: 40.3%; height: 100%; border-radius: 0 0 50px 0; background-color: #fff0c3; position: absolute;top: 0;left: 0; z-index: -1;}
+#spc-youtube::after {content: ''; width: 360px; height: 125px; background: url(/img/main03_bg.png) center no-repeat; background-size: 100%; position: absolute;top: -15px; right: -40px; z-index: -1; }
+#spc-youtube > div.content-box { z-index: 3; padding: 100px 50px; position: relative;}
+#spc-youtube > div.content-box::after {content: ''; clear: both; display: block;}
+#spc-youtube > div.content-box div.title {}
+#spc-youtube > div.content-box p > a {margin: 50px 0 0;}
+#spc-youtube > div.content-box > div.banner-slide {padding: 0 50px 0 0;}
+#spc-youtube > div.content-box > div.banner-slide > div.box {overflow: initial;}
+
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide {padding: 30px 0 60px; width: 300000px;}
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 44vw; height: 38vw; border-radius: 15px; box-sizing: border-box;}
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 2.4vw;}
+#spc-youtube div.banner-slide ul.slide > li > div.image {height: 25vw;}
+#spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
+#spc-youtube div.banner-slide ul.slide > li > div.text {height: 13vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;}
+#spc-youtube div.banner-slide ul.slide > li:hover > div.text {background-color: #1e2432; color: #fff; box-sizing: border-box; }
+#spc-youtube div.banner-slide  ul.slide > li > div.text  em {font-size: 2.5vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;}
+#spc-youtube  div.banner-slide  ul.slide > li > div.text  p.date {font-size: 1.7vw; text-align: left; margin-top: 2vw; color: #7d7d7d; font-weight: 700;}
+#spc-youtube div.banner-slide  ul.slide > li:hover p.date {color: #fff;}
+#spc-youtube  div.banner-slide  p.control {position: absolute; left: -250px; bottom: -100px;}
+#spc-youtube  div.banner-slide p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%); border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
+#spc-youtube  div.banner-slide p.control > a + a {margin-left: 30px;}
+#spc-youtube  div.banner-slide p.control > a::before {content: ''; width: 97px; height: 97px; background-color: #fece00; position: absolute; left: 50%; top: 50%; margin: -49px 0 0 -49px; border-radius: 50%; transform: scale(0); transition: all 0.4s; opacity: 0.2;} 
+#spc-youtube  div.banner-slide p.control > a:hover::before {transform: scale(1);}
+#spc-youtube  div.banner-slide p.control > a:hover {background-color: #fece00; color: #fff;}*/
+
+/* #spc-youtube {}
+#spc-youtube::after {content: ''; width: 360px; height: 125px; ;top: -15px; right: -40px;}
+#spc-youtube > div.content-box { clear: both;}
+#spc-youtube > div.content-box div.title {width: 100%; background-color: green;}
+#spc-youtube > div.content-box > div.banner-slide {background-color: skyblue; width: 100%; clear: right;}
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide {padding: 30px 0 60px; width: 300000px;}
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 44vw; height: 38vw; border-radius: 15px; box-sizing: border-box;}
+#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 2.4vw;}
+#spc-youtube div.banner-slide ul.slide > li > div.image {height: 25vw;}
+#spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
+#spc-youtube div.banner-slide ul.slide > li > div.text {height: 13vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;} */
