@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* pc */
 /* reset */
 html {-webkit-text-size-adjust: none; text-size-adjust: none;}
 body {background-color: yellow; margin: 0; }
@@ -42,15 +42,16 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 /* 틀 */
 section > div.content-box {width: 82%; max-width: 1554px; margin: 0 auto; padding: 0 50px; box-sizing: border-box;}
 div.content-box > div.title {}
-div.content-box  div.title  h3 {font-size: 48px; margin-bottom: 10px; letter-spacing: -2px;}
-div.content-box  div.title  p {font-size: 20px; color: #7d7d7d; font-weight: 700;}
+div.content-box  div.title  h3 {font-size: 45px; margin-bottom: 5.76px; letter-spacing: -2px;}
+div.content-box  div.title  p {font-size: 18px; color: #7d7d7d; font-weight: 700;}
 div.content-box > div.banner-slide  > a.btn.white {position: absolute; right: 10px; top: -65px;}
 
 /* 슬라이드 */
 div.content-box > div.banner-slide {position: relative; padding: 50px 0; } 
 div.content-box > div.banner-slide > div.box {width: 100%;  overflow: hidden; margin: -10px; padding: 10px;}
-div.content-box > div.banner-slide ul.slide {display: flex; width: 3000px; }
-div.content-box > div.banner-slide ul.slide > li{ text-align: center; padding-bottom: 20px;  overflow: hidden; transition: all 0.7s; position: relative; box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; transform:perspective(500px) rotate(.001deg); border-color: #ebebeb;} 
+div.content-box > div.banner-slide ul.slide {width: 3000px;}
+div.content-box > div.banner-slide ul.slide::after {content:''; display: block; clear: both;}
+div.content-box > div.banner-slide ul.slide > li{float: left; text-align: center; padding-bottom: 20px;  overflow: hidden; transition: all 0.7s; position: relative; box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; transform:perspective(500px) rotate(.001deg); border-color: #ebebeb;} 
 div.content-box > div.banner-slide  ul.slide > li + li {}
 div.content-box > div.banner-slide ul.slide > li div.image {width: 100%; overflow: hidden;  position: relative;}
 div.content-box > div.banner-slide ul.slide > li > div.image > a {display: block; width: 100%; height: 100%;;}
@@ -240,17 +241,11 @@ margin: 0 0 0.2em;}
 #main-visual > ul.sns > li > a:hover::after {opacity: 0.2; transform: scale(1);}
 #main-visual > ul.sns > li > a > img {width: 61px; position: relative; }
 
-@media only screen and (max-width: 1510px) {
-  #main-visual > div.main-text p.big-txt {font-size: 46px;}
-
-}
-
-
 /* spc group */
 #spc-group {background-color: #fff; padding: 125px 0 130px;}
 #spc-group > div.content-box > div.banner-slide {}
 #spc-group > div.content-box > div.banner-slide > div.box {overflow: initial;}
-#spc-group > div.content-box > div.banner-slide > div.box > ul.slide {width: 100%; display: flex;}
+#spc-group > div.content-box > div.banner-slide > div.box > ul.slide {width: 100%;}
 #spc-group > div.content-box > div.banner-slide > div.box > ul.slide > li {background-color: #fff; width: 22.525%; height: 25vw; box-sizing: border-box; box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05); border-radius: 30px; position: relative;  transition: all 0.4s; text-align-last: left; padding-bottom: 0;}
 #spc-group > div.content-box > div.banner-slide > div.box > ul.slide > li + li { margin-left: 3%;}
 #spc-group > div.content-box > div.banner-slide > div.box > ul.slide > li > div.first {width: 100%; height: 100%; position: relative;}
@@ -274,7 +269,7 @@ margin: 0 0 0.2em;}
 #spc-brand ul.indicator > li:hover > a {color: #000;}
 #spc-brand ul.indicator > li.on > a {border-color: #333; color: #333;}
 #spc-brand ul.indicator > li.on img {opacity: 1;}
-#spc-brand ul.indicator > li a {font-size: 20px; font-weight: 700; border-bottom: 2px solid #d1d1d1; color: #afafaf; min-width: 230px; text-align: center; transition: 0.4s; display: inline-block; padding: 15px; box-sizing: border-box; }
+#spc-brand ul.indicator > li a {font-size: 17px; font-weight: 700; border-bottom: 2px solid #d1d1d1; color: #afafaf; width: 210px; text-align: center; transition: 0.4s; display: inline-block; padding: 15px; box-sizing: border-box; }
 #spc-brand ul.indicator > li img {display: block; width: 34px; margin: 0 auto 5px; opacity: 0.3; transition: 0.4s;}
 #spc-brand ul.indicator > li em {}
 
@@ -288,7 +283,6 @@ margin: 0 0 0.2em;}
 #spc-brand div.brand-list ul.sub::after {content: ''; display: block; clear: both;}
 #spc-brand div.brand-list ul.sub.on {display: block; animation: show-slide 1s ease 0s 1 normal forwards;}
 #spc-brand div.brand-list ul.sub > li {float: left; position: relative; width: 13.5vw; height:13.5vw; border-radius: 500px; background-color: #fff;  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.01); box-sizing: border-box; transition: all 0.7s; margin-right: 1.8vw; }
-/* #spc-brand div.brand-list  ul.sub > li + li {margin-left: 1.8vw;} */
 #spc-brand div.brand-list li:last-child {margin-right: 0;}
 #spc-brand div.brand-list li div.logo {position: absolute; top: 0; right: 50%; width: 100%; height: 100%; transform: translateX(50%); transition: 0.4s; z-index: 3;}
 #spc-brand div.brand-list li div.logo a {display: block; width: 100%; height: 100%;}
@@ -456,6 +450,46 @@ body.sub .all-brand ul.sub > li > a > div.text > div.table > div.table-cell > p 
 body.sub .all-brand ul.sub > li > a > div.text > div.table > div.table-cell > span {font-size: 14px; color: #fff; opacity: 0.8; display: block; position: absolute; bottom: 30px; left: 0; width: 100%;}
 section.all-brand dl dd > ul > li div.image {}
 
+/* mediaquery */
+/* index.html */
+@media only screen and (max-width: 1570px) {
+  /* main-visual */
+  #main-visual > ul.sns {bottom: 35px;}
+  #main-visual > ul.sns::after {content: ''; display: block; clear: both;}
+  #main-visual > ul.sns > li {float: left;}
+  #main-visual > div.main-text p.big-txt {font-size: 46px;}
+}
+
+@media only screen and (max-width: 1470px) {
+  /* main-visual */
+  /* spc-group */
+  /* spc-brand */
+  #spc-brand ul.indicator > li a {width: 170px; font-size: 15px;} 
+}
+
+@media only screen and (max-width: 1365px) {
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1470px) {
   body.sub #main>div.content-box>div.spc-sub-content>.all-brand ul.sub>li {
     width: 48%;
@@ -479,6 +513,7 @@ section.all-brand dl dd > ul > li div.image {}
     left: 30px;
   }
 }
+
 
 
 

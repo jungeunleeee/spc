@@ -52,7 +52,6 @@ a.btn.gray {display: inline-block; padding: 12px 0; text-align: center; min-widt
 a.btn.gray:hover {background-color: #1E2432; color: #f8f8f8;}
 a.btn.graymini {display: block; border-radius: 40px; background-color: #f8f8f8; color: #1e2432; font-size: 0.9vw; font-weight: 700; width: 8vw; line-height: 2.5vw; }
 a.btn.graymini:hover {background-color: #1e2432; color: #f8f8f8;}
-
 a.btn-gray {background-color: #f8f8f8; color: #1E2432; display: block; width: 8vw; height: 2.5vw; position: relative; left: 50%; transform: translate(-50%, 0);  border-radius: 50px; line-height: 2.5vw; font-size: 0.7vw; font-weight: 700; transition: all 0.3s;}
 a.btn-gray:hover {background-color: #1E2432; color: #fff;}
 a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFAF; box-sizing: border-box; text-align: center; font-size: 30px; color: #7d7d7d; line-height: 45px; position: fixed; bottom: 50px; right: 50px; background-color: #fff; opacity: 0.4;}
@@ -64,7 +63,6 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header.open > div.content-box > #gnb > ul > li > a {color: #333;}
 #header.on,
 #header.open {background-color: #fff; }
-
 #header.open::after {height: 286px; border-top: 1px solid #f8f8f8;}
 #header > div.content-box {width: 100%; height: 100%;  position: relative; box-sizing: border-box; margin: 0 auto;}
 #header > div.content-box > h1 {position: absolute; left: 0; top:0; height: 100%;}
@@ -148,7 +146,7 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.show {animation: show-slide 1s ease 0s 1 normal forwards; display: block;}
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.hide {animation: hide-slide 1s ease 0s 1 normal forwards; display: block;}
 
-
+/* 애니메이션 */
 @keyframes show-slide {
   0% {opacity: 0;}
   100% {opacity: 1;}
@@ -160,10 +158,8 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.on {display: block;} 
 #main-visual > div.container-box >  div.slide-inner >  ul.slide-layers > li > img {width: 100%;}
-
 #main-visual > div.container-box > a.prev,
 #main-visual > div.container-box  > a.next {display: block; position: absolute; right: 33px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 100%; border: 1px solid rgba(255, 255, 255, 0.3); background: url(../img/icon_slide_next_w.png) center no-repeat; background-size: 7px; z-index: 100;}
-
 #main-visual > div.container-box > a.prev {visibility: visible; background: url(../img/icon_slide_prev_w.png) center no-repeat; background-size: 7px; left: 33px;}
 #main-visual > div.container-box > a:hover {border-color: #fff;}
 #main-visual > div.container-box > a.prev:hover::after {transform: translateX(20px);}
@@ -186,6 +182,7 @@ margin: 0 0 0.2em;}
 #main-visual > div.main-text p.big-txt > b * {display: block;}
 #main-visual > div.main-text.active p.big-txt > b * {animation: text-show 1s ease 0s 1 normal forwards;}
 
+/* 애니메이션 */
 @keyframes text-show {
   from {
     transform: translateY(140%) rotate(5deg);
@@ -370,6 +367,7 @@ content: ''; width: 1px; height: 100%; background: #eaeaea; position: absolute; 
 @media only screen and (max-width: 990px) {
   /* main-visual */
   #main-visual > div.main-text p.big-txt {font-size: 30px;}
+
   /* spc-group */
   #spc-group > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 45vw; height: 52vw;}
   #spc-group div.content-box > div.banner-slide ul.slide > li p.title {font-size: 15px; padding: 3vw 0 0 7vw; font-weight: 700;}
@@ -400,45 +398,3 @@ content: ''; width: 1px; height: 100%; background: #eaeaea; position: absolute; 
   #spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
   #spc-youtube div.banner-slide ul.slide > li > div.text {height: 13vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;}
 }
-
-
-
-/*
-#spc-youtube {position: relative;}
-#spc-youtube::before {content: ''; width: 40.3%; height: 100%; border-radius: 0 0 50px 0; background-color: #fff0c3; position: absolute;top: 0;left: 0; z-index: -1;}
-#spc-youtube::after {content: ''; width: 360px; height: 125px; background: url(/img/main03_bg.png) center no-repeat; background-size: 100%; position: absolute;top: -15px; right: -40px; z-index: -1; }
-#spc-youtube > div.content-box { z-index: 3; padding: 100px 50px; position: relative;}
-#spc-youtube > div.content-box::after {content: ''; clear: both; display: block;}
-#spc-youtube > div.content-box div.title {}
-#spc-youtube > div.content-box p > a {margin: 50px 0 0;}
-#spc-youtube > div.content-box > div.banner-slide {padding: 0 50px 0 0;}
-#spc-youtube > div.content-box > div.banner-slide > div.box {overflow: initial;}
-
-#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide {padding: 30px 0 60px; width: 300000px;}
-#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 44vw; height: 38vw; border-radius: 15px; box-sizing: border-box;}
-#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 2.4vw;}
-#spc-youtube div.banner-slide ul.slide > li > div.image {height: 25vw;}
-#spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
-#spc-youtube div.banner-slide ul.slide > li > div.text {height: 13vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;}
-#spc-youtube div.banner-slide ul.slide > li:hover > div.text {background-color: #1e2432; color: #fff; box-sizing: border-box; }
-#spc-youtube div.banner-slide  ul.slide > li > div.text  em {font-size: 2.5vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;}
-#spc-youtube  div.banner-slide  ul.slide > li > div.text  p.date {font-size: 1.7vw; text-align: left; margin-top: 2vw; color: #7d7d7d; font-weight: 700;}
-#spc-youtube div.banner-slide  ul.slide > li:hover p.date {color: #fff;}
-#spc-youtube  div.banner-slide  p.control {position: absolute; left: -250px; bottom: -100px;}
-#spc-youtube  div.banner-slide p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%); border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
-#spc-youtube  div.banner-slide p.control > a + a {margin-left: 30px;}
-#spc-youtube  div.banner-slide p.control > a::before {content: ''; width: 97px; height: 97px; background-color: #fece00; position: absolute; left: 50%; top: 50%; margin: -49px 0 0 -49px; border-radius: 50%; transform: scale(0); transition: all 0.4s; opacity: 0.2;} 
-#spc-youtube  div.banner-slide p.control > a:hover::before {transform: scale(1);}
-#spc-youtube  div.banner-slide p.control > a:hover {background-color: #fece00; color: #fff;}*/
-
-/* #spc-youtube {}
-#spc-youtube::after {content: ''; width: 360px; height: 125px; ;top: -15px; right: -40px;}
-#spc-youtube > div.content-box { clear: both;}
-#spc-youtube > div.content-box div.title {width: 100%; background-color: green;}
-#spc-youtube > div.content-box > div.banner-slide {background-color: skyblue; width: 100%; clear: right;}
-#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide {padding: 30px 0 60px; width: 300000px;}
-#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 44vw; height: 38vw; border-radius: 15px; box-sizing: border-box;}
-#spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 2.4vw;}
-#spc-youtube div.banner-slide ul.slide > li > div.image {height: 25vw;}
-#spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
-#spc-youtube div.banner-slide ul.slide > li > div.text {height: 13vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;} */
