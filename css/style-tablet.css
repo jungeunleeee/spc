@@ -87,69 +87,50 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header div.nav-hamburger > a > span::before {bottom: -10px;}
 
 /* footer */
-#footer {background-color: green; padding: 15px 0 30px 0; }
-#footer > div.content-box {padding: 0 30px; position: relative;}
-#footer section.logo {background-color: yellow; padding: 30px 0 30px 0;}
-#footer section.logo > h2 {background-color: pink;}
+#footer {background-color:#fff; padding: 15px 30px 60px;}
+#footer > div.content-box {position: relative;}
+#footer section.logo {padding: 30px 0 30px 0;}
+#footer section.logo > h2 {}
 #footer section.logo > h2 > img {width: 80px;}
-#footer section.copyright {background-color: plum;}
-#footer section.copyright > ul.regulation-link {}
-#footer section.copyright > ul.regulation-link > li {}
-#footer section.copyright > ul.regulation-link > li > a {}
-#footer section.copyright > ul.regulation-link > li.on > a {}
+#footer section.copyright {}
+#footer section.copyright > ul.regulation-link {overflow: hidden; margin-bottom: 15px;}
+#footer section.copyright > ul.regulation-link > li {float: left;}
+#footer section.copyright > ul.regulation-link > li + li {margin-left: 20px;}
+#footer section.copyright > ul.regulation-link > li > a {font-size: 13px; font-weight: 700; color: #000;}
+#footer section.copyright > ul.regulation-link > li.on > a {color: #23afe3;}
 #footer section.copyright > ul.regulation-link > li > a > em {}
-#footer section.copyright > address {}
+#footer section.copyright > address {display: block;}
 #footer section.copyright > address > ul {}
-#footer section.copyright > address > ul > li {}
-#footer section.copyright > p {}
-#footer section.footer-sns {position: absolute; top: 30px; right: 13px; background-color: lime;}
+#footer section.copyright > address > ul > li {font-size: 14px; color: #7d7d7d; font-weight: 700;}
+#footer section.copyright > p {font-size: 12px; color: #7d7d7d; font-weight: 700;}
+#footer section.footer-sns {position: absolute; top: 30px; right: 0;}
 #footer section.footer-sns > ul {}
 #footer section.footer-sns > ul > li {float: left; margin: 0 16px; text-align: center; position: relative;}
 #footer section.footer-sns > ul > li:not(:last-child)::after  {content: ''; position: absolute; width: 1px; height: 19px; background-color: #ebebeb; top: 50%; right: -16px; transform: translate(0, -50%); }
-#footer section.footer-sns > ul > li > a {display: block; background-color: skyblue;  }
+#footer section.footer-sns > ul > li > a {display: block;}
 #footer section.footer-sns > ul > li > a > img {width: 40px; height: auto; margin: 10px; box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); border-radius: 50%}
 #footer section.footer-sns > ul > li > a > img.on {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.3s;}
 #footer section.footer-sns > ul > li:hover > a > img.on {opacity: 1;}
-#footer section.footer-brands {background-color: skyblue;}
+#footer section.footer-brands {position: absolute; right: 0; bottom: 0;}
 #footer section.footer-brands > div.button {}
-#footer section.footer-brands > div.button > p {}
-#footer section.footer-brands > div.button > p > a {}
-#footer section.footer-brands > div.button > p > a > i {}
-#footer section.footer-brands > ul {}
-#footer section.footer-brands > ul > li {}
-#footer section.footer-brands > ul > li > a {}
-/* #footer {padding: 15px 30px 30px; background-color: pink; z-index: 10000; border-top: 1px solid #d2d2d2;}
-#footer > div.content-box {position: relative; width: 100%;}
-#footer > div.content-box::after {content: ''; display: block; clear: both;}
-#footer > div.content-box > section {vertical-align: middle; background-color: green;}
-#footer > div.content-box > section.logo {}
-#footer > div.content-box > section.logo h2 img {width: 80px;}
-#footer > div.content-box section.footer-contactCopyright {position: relative; top: 6px;}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link {overflow: hidden; margin-bottom: 22px;}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li {float: left; font-size: 13px; font-weight: 700;}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li:not(:last-child) {margin-right: 20px}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li.on {color: #23AFE3;} 
-#footer > div.content-box section.footer-contactCopyright  ul.contact {font-size: 14px; font-weight: 700; color: #7d7d7d; line-height: 1.5;}
-#footer > div.content-box section.footer-contactCopyright p.copyright {font-size: 14px; font-weight: 700; color: #7d7d7d;}
-#footer > div.content-box section.footer-sns {position: relative; top: 1.5px; position: absolute; right: 0; top: 0; }
-#footer > div.content-box section.footer-sns > ul::after {content: ''; display: block; clear: both;}
-#footer > div.content-box section.footer-sns ul > li {float: left; margin: 0 16px; text-align: center; position: relative; width: 50px;}
-#footer > div.content-box section.footer-sns ul > li:not(:last-child)::after  {content: ''; position: absolute; width: 1px; height: 19px; background-color: #ebebeb; top: 50%; right: -24px; transform: translate(0, -50%); }
-#footer > div.content-box section.footer-sns ul > li img {width: 45px; height: auto; margin: 10px; box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); border-radius: 50%;}
-#footer > div.content-box section.footer-sns ul > li img.on {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.3s;}
-#footer > div.content-box section.footer-sns ul > li:hover  img.on {opacity: 1;}
-#footer > div.content-box section.footer-sns ul > li span {display: block; font-size: 13px; font-weight: 700; color: #7d7d7d; line-height: 2.0;}
-#footer > div.content-box section.footer-spc-brands {width: 19%; margin-left: 2%; position: relative;}
-#footer > div.content-box section.footer-spc-brands div.button {position: relative; width: 33%; margin: 30px 0 0; float: right;}
-#footer > div.content-box section.footer-spc-brands div.button a {display: block; padding: 0 40px; font-size: 14px; font-weight: 700; color: #000; background-color: #fff; width: 280px; height: 65px; box-sizing: border-box; line-height: 60px; border-radius: 100px; box-shadow: 0 0 18px 0 rgba(0 0 0 5%); }
-#footer > div.content-box section.footer-spc-brands div.button p.updown {}
-#footer > div.content-box section.footer-spc-brands div.button p.updown a {position: relative; background-color: #fff;  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); }
-#footer > div.content-box section.footer-spc-brands div.button p.updown i {font-size: 40px; position: absolute; top: 50%; right: 25px; transform: translate(0, -50%);}
-#footer > div.content-box section.footer-spc-brands div.button p.updown a.on > i.open {display: none;}
-#footer > div.content-box section.footer-spc-brands div.button p.updown a.on > i.close {display: inline;}
-#footer > div.content-box section.footer-spc-brands > ul {background-color: #fff; height: auto; max-height: 200px; padding: 20px 0; overflow-y: scroll; width: 100%; border-radius: 25px; position: absolute; bottom: 100%; right: 0; display: none;}
-#footer > div.content-box section.footer-spc-brands ul > li > a {display: block; color: #aaaaaa; padding: 6px 40px; font-size: 18px;  display: block; transition: all 0.3s;}
-#footer > div.content-box section.footer-spc-brands ul > li:hover > a {color: #000;} */
+#footer section.footer-brands > div.button > p {background-color: #fff;width: 220px; height: 60px; box-sizing: border-box; line-height: 60px; text-align: left; position: relative; border-radius: 100px;  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); position: relative;} 
+#footer section.footer-brands > div.button > p > a {font-size: 13px; font-weight: 700; color: #000; display: block;  padding: 0 40px; border-radius: 100px;}
+#footer section.footer-brands > div.button > p > a > i {position: absolute; top: 50%; transform: translateY(-50%); right: 30px;}
+#footer section.footer-brands > div.button > ul {position: absolute; bottom: 100%; left: 0; width: 100%; background-color: #fff; height: auto; max-height: 200px; padding: 20px 0; overflow-y: scroll; border-radius: 25px; display: none;}
+#footer section.footer-brands > div.button > ul > li {}
+#footer section.footer-brands > div.button > ul > li:hover > a {color: #000;}
+#footer section.footer-brands > div.button > ul > li > a {display: block; color: #aaaaaa; padding: 5px 40px; font-size: 12px; transition: all 0.3s; font-weight: 700;}
+
+/*scroll*/
+.custom-scroll {overflow: auto;}
+.custom-scroll::-webkit-scrollbar {width: 2px;}
+.custom-scroll::-webkit-scrollbar-thumb {background-color: transparent; border-radius: 50%; background-clip: padding-box; border: 5px solid #23afe3; transition: background-color 0.3s;}
+.custom-scroll:hover::-webkit-scrollbar-thumb {background-color: #d1d1d1;}
+.custom-scroll::-webkit-scrollbar-track {background-color: #d1d1d1;}
+/* Fire Fox */
+.custom-scroll {scrollbar-width: thin; scrollbar-color: #d1d1d1; transition: scrollbar-color 0.3s;}
+/* IE */
+.custom-scroll {-ms-overflow-style: none;}
 
 
 /* main */
@@ -161,7 +142,6 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #main-visual > div.container-box >  div.slide-inner > p.dummy {}
 #main-visual > div.container-box >  div.slide-inner > p.dummy > img {opacity: 0; width: 100%;display: block; }
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li img {width: 100%;}
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.on {display: block;}
@@ -192,19 +172,20 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #main-visual > div.container-box.arrow-go-r:before{transform:scaleX(0.25);}
 #main-visual > div.container-box.arrow-on-l:after{transform:scaleX(0);}
 #main-visual > div.container-box.arrow-go-l:after{transform:scaleX(0.25); }
-#main-visual > div.container-box > ul.indicator {position: absolute; left: 29.5%; bottom: 33%; display: block;  overflow: hidden;}
+#main-visual > div.container-box > ul.indicator {position: absolute; left: 32%; bottom: 33%; display: block;  overflow: hidden;}
 #main-visual > div.container-box > ul.indicator > li {float: left; margin: 0 10px;}
 #main-visual > div.container-box > ul.indicator > li.on > a {opacity: 1; background-color: #fece00;}
 #main-visual > div.container-box > ul.indicator > li > a {display: block; width: 8px; height: 8px; border-radius: 500px; background-color: #fff; opacity: 0.5;}
  p.txt-ani > b {display: block; overflow: hidden; line-height: 1.1; 
 margin: 0 0 0.2em;}
-#main-visual > div.main-text {position: absolute; left: 50%; transform: translateX(-50%); top: 27.8%;}
+#main-visual > div.main-text {position: absolute; left: 32.0%;  top: 27.8%;}
 #main-visual > div.main-text > p.small-txt {color: #fff; letter-spacing: 0;}
 #main-visual > div.main-text > p.small-txt .slide-bar {width: 64px; height: 1px; background-color: #fff; display: inline-block; vertical-align: middle; margin: -7px 0 0 25px; overflow: hidden; text-indent: -999px;}
 #main-visual > div.main-text p.big-txt {font-size: 40px; font-weight: 800; line-height: 1.2; color: #fff; margin: 0.4em 0;}
 #main-visual > div.main-text p.big-txt > b {}
 #main-visual > div.main-text p.big-txt > b * {display: block;}
-#main-visual > div.main-text.active p.big-txt > b * {animation: text-show 1s ease 0s 1 normal forwards; }
+#main-visual > div.main-text.active p.big-txt > b * {animation: text-show 1s ease 0s 1 normal forwards;}
+
 @keyframes text-show {
   from {
     transform: translateY(140%) rotate(5deg);
@@ -298,7 +279,6 @@ margin: 0 0 0.2em;}
 #spc-happy div.content-box p.control > a.next {position: absolute; top:50% ;right: -50px;}
 #spc-happy div.content-box p.control > a.prev {position: absolute; left: -50px; top: 50%;}
 #spc-happy  div.banner-slide  a.btn-gray  {width: 100%; height: 4vw; line-height: 4vw;  font-size: 0.7vw; font-weight: 700; transition: all 0.3s;}
-/* #spc-happy  div.banner-slide  a.btn-gray {background-color: #f8f8f8; color: #1E2432; display: block; width: 100%; height: 4vw; position: relative; left: 50%; transform: translate(-50%, 0);  border-radius: 50px; line-height: 4vw; font-size: 0.7vw; font-weight: 700; transition: all 0.3s; top: -1.5vw;} */
 
 /* spc-news */
 #spc-news {background-color: #d1ebfa; padding: 85px 0 90px;  position: relative; overflow: hidden;}
@@ -326,13 +306,12 @@ margin: 0 0 0.2em;}
 #spc-magazine > div.content-box > div.banner-slide {position: relative;}
 #spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide {width: 100%;}
 #spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide::after {content: ''; display: block; clear: both; }
-#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li {float: left; width: 48%; margin-bottom: 35px;}
+#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li {float: left; width: 22%; margin-bottom: 35px; overflow: initial; box-shadow: none; padding-bottom: 0;}
 #spc-magazine > div.content-box > div.banner-slide  ul.slide > li + li:before {
-content: ''; width: 1px; height: 100%; background: #eaeaea; position: absolute;
-top: 0; left: -9.5%;}
-#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li:nth-child(2n) {margin-left: 4%;} 
+content: ''; width: 1px; height: 100%; background: #eaeaea; position: absolute; top: 0; left: -9.5%; z-index: 100;}
+#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 4%;} 
 #spc-magazine > div.content-box > div.banner-slide  ul.slide > li > a {display: block;}
-#spc-magazine > div.content-box > div.banner-slide ul.slide > li img {max-width: 100%; padding-bottom: 15px;}
+#spc-magazine > div.content-box > div.banner-slide ul.slide > li img {width: 100%; padding-bottom: 15px;}
 #spc-magazine > div.content-box > div.banner-slide  ul.slide > li span {font-size: 14px; font-weight: 700; color: #7d7d7d; display: block; text-align: left;}
 
 /* spc-youtube */
@@ -353,8 +332,8 @@ top: 0; left: -9.5%;}
 #spc-youtube div.banner-slide ul.slide > li > div.image img {width: 100%;}
 #spc-youtube div.banner-slide ul.slide > li > div.text {height: 10vw; background-color: #ffffff; padding: 10px 20px; text-align: center;  position: relative; transition: all 0.4s;}
 #spc-youtube div.banner-slide ul.slide > li:hover > div.text {background-color: #1e2432; color: #fff; }
-#spc-youtube div.banner-slide  ul.slide > li > div.text  em {font-size: 1vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;}
-#spc-youtube  div.banner-slide  ul.slide > li > div.text  p.date {font-size: 0.8vw; text-align: left; margin-top: 2vw; color: #7d7d7d; font-weight: 700;}
+#spc-youtube div.banner-slide  ul.slide > li > div.text  em {font-size: 1.8vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;}
+#spc-youtube  div.banner-slide  ul.slide > li > div.text  p.date {font-size: 1.3vw; text-align: left; margin-top: 2vw; color: #7d7d7d; font-weight: 700;}
 #spc-youtube div.banner-slide  ul.slide > li:hover p.date {color: #fff;}
 #spc-youtube  div.banner-slide  p.control {position: absolute; left: -250px; bottom: -100px;}
 #spc-youtube  div.banner-slide p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%); border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
@@ -366,7 +345,7 @@ top: 0; left: -9.5%;}
 /* spc-sns */
 #spc-sns {background: linear-gradient(to top, #edf6fb, #ffffff); padding: 105px 0 115px;}
 #spc-sns > div.content-box {position: relative;}
-#spc-sns  div.content-box > div.banner-slide {padding: 70px 0; }
+#spc-sns  div.content-box > div.banner-slide {padding: 70px 0;}
 #spc-sns  div.content-box > div.banner-slide > div.box {width: 100%; overflow: hidden;}
 #spc-sns  div.content-box > div.banner-slide > div.box > ul.slide {overflow: hidden; width: 3000px;}
 #spc-sns  div.content-box > div.banner-slide > div.box > ul.slide > li {float: left; text-align: center; padding-bottom: 20px; border-radius: 25px; margin-right: 2.1vw; overflow: hidden; transition: all 0.7s; position: relative; box-sizing: border-box; box-shadow: 5px 5px 3px 5px rgba(216, 217, 218, 0.2); width: 20vw; height: 20vw; transition: all 0.3s; background-color: #fff;} 
@@ -376,10 +355,10 @@ top: 0; left: -9.5%;}
 
 /* sns-brandslide */
 #spc-brandslide {background-color: #fff; padding: 20px 0; border-bottom: 1px solid #ebebeb;}
-#spc-brandslide div.banner-slide {position: relative;  background-color: #fff; width: 100%;}
-#spc-brandslide div.banner-slide > div.box {background-color: skyblue; box-sizing: border-box; overflow: hidden;}
+#spc-brandslide div.banner-slide {position: relative;  background-color: #fff;}
+#spc-brandslide div.banner-slide > div.box {box-sizing: border-box; overflow: hidden;}
 #spc-brandslide div.banner-slide ul.slide {overflow: hidden; width: 3000px;}
-#spc-brandslide div.banner-slide ul.slide > li {float: left; margin-right: 1px; box-sizing: border-box; background-color: pink;}
+#spc-brandslide div.banner-slide ul.slide > li {float: left;  margin-right: 1px; box-sizing: border-box;}
 #spc-brandslide div.banner-slide ul.slide > li img {height: 60px; width: auto;}
 #spc-brandslide div.banner-slide p.control > a {font-size: 15px; position: absolute; top: 50%; transform: translateY(-50%);}
 #spc-brandslide div.banner-slide p.control > a.on {opacity: 0.3;}
@@ -387,18 +366,10 @@ top: 0; left: -9.5%;}
 #spc-brandslide div.banner-slide p.control > a.prev {left: -50px;}
 
 
-
-
-
-
-
-
-
-
-
-
 /* media query */
 @media only screen and (max-width: 990px) {
+  /* main-visual */
+  #main-visual > div.main-text p.big-txt {font-size: 30px;}
   /* spc-group */
   #spc-group > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 45vw; height: 52vw;}
   #spc-group div.content-box > div.banner-slide ul.slide > li p.title {font-size: 15px; padding: 3vw 0 0 7vw; font-weight: 700;}
@@ -409,6 +380,12 @@ top: 0; left: -9.5%;}
   #spc-brand div.brand-list ul.sub > li {width: 28.5vw; height: 28.5vw;}
   #spc-brand div.brand-list ul.sub > li + li {margin-left: 2.5vw;}
   #spc-brand div.brand-list li div.text {display: none;}
+
+  /* spc-magazine */
+  #spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 48%;}
+  #spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li:nth-child(2n) {margin-left: 4%;} 
+  #spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li:nth-child(2n - 1) {margin-left: 0%;}
+  #spc-magazine > div.content-box > div.banner-slide  ul.slide > li + li:before {display: none;}
 
   /* spc-youtube */
   #spc-youtube {}
