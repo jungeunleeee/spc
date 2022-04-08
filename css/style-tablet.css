@@ -86,6 +86,72 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header div.nav-hamburger > a > span::after {top: -10px;}
 #header div.nav-hamburger > a > span::before {bottom: -10px;}
 
+/* footer */
+#footer {background-color: green; padding: 15px 0 30px 0; }
+#footer > div.content-box {padding: 0 30px; position: relative;}
+#footer section.logo {background-color: yellow; padding: 30px 0 30px 0;}
+#footer section.logo > h2 {background-color: pink;}
+#footer section.logo > h2 > img {width: 80px;}
+#footer section.copyright {background-color: plum;}
+#footer section.copyright > ul.regulation-link {}
+#footer section.copyright > ul.regulation-link > li {}
+#footer section.copyright > ul.regulation-link > li > a {}
+#footer section.copyright > ul.regulation-link > li.on > a {}
+#footer section.copyright > ul.regulation-link > li > a > em {}
+#footer section.copyright > address {}
+#footer section.copyright > address > ul {}
+#footer section.copyright > address > ul > li {}
+#footer section.copyright > p {}
+#footer section.footer-sns {position: absolute; top: 30px; right: 13px; background-color: lime;}
+#footer section.footer-sns > ul {}
+#footer section.footer-sns > ul > li {float: left; margin: 0 16px; text-align: center; position: relative;}
+#footer section.footer-sns > ul > li:not(:last-child)::after  {content: ''; position: absolute; width: 1px; height: 19px; background-color: #ebebeb; top: 50%; right: -16px; transform: translate(0, -50%); }
+#footer section.footer-sns > ul > li > a {display: block; background-color: skyblue;  }
+#footer section.footer-sns > ul > li > a > img {width: 40px; height: auto; margin: 10px; box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); border-radius: 50%}
+#footer section.footer-sns > ul > li > a > img.on {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.3s;}
+#footer section.footer-sns > ul > li:hover > a > img.on {opacity: 1;}
+#footer section.footer-brands {background-color: skyblue;}
+#footer section.footer-brands > div.button {}
+#footer section.footer-brands > div.button > p {}
+#footer section.footer-brands > div.button > p > a {}
+#footer section.footer-brands > div.button > p > a > i {}
+#footer section.footer-brands > ul {}
+#footer section.footer-brands > ul > li {}
+#footer section.footer-brands > ul > li > a {}
+/* #footer {padding: 15px 30px 30px; background-color: pink; z-index: 10000; border-top: 1px solid #d2d2d2;}
+#footer > div.content-box {position: relative; width: 100%;}
+#footer > div.content-box::after {content: ''; display: block; clear: both;}
+#footer > div.content-box > section {vertical-align: middle; background-color: green;}
+#footer > div.content-box > section.logo {}
+#footer > div.content-box > section.logo h2 img {width: 80px;}
+#footer > div.content-box section.footer-contactCopyright {position: relative; top: 6px;}
+#footer > div.content-box section.footer-contactCopyright ul.regulation-link {overflow: hidden; margin-bottom: 22px;}
+#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li {float: left; font-size: 13px; font-weight: 700;}
+#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li:not(:last-child) {margin-right: 20px}
+#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li.on {color: #23AFE3;} 
+#footer > div.content-box section.footer-contactCopyright  ul.contact {font-size: 14px; font-weight: 700; color: #7d7d7d; line-height: 1.5;}
+#footer > div.content-box section.footer-contactCopyright p.copyright {font-size: 14px; font-weight: 700; color: #7d7d7d;}
+#footer > div.content-box section.footer-sns {position: relative; top: 1.5px; position: absolute; right: 0; top: 0; }
+#footer > div.content-box section.footer-sns > ul::after {content: ''; display: block; clear: both;}
+#footer > div.content-box section.footer-sns ul > li {float: left; margin: 0 16px; text-align: center; position: relative; width: 50px;}
+#footer > div.content-box section.footer-sns ul > li:not(:last-child)::after  {content: ''; position: absolute; width: 1px; height: 19px; background-color: #ebebeb; top: 50%; right: -24px; transform: translate(0, -50%); }
+#footer > div.content-box section.footer-sns ul > li img {width: 45px; height: auto; margin: 10px; box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); border-radius: 50%;}
+#footer > div.content-box section.footer-sns ul > li img.on {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.3s;}
+#footer > div.content-box section.footer-sns ul > li:hover  img.on {opacity: 1;}
+#footer > div.content-box section.footer-sns ul > li span {display: block; font-size: 13px; font-weight: 700; color: #7d7d7d; line-height: 2.0;}
+#footer > div.content-box section.footer-spc-brands {width: 19%; margin-left: 2%; position: relative;}
+#footer > div.content-box section.footer-spc-brands div.button {position: relative; width: 33%; margin: 30px 0 0; float: right;}
+#footer > div.content-box section.footer-spc-brands div.button a {display: block; padding: 0 40px; font-size: 14px; font-weight: 700; color: #000; background-color: #fff; width: 280px; height: 65px; box-sizing: border-box; line-height: 60px; border-radius: 100px; box-shadow: 0 0 18px 0 rgba(0 0 0 5%); }
+#footer > div.content-box section.footer-spc-brands div.button p.updown {}
+#footer > div.content-box section.footer-spc-brands div.button p.updown a {position: relative; background-color: #fff;  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); }
+#footer > div.content-box section.footer-spc-brands div.button p.updown i {font-size: 40px; position: absolute; top: 50%; right: 25px; transform: translate(0, -50%);}
+#footer > div.content-box section.footer-spc-brands div.button p.updown a.on > i.open {display: none;}
+#footer > div.content-box section.footer-spc-brands div.button p.updown a.on > i.close {display: inline;}
+#footer > div.content-box section.footer-spc-brands > ul {background-color: #fff; height: auto; max-height: 200px; padding: 20px 0; overflow-y: scroll; width: 100%; border-radius: 25px; position: absolute; bottom: 100%; right: 0; display: none;}
+#footer > div.content-box section.footer-spc-brands ul > li > a {display: block; color: #aaaaaa; padding: 6px 40px; font-size: 18px;  display: block; transition: all 0.3s;}
+#footer > div.content-box section.footer-spc-brands ul > li:hover > a {color: #000;} */
+
+
 /* main */
 #main-visual {width: 100%;  margin: 0 auto;  position: relative;}
 #main-visual > div.container-box {width: 100%; position: relative; box-sizing: content-box;  overflow: hidden;}
