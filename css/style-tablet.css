@@ -14,6 +14,7 @@ table caption {overflow: hidden; width: 0; height: 0;}
 i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle;}
 i[class^="fa"] span {position: absolute; left: -9999px;}
 .ir-hidden {position: absolute; left: -9999px;}
+.mobile,
 .pc {display: none !important;}
 br.only-m {content: '';}
 br.only-m::after {content: '\00a0';}
@@ -169,6 +170,7 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #main-visual > div.container-box.arrow-go-r:before{transform:scaleX(0.25);}
 #main-visual > div.container-box.arrow-on-l:after{transform:scaleX(0);}
 #main-visual > div.container-box.arrow-go-l:after{transform:scaleX(0.25); }
+
 #main-visual > div.container-box > ul.indicator {position: absolute; left: 32%; bottom: 33%; display: block;  overflow: hidden;}
 #main-visual > div.container-box > ul.indicator > li {float: left; margin: 0 10px;}
 #main-visual > div.container-box > ul.indicator > li.on > a {opacity: 1; background-color: #fece00;}
@@ -235,9 +237,6 @@ margin: 0 0 0.2em;}
 #spc-brand ul.indicator > li a {font-size: 15px; font-weight: 700; border-bottom: 2px solid #d1d1d1; color: #afafaf;min-width: 100%; text-align: center; transition: 0.4s; display: inline-block; padding: 10px; box-sizing: border-box;}
 #spc-brand ul.indicator > li img {display: block; width: 34px; margin: 0 auto 10px; opacity: 0.3; transition: 0.4s;}
 #spc-brand ul.indicator > li em {}
-
-
-/* 여기서부터 */
 #spc-brand div.brand-list {padding: 70px 0; width: 100%;  overflow: hidden;}
 #spc-brand div.brand-list ul.sub {position: relative; width: 5000px; box-sizing: border-box; display: none;}
 #spc-brand div.brand-list ul.sub::after {content: ''; display: block; clear: both;}
