@@ -20,7 +20,7 @@ br.only-m::after {content: '\00a0';}
 
 /* common */
 body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; background-color: #ffffff;}
-#wrapper {max-width: 1023.9px; overflow: hidden; position: relative; margin: 0 auto;}
+#wrapper {max-width: 1319.9px; overflow: hidden; position: relative; margin: 0 auto;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0,0,0,0.8); color : #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;} 
 #skip-nav:focus {top: 0;}
 
@@ -34,7 +34,7 @@ div.content-box > div.banner-slide  > a.btn.white {position: absolute; right: 10
 /* 슬라이드 */
 div.content-box > div.banner-slide {position: relative; padding: 50px 0; } 
 div.content-box > div.banner-slide > div.box {width: 100%;  overflow: hidden; margin: -10px; padding: 10px;}
-div.content-box > div.banner-slide ul.slide {width: 3000px;}
+div.content-box > div.banner-slide ul.slide {width: 9000px;}
 div.content-box > div.banner-slide ul.slide::after {content:''; display: block; clear: both;}
 div.content-box > div.banner-slide ul.slide > li{float: left;  text-align: center; padding-bottom: 20px;  overflow: hidden; transition: all 0.7s; position: relative; box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; transform:perspective(500px) rotate(.001deg); border-color: #ebebeb;} 
 div.content-box > div.banner-slide  ul.slide > li + li {}
@@ -109,6 +109,7 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #footer section.footer-sns > ul > li > a > img {width: 40px; height: auto; margin: 10px; box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); border-radius: 50%}
 #footer section.footer-sns > ul > li > a > img.on {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.3s;}
 #footer section.footer-sns > ul > li:hover > a > img.on {opacity: 1;}
+
 #footer section.footer-brands {position: absolute; right: 0; bottom: 0;}
 #footer section.footer-brands > div.button {}
 #footer section.footer-brands > div.button > p {background-color: #fff;width: 220px; height: 60px; box-sizing: border-box; line-height: 60px; text-align: left; position: relative; border-radius: 100px;  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); position: relative;} 

@@ -11,8 +11,8 @@
 
   <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
   <!-- <link rel="stylesheet" href="fa/css/all.min.css" /> -->
-  <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
-  <link rel="stylesheet" href="css/style-tablet.css" media="screen and (min-width: 768px) and (max-width: 1023.9px)" />
+  <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1320.0px)" />
+  <link rel="stylesheet" href="css/style-tablet.css" media="screen and (min-width: 768px) and (max-width: 1319.9px)" />
   <link rel="stylesheet" href="css/style-m.css" media="screen and (min-width:500px) and (max-width:767.9px)">
   <!-- 웹 폰트 -->
   <link href="//db.onlinewebfonts.com/c/f797b34c6bb4fdc383eaf58b6980ce02?family=entypo-fontello" rel="stylesheet"
@@ -1175,7 +1175,76 @@
 
 
   <script>
+'use strict';
+$(document).ready(function () {
+  headerGnb();
+  prevnextBtn();
+  setImageSlide('#main-visual', 1, true, 3000);
+});
 
+// gnb 영역 
+$(window).on('resize', function () {
+  var windowWidth = $(window).width();
+  // if (windowWidth >= 1024) {
+  //   $('#header ul.gnb-list > li').removeClass('on');
+  //   $('#header div.table-right').removeClass('open');
+  // }
+  headerGnb();
+  prevnextBtn();
+  setImageSlide('#main-visual', 1, true, 3000);
+});
+
+
+function headerGnb() {
+  $('#header').on('mouseenter focusin', function () {
+    $('#header ul.sub').css({
+      'height': '200px'
+    });
+    $(this).addClass('open');
+    $('#header span.global').css({
+      'opacity': 1
+    });
+  });
+
+  $('#header').on('mouseleave focusout', function () {
+    $('#header ul.sub').css({
+      'height': '0px'
+    });
+    $(this).removeAttr('class');
+    $('#header span.global').css({
+      'opacity': 0
+    });
+  });
+
+  $('#header div.language-box').on('mouseenter focusin', function () {
+    $('#header div.language-box > ul.language').addClass('on');
+  });
+
+  $('#header div.language-box').on('mouseleave', function () {
+    $('#header div.language-box > ul.language').removeClass('on');
+  });
+}
+
+// 스크롤 발생 시 header 고정
+
+$(window).on('scroll', function () {
+  // console.log('scroll');
+  var scrollTop = $(window).scrollTop();
+  if (scrollTop === 0) {
+    $('#header').removeClass('on');
+    $('#header span.global').css({
+      'opacity': 0
+    });
+  } else {
+    $('#header').addClass('on');
+    $('#header span.global').css({
+      'opacity': 1
+    });
+    $('#header div.language-box > ul.language').addClass('on');
+  }
+
+
+});
 
 
 

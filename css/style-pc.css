@@ -20,7 +20,7 @@ br.only-m::after {content: '\00a0';}
 
 /* common */
 body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; background-color: #ffffff;}
-#wrapper {min-width: 1024px; max-width: 1920px; overflow: hidden; position: relative; margin: 0 auto;}
+#wrapper {min-width: 1320px; max-width: 1920px; overflow: hidden; position: relative; margin: 0 auto;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0,0,0,0.8); color : #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;} 
 #skip-nav:focus {top: 0;}
 
@@ -49,7 +49,7 @@ div.content-box > div.banner-slide  > a.btn.white {position: absolute; right: 10
 /* 슬라이드 */
 div.content-box > div.banner-slide {position: relative; padding: 50px 0; } 
 div.content-box > div.banner-slide > div.box {width: 100%;  overflow: hidden; margin: -10px; padding: 10px;}
-div.content-box > div.banner-slide ul.slide {width: 3000px;}
+div.content-box > div.banner-slide ul.slide {width: 9000px;}
 div.content-box > div.banner-slide ul.slide::after {content:''; display: block; clear: both;}
 div.content-box > div.banner-slide ul.slide > li{float: left; text-align: center; padding-bottom: 20px;  overflow: hidden; transition: all 0.7s; position: relative; box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; transform:perspective(500px) rotate(.001deg); border-color: #ebebeb;} 
 div.content-box > div.banner-slide  ul.slide > li + li {}
@@ -61,7 +61,7 @@ div.content-box > div.banner-slide ul.slide > li:hover > div.text a.btn-gray,
 div.content-box > div.banner-slide ul.slide > li:hover > div.text a.btn.graymini {background-color: #1E2432; color: #fff;}
 
 /* button */
-div.content-box > p.control {position: absolute; right: 300px;top: 33px;}
+div.content-box > p.control {position: absolute; right: 300px; top: 25px;}
 div.content-box > p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%); border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
 div.content-box > p.control > a + a {margin-left: 30px;}
 div.content-box > p.control > a::before {content: ''; width: 97px; height: 97px; background-color: #fece00; position: absolute; left: 50%; top: 50%; margin: -49px 0 0 -49px; border-radius: 50%; transform: scale(0); transition: all 0.4s; opacity: 0.2;} 
@@ -84,8 +84,8 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 #header.open {background-color: #fff; }
 
 #header.open::after {height: 286px; border-top: 1px solid #f8f8f8;}
-#header > div.content-box {max-width: 1886px; height: 100%; padding: 0 50px; position: relative; box-sizing: border-box; margin: 0 auto;}
-#header > div.content-box > h1 {position: absolute; left: 58.5px; top:0; height: 100%; }
+#header > div.content-box {max-width: 1886px; height: 100%; padding: 0 50px; position: relative; box-sizing: border-box; margin: 0 auto; transition: all 0.3s;}
+#header > div.content-box > h1 {position: absolute; left: 58.5px; top:0; height: 100%; transition: all 0.3s; }
 #header > div.content-box > h1 > a {display: block;}
 #header > div.content-box > h1 > a > span.white-logo {position: absolute; left: 0; top: 0; opacity: 0; transition: opacity 0.3s;}
 #header.on > div.content-box > h1 > a > span.white-logo,
@@ -104,8 +104,7 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 #header > div.content-box > #gnb ul.sub > li:first-child {margin-top: 20px;}
 #header > div.content-box > #gnb > ul ul.sub > li:hover > a {color: #23aef3;}
 #header > div.content-box > #gnb > ul ul.sub > li > a {display: block; line-height: 30px; font-weight: 700; color: #333; transition: all 0.3s;}
-
-#header div.language-box { position: absolute; right: 99.5px; top: 0;}
+#header div.language-box { position: absolute; right: 99.5px; top: 0; transition: all 0.3s;}
 #header div.language-box > a {display: block; width: 58px; height: 88px; position: relative;}
 #header div.language-box > a > span {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: all 0.3s;}
 #header div.language-box > a > span.global {opacity: 0;}
@@ -120,49 +119,38 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 #header div.language-box ul.language li + li {margin-top: 5px;}
 #header div.language-box ul.language > li > a {font-size: 16px; font-weight: 700; transition: color 0.3s;}
 
-@media only screen and (max-width: 1320px) {
-  #header > div.content-box > #gnb > ul > li > a { font-size: 14px;
-    padding: 0 15px;}
-}
-
-
-
-
 /* footer */
 #footer {padding: 15px 0 30px; background-color: #fff; z-index: 10000; border-top: 1px solid #d2d2d2;}
 #footer > div.content-box {position: relative; margin: 8.5px; padding: 0 50px; box-sizing: border-box; max-width: 1886px;}
 #footer > div.content-box::after {content: ''; display: block; clear: both;}
-
 #footer > div.content-box > section {float: left; vertical-align: middle;}
+#footer section.logo {width: 14%; }
+#footer section.logo h2 img {width: 80px;}
+#footer section.copyright {margin-left: 2%; width: 34%; position: relative; top: 6px;}
+#footer section.copyright ul.regulation-link {overflow: hidden; margin-bottom: 22px;}
+#footer section.copyright ul.regulation-link > li {float: left; font-size: 16px; font-weight: 700;}
+#footer section.copyright ul.regulation-link > li:not(:last-child) {margin-right: 30px}
+#footer section.copyright ul.regulation-link > li.on {color: #23AFE3;} 
+#footer section.copyright  ul.contact {font-size: 14px; font-weight: 700; color: #7d7d7d; line-height: 1.5;}
+#footer section.copyright p.copyright {font-size: 14px; font-weight: 700; color: #7d7d7d;}
+#footer section.footer-sns {margin-left: 2%; width: 27%; position: relative; top: 1.5px;}
+#footer section.footer-sns > ul::after {content: ''; display: block; clear: both;}
+#footer section.footer-sns ul > li {float: left; margin: 0 20px; text-align: center; position: relative; width: 78px;}
+#footer section.footer-sns ul > li:not(:last-child)::after  {content: ''; position: absolute; width: 1px; height: 20%; background-color: #ebebeb; top: 50%; right: 0; margin: -20px;}
+#footer section.footer-sns ul > li img {width: 58px; height: auto; margin: 10px; box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); border-radius: 50%;}
+#footer section.footer-sns ul > li img.on {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.3s;}
+#footer section.footer-sns ul > li:hover  img.on {opacity: 1;}
+#footer section.footer-sns ul > li span {display: block; font-size: 14px; font-weight: 700; color: #7d7d7d; line-height: 2.0;}
+#footer section.footer-brands {width: 19%; margin-left: 2%; position: relative; top: 15px;}
+#footer section.footer-brands > div.button {}
+#footer section.footer-brands > div.button > p {background-color: #fff;width: 317px; height: 65px; box-sizing: border-box; line-height: 65px; text-align: left; position: relative; border-radius: 100px;  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); position: relative;} 
+#footer section.footer-brands > div.button > p > a {font-size: 18px; font-weight: 700; color: #000; display: block;  padding: 0 40px; border-radius: 100px;}
+#footer section.footer-brands > div.button > p > a > i {position: absolute; top: 50%; transform: translateY(-50%); right: 30px;}
+#footer section.footer-brands > div.button > ul {position: absolute; bottom: 100%; left: 0; width: 100%; background-color: #fff; height: auto; max-height: 200px; padding: 20px 0; overflow-y: scroll; border-radius: 25px; display: none;}
+#footer section.footer-brands > div.button > ul > li {}
+#footer section.footer-brands > div.button > ul > li:hover > a {color: #000;}
+#footer section.footer-brands > div.button > ul > li > a {display: block; color: #aaaaaa; padding: 5px 40px; font-size: 12px; transition: all 0.3s; font-weight: 700;}
 
-#footer > div.content-box > section.logo {width: 14%; }
-#footer > div.content-box > section.logo h2 img {width: 80px;}
-#footer > div.content-box section.footer-contactCopyright {margin-left: 2%; width: 34%; position: relative; top: 6px;}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link {overflow: hidden; margin-bottom: 22px;}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li {float: left; font-size: 16px; font-weight: 700;}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li:not(:last-child) {margin-right: 30px}
-#footer > div.content-box section.footer-contactCopyright ul.regulation-link > li.on {color: #23AFE3;} 
-#footer > div.content-box section.footer-contactCopyright  ul.contact {font-size: 14px; font-weight: 700; color: #7d7d7d; line-height: 1.5;}
-#footer > div.content-box section.footer-contactCopyright p.copyright {font-size: 14px; font-weight: 700; color: #7d7d7d;}
-#footer > div.content-box section.footer-sns {margin-left: 2%; width: 27%; position: relative; top: 1.5px;}
-#footer > div.content-box section.footer-sns > ul::after {content: ''; display: block; clear: both;}
-#footer > div.content-box section.footer-sns ul > li {float: left; margin: 0 20px; text-align: center; position: relative; width: 78px;}
-#footer > div.content-box section.footer-sns ul > li:not(:last-child)::after  {content: ''; position: absolute; width: 1px; height: 20%; background-color: #ebebeb; top: 50%; right: 0; margin: -20px;}
-#footer > div.content-box section.footer-sns ul > li img {width: 58px; height: auto; margin: 10px; box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); border-radius: 50%;}
-#footer > div.content-box section.footer-sns ul > li img.on {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.3s;}
-#footer > div.content-box section.footer-sns ul > li:hover  img.on {opacity: 1;}
-#footer > div.content-box section.footer-sns ul > li span {display: block; font-size: 14px; font-weight: 700; color: #7d7d7d; line-height: 2.0;}
-#footer > div.content-box section.footer-spc-brands {width: 19%; margin-left: 2%; position: relative; top: 15px;}
-#footer > div.content-box section.footer-spc-brands div.button {position: relative;}
-#footer > div.content-box section.footer-spc-brands div.button a {display: block; padding: 0 40px; font-size: 18px; font-weight: 700; color: #000; background-color: #fff; width: 317px; height: 65px; box-sizing: border-box; line-height: 60px; border-radius: 100px; box-shadow: 0 0 18px 0 rgba(0 0 0 5%); }
-#footer > div.content-box section.footer-spc-brands div.button p.updown {}
-#footer > div.content-box section.footer-spc-brands div.button p.updown a {position: relative; background-color: #fff;  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); }
-#footer > div.content-box section.footer-spc-brands div.button p.updown i {font-size: 40px; position: absolute; top: 50%; right: 25px; transform: translate(0, -50%);}
-#footer > div.content-box section.footer-spc-brands div.button p.updown a.on > i.open {display: none;}
-#footer > div.content-box section.footer-spc-brands div.button p.updown a.on > i.close {display: inline;}
-#footer > div.content-box section.footer-spc-brands > ul {background-color: #fff; height: auto; max-height: 200px; padding: 20px 0; overflow-y: scroll; width: 100%; border-radius: 25px; position: absolute; bottom: 100%; right: 0;}
-#footer > div.content-box section.footer-spc-brands ul > li > a {display: block; color: #aaaaaa; padding: 6px 40px; font-size: 18px;  display: block; transition: all 0.3s;}
-#footer > div.content-box section.footer-spc-brands ul > li:hover > a {color: #000;}
 
 
 /* main */
@@ -221,7 +209,7 @@ margin: 0 0 0.2em;}
 #main-visual > div.main-text {position: absolute; left: 32.0%; top: 27.8%;right: 20%;}
 #main-visual > div.main-text > p.small-txt {color: #fff; letter-spacing: 0;}
 #main-visual > div.main-text > p.small-txt .slide-bar {width: 64px; height: 1px; background-color: #fff; display: inline-block; vertical-align: middle; margin: -7px 0 0 25px; overflow: hidden; text-indent: -999px;}
-#main-visual > div.main-text p.big-txt {font-size: 65px; font-weight: 800; line-height: 1.2; color: #fff; margin: 0.4em 0;}
+#main-visual > div.main-text p.big-txt {font-size: 65px; font-weight: 800; line-height: 1.2; color: #fff; margin: 0.4em 0; transition: all 0.3s;}
 #main-visual > div.main-text p.big-txt > b {}
 #main-visual > div.main-text p.big-txt > b * {display: block;}
 #main-visual > div.main-text.active p.big-txt > b * {animation: text-show 1s ease 0s 1 normal forwards; }
@@ -234,8 +222,8 @@ margin: 0 0 0.2em;}
   }
 }
 
-#main-visual > ul.sns {position: absolute; left: 55px; bottom: 70px; z-index: 50;}
-#main-visual > ul.sns > li {}
+#main-visual > ul.sns {position: absolute; left: 55px; bottom: 70px; z-index: 50;  transition: all 0.3s;}
+#main-visual > ul.sns > li { transition: all 0.3s;}
 #main-visual > ul.sns > li > a {display: block; margin-top: 10px; position: relative;}
 #main-visual > ul.sns > li > a::after {content:''; width: 100%; height: 100%; background-color: #fece00; position: absolute; left: 0; top: 0; transition: 0.3s; opacity: 0; transform: scale(0.7); border-radius: 100px;}
 #main-visual > ul.sns > li > a:hover::after {opacity: 0.2; transform: scale(1);}
@@ -263,7 +251,8 @@ margin: 0 0 0.2em;}
 /* spc-brand */
 #spc-brand {padding: 110px 0; background-color: #f8f8f8;}
 #spc-brand > div.content-box {position: relative;}
-#spc-brand div.content-box > ul.indicator {margin: -95px 0 0; overflow: hidden; float: right;}
+/* #spc-brand div.content-box > ul.indicator {margin: -95px 0 0; overflow: hidden; float: right; transition: all 0.3s; background-color: green;} */
+#spc-brand div.content-box > ul.indicator {position: absolute; right: 50px; top: 0;}
 #spc-brand ul.indicator > li {float:left;}
 #spc-brand ul.indicator > li:hover img {opacity: 1;}
 #spc-brand ul.indicator > li:hover > a {color: #000;}
@@ -277,7 +266,7 @@ margin: 0 0 0.2em;}
 
 
 /* 여기서부터 */
-#spc-brand div.brand-list {padding: 70px 0; width: 76vw;  overflow: hidden;  background-color: skyblue;}
+#spc-brand div.brand-list {padding: 70px 0; overflow: hidden;  background-color: skyblue;}
 #spc-brand div.brand-list ul.sub {position: relative; width: 5000px; box-sizing: border-box; display: none; background-color: green;}
 
 #spc-brand div.brand-list ul.sub::after {content: ''; display: block; clear: both;}
@@ -319,8 +308,8 @@ margin: 0 0 0.2em;}
 /* spc-news */
 #spc-news {background-color: #d1ebfa; padding: 110px 0 115px;  position: relative; overflow: hidden;}
 #spc-news div.content-box {position: relative;}
-#spc-news div.content-box::before {content: ''; background: #fff0c3; border-radius: 50%; position: absolute; top: -120%; right: -36%; width: 908px; height: 908px;}
-#spc-news div.content-box > div.banner-slide {padding: 70px 0;}
+#spc-news div.content-box::before {content: ''; background: #fff0c3; border-radius: 50%; position: absolute; top: -120%; right: -36%; width: 908px; height: 908px; z-index: 0;}
+#spc-news div.content-box > div.banner-slide {padding: 70px 0;} 
 #spc-news div.content-box > div.banner-slide  ul.slide > li {width: 23.7vw; height: 18vw; box-sizing: border-box;  border-radius: 25px;} 
 #spc-news div.content-box > div.banner-slide  ul.slide > li + li {margin-left: 2.3vw;}
 #spc-news div.content-box > div.banner-slide  ul.slide > li div.image {height: 12vw;}
@@ -328,14 +317,6 @@ margin: 0 0 0.2em;}
 #spc-news div.content-box > div.banner-slide ul.slide > li div.text em {font-size: 1vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;}
 #spc-news div.content-box > div.banner-slide ul.slide > li div.text p.date {font-size: 0.8vw; position: absolute; top: 4vw; left: 1vw; transform:translateY(-50%) perspective(500px) rotate(.001deg); }
 #spc-news div.content-box > div.banner-slide ul.slide > li div.text a.btn.graymini {position: absolute; top: 4vw; right: 1vw; transform: translateY(-50%); font-size: 0.8vw; transition: all 0.3s;}
-#spc-news div.content-box > p.control {position: absolute; right: 300px;top: 33px;}
-#spc-news div.content-box > p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
-#spc-news div.content-box > p.control > a + a {margin-left: 30px;}
-#spc-news div.content-box > p.control > a::before {content: ''; width: 97px; height: 97px; background-color: #fece00; position: absolute; left: 50%; top: 50%; margin: -49px 0 0 -49px; border-radius: 50%; transform: scale(0); transition: all 0.4s; opacity: 0.2;} 
-#spc-news div.content-box > p.control > a:hover::before {transform: scale(1);}
-#spc-news div.content-box > p.control > a:hover {background-color: #fece00; color: #fff;}
-#spc-news div.content-box > p.control > a i {position: relative; vertical-align: middle; display: inline-block;}
-
 
 
 /* spc-magazine */
@@ -343,7 +324,7 @@ margin: 0 0 0.2em;}
 #spc-magazine > div.content-box {}
 #spc-magazine > div.content-box > div.banner-slide {position: relative;}
 #spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide {width: 100%;}
-#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li {display: inline-block; vertical-align: top; width: 22%; position: relative; top: 30px; opacity: 1; transition: 0.4s; box-sizing: border-box; overflow: initial; padding: 0;}
+#spc-magazine > div.content-box > div.banner-slide > div.box > ul.slide > li {display: inline-block; vertical-align: top; width: 22%; position: relative; top: 30px; opacity: 1; transition: 0.4s; box-sizing: border-box; overflow: initial; box-shadow: none;}
 #spc-magazine > div.content-box > div.banner-slide  ul.slide > li + li:before {
 content: ''; width: 1px; height: 100%; background: #eaeaea; position: absolute;
 top: 0; left: -9.5%;}
@@ -358,11 +339,10 @@ top: 0; left: -9.5%;}
 #spc-youtube::after {content: ''; width: 640px; height: 213px; background: url(/img/main03_bg.png) center no-repeat; background-size: 100%; position: absolute;top: -80px; right: -60px; z-index: -1; }
 #spc-youtube > div.content-box { z-index: 3; padding: 100px 50px; position: relative;}
 #spc-youtube > div.content-box::after {content: ''; clear: both; display: block;}
-#spc-youtube > div.content-box div.title {float: left; width: 30%; }
-#spc-youtube > div.content-box p > a {margin: 70px 0;}
-#spc-youtube > div.content-box > div.banner-slide {width: 62.5%; float: right; padding: 0 50px 0 0;}
-#spc-youtube > div.content-box > div.banner-slide > div.box {overflow: initial;}
-
+#spc-youtube > div.content-box div.title {float: left; width: 30%; transition: all 0.3s; }
+#spc-youtube > div.content-box p > a {margin: 70px 0; transition: all 0.3s;}
+#spc-youtube > div.content-box > div.banner-slide {width: 62.5%; float: right; padding: 0 50px 0 0; transition: all 0.3s;}
+#spc-youtube > div.content-box > div.banner-slide > div.box {overflow: initial; position: relative;}
 #spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide {}
 #spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li {width: 18vw; height: 16vw; border-radius: 25px; box-sizing: border-box;}
 #spc-youtube > div.content-box > div.banner-slide > div.box > ul.slide > li + li {margin-left: 2.2vw;}
@@ -372,8 +352,8 @@ top: 0; left: -9.5%;}
 #spc-youtube div.banner-slide  ul.slide > li > div.text  em {font-size: 1vw; font-weight: 700; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;}
 #spc-youtube  div.banner-slide  ul.slide > li > div.text  p.date {font-size: 0.8vw; text-align: left; margin-top: 2vw; color: #7d7d7d; font-weight: 700;}
 #spc-youtube div.banner-slide  ul.slide > li:hover p.date {color: #fff;}
-#spc-youtube  div.banner-slide  p.control {position: absolute; left: -250px; bottom: -100px;}
-#spc-youtube  div.banner-slide p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%); border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s;}
+#spc-youtube  div.banner-slide  p.control {position: absolute; left: -30%; bottom: -10%; transition: all 0.3s; display: inline-block; transition: all 0.3s;}
+#spc-youtube  div.banner-slide p.control > a {display: block; width: 65px; height: 65px; background-color: #fff; box-shadow: 0 0 40px 0 rgb(0 0 0 / 5%); border-radius: 50%; text-align: center; line-height: 55px; font-size: 25px; float: left; position: relative; transition: all 0.4s; margin: 0;}
 #spc-youtube  div.banner-slide p.control > a + a {margin-left: 30px;}
 #spc-youtube  div.banner-slide p.control > a::before {content: ''; width: 97px; height: 97px; background-color: #fece00; position: absolute; left: 50%; top: 50%; margin: -49px 0 0 -49px; border-radius: 50%; transform: scale(0); transition: all 0.4s; opacity: 0.2;} 
 #spc-youtube  div.banner-slide p.control > a:hover::before {transform: scale(1);}
@@ -450,8 +430,26 @@ body.sub .all-brand ul.sub > li > a > div.text > div.table > div.table-cell > p 
 body.sub .all-brand ul.sub > li > a > div.text > div.table > div.table-cell > span {font-size: 14px; color: #fff; opacity: 0.8; display: block; position: absolute; bottom: 30px; left: 0; width: 100%;}
 section.all-brand dl dd > ul > li div.image {}
 
-/* mediaquery */
+/* mediaquery 사용 */
+
 /* index.html */
+@media only screen and (max-width: 1655px) {
+  /* spc-youtube */
+  #spc-youtube > div.content-box p > a {margin: 50px 0;}
+}
+
+@media only screen and (max-width: 1630px) {
+  /* spc-brand */
+  #spc-brand ul.indicator > li a {width: 170px;}
+} 
+
+@media only screen and (max-width: 1610px) {
+  /* spc-youtube */
+  #spc-youtube  div.banner-slide  p.control {left: -50%;}
+  #spc-youtube > div.content-box div.title {width: 40%; }
+  #spc-youtube > div.content-box > div.banner-slide { width: 50%;}
+}
+
 @media only screen and (max-width: 1570px) {
   /* main-visual */
   #main-visual > ul.sns {bottom: 35px;}
@@ -460,20 +458,25 @@ section.all-brand dl dd > ul > li div.image {}
   #main-visual > div.main-text p.big-txt {font-size: 46px;}
 }
 
-@media only screen and (max-width: 1470px) {
-  /* main-visual */
-  /* spc-group */
+@media only screen and (max-width: 1430px) {
   /* spc-brand */
-  #spc-brand ul.indicator > li a {width: 170px; font-size: 15px;} 
+  #spc-brand ul.indicator > li a {width: 150px; font-size: 15px;}
+}
+
+@media only screen and (max-width: 1410px) {
+  /* spc-youtube */
+  #spc-youtube  div.banner-slide  p.control {left: -50%; bottom: -35%;}
 }
 
 @media only screen and (max-width: 1365px) {
-
-
+  /* header */
+  #header > div.content-box > h1 {left: 30px;}
+  #header > div.content-box > h1 > a img {width: 140px;}
+  #header > div.content-box > #gnb > ul > li > a { font-size: 15px; padding: 0 20px;}
+  #header > div.content-box > #gnb > ul > li:nth-child(4) {width: 95px;}
+  #header > div.content-box > #gnb > ul ul.sub > li > a {font-size: 13px;}
+  #header div.language-box {right: 69.5px;}
 }
-
-
-
 
 
 
