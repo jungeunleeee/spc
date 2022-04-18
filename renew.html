@@ -122,7 +122,7 @@
           <a href="#"><span></span></a>
         </div>
       </div>
-      <div class="bg-overlay mobile-tablet"></div>
+      <div class="bg-overlay"></div>
 
     </header>
 
@@ -1236,77 +1236,68 @@
       $('#gnb > ul > li > ul.sub > li:eq('+ index +')').addClass('on');
     });
 
-    // resize될 때 변화
-    $(window).on('resize', function() {
+    // gnb 영역 
+    $(window).on('resize', function () {
       var windowWidth = $(window).width();
-      if(windowWidth >= 1320) {
-        $('#gnb > ul > li > ul.sub').removeAttr('style');
-        $('#header div.nav-hamburger').removeClass('close');
+      if (windowWidth >= 1024) {
+        $('#gnb > ul > li > ul').removeAttr('style');
+        $('#header .nav-hamburger').removeClass('close');
         $('#gnb').removeClass('close');
-        $('#header ul.sub').css({'height': '0px'});
-        // headerGnb();
-      } else {
-        $('#header div.nav-hamburger').removeClass('open');
-        $('#header').removeClass('navopen');
-        $('#gnb > ul > li').removeClass('on');
-        $('#gnb > ul > li > ul.sub').css({'height' : '0px'});
-        $('#gnb > ul > li > ul.sub > li').removeClass('on');
-        return false;
+        headerGnb();
       }
     });
 
 
-    // pc에서의 gnb
-    $('#header').on('mouseenter', function() {
-      var windowWidth = $(window).width();
-      if(windowWidth >= 1320) {
-        $('#header ul.sub').css({'height' : '200px'});
+    function headerGnb() {
+      $('#header').on('mouseenter focusin', function () {
+        $('#header ul.sub').css({
+          'height': '200px'
+        });
         $(this).addClass('open');
-        $('#header span.global').css({'opacity' : 1});
-      }
-    });
+        $('#header span.global').css({
+          'opacity': 1
+        });
+      });
 
-    $('#header').on('mouseleave', function() {
-      var windowWidth = $(window).width();
-      if(windowWidth >= 1320) {
-        $('#header ul.sub').css({'height' : '0px'});
+      $('#header').on('mouseleave focusout', function () {
+        $('#header ul.sub').css({
+          'height': '0px'
+        });
         $(this).removeAttr('class');
-        $('#header span.global').css({'opacity' : 0});
+        $('#header span.global').css({
+          'opacity': 0
+        });
+      });
+
+      $('#header div.language-box').on('mouseenter focusin', function () {
+        $('#header div.language-box > ul.language').addClass('on');
+      });
+
+      $('#header div.language-box').on('mouseleave', function () {
+        $('#header div.language-box > ul.language').removeClass('on');
+      });
+    }
+
+    // 스크롤 발생 시 header 고정
+
+    $(window).on('scroll', function () {
+      // console.log('scroll');
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop === 0) {
+        $('#header').removeClass('on');
+        $('#header span.global').css({
+          'opacity': 0
+        });
+        $('#header div.nav-hamburger').removeClass('on');
+      } else {
+        $('#header').addClass('on');
+        $('#header span.global').css({
+          'opacity': 1
+        });
+        $('#header div.language-box > ul.language').addClass('on');
+        $('#header div.nav-hamburger').addClass('on');
       }
     });
-
-
-    // function headerGnb() {
-    //     $('#header').on('mouseenter focusin', function () {
-    //     $('#header ul.sub').css({
-    //       'height': '200px'
-    //     });
-    //     $(this).addClass('open');
-    //     $('#header span.global').css({
-    //       'opacity': 1
-    //     });
-    //   });
-
-    //   $('#header').on('mouseleave focusout', function () {
-    //     $('#header ul.sub').css({
-    //       'height': '0px'
-    //     });
-    //     $(this).removeAttr('class');
-    //     $('#header span.global').css({
-    //       'opacity': 0
-    //     });
-    //   });
-
-    //   $('#header div.language-box').on('mouseenter focusin', function () {
-    //     $('#header div.language-box > ul.language').addClass('on');
-    //   });
-
-    //   $('#header div.language-box').on('mouseleave', function () {
-    //     $('#header div.language-box > ul.language').removeClass('on');
-    //   });
-    // }
-
-
   </script>
 </body>
 

@@ -20,7 +20,7 @@ br.only-m {content: '';}
 br.only-m::after {content: '\00a0';}
 
 /* common */
-body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; background-color: #ffffff;}
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px; color: #000000; background-color: #ffffff;}
 #wrapper {max-width: 1319.9px; overflow: hidden; position: relative; margin: 0 auto;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0,0,0,0.8); color : #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;} 
 #skip-nav:focus {top: 0;}
@@ -58,13 +58,7 @@ a.btn-gray:hover {background-color: #1E2432; color: #fff;}
 a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFAF; box-sizing: border-box; text-align: center; font-size: 30px; color: #7d7d7d; line-height: 45px; position: fixed; bottom: 50px; right: 50px; background-color: #fff; opacity: 0.4;}
 
 /* header */
-#header {position: fixed; left: 0; top: 0; width: 100%; height: 86px; z-index: 100000; background-color: transparent; text-align: center; padding: 0 30px; box-sizing: border-box;}
-#header::after {content:''; position: absolute; left: 0; top: 100%; width: 100%; height: 0px; background-color: #fff;  transition: height 0.3s; border-radius: 0 0 50px 0; z-index: -1; }
-#header.on >  div.content-box > #gnb > ul > li > a,
-#header.open > div.content-box > #gnb > ul > li > a {color: #333;}
-#header.on,
-#header.open {background-color: #fff; }
-#header.open::after {height: 286px; border-top: 1px solid #f8f8f8;}
+#header {position: fixed; left: 0; top: 0; width: 100%; height: 86px; z-index: 100000; background-color: transparent; text-align: center; padding: 0 0 0 30px; box-sizing: border-box;}
 #header > div.content-box {width: 100%; height: 100%;  position: relative; box-sizing: border-box; margin: 0 auto;}
 #header > div.content-box > h1 {position: absolute; left: 0; top:0; height: 100%;}
 #header > div.content-box > h1 > a {display: block;}
@@ -72,18 +66,57 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header.on > div.content-box > h1 > a > span.white-logo,
 #header.open > div.content-box > h1 > a > span.white-logo {opacity: 1;}
 #header > div.content-box > h1 > a img {margin-top: 20px; max-width: 115px;}
-#header > div.content-box > #gnb {display: none;}
-#header div.language-box {display: none;}
-#header div.nav-hamburger {height: 100%;  position: absolute; right: 0; top: 0;}
+
+/* nav :#gnb */
+#header > div.content-box > #gnb {width: 350px; padding: 88px 0; height: 100vh; background-color: #fff; position: fixed; right: -100%; top: 0; text-align: left; overflow-y: scroll; z-index: 10000; transition: all 0.5s;}
+#header > div.content-box > #gnb.close {right: 0; transition: all 0.5s;}
+#header > div.content-box > #gnb::after {content: ''; width: 100%; height: 1px; background-color: #d1d1d1; position: absolute; left: 0; top: 88px;}
+#header > div.content-box > #gnb > ul {}
+#header > div.content-box > #gnb > ul > li.on > a {padding: 22px 25px;}
+#header > div.content-box > #gnb > ul > li.on > a::after {margin-top: 3px;}
+#header > div.content-box > #gnb > ul > li > a {font-size: 21px; font-weight: 700; color: #000; padding:22px 25px 0; display: block; position: relative; }  
+#header > div.content-box > #gnb > ul > li > a::after {content:''; width: 14px;height: 9px; position: absolute; right: 25px; top: 50%; transform: translate(0, -50%) rotate(180deg); background: url('../img/footer_dropdown.png') center no-repeat; background-size: 100%; margin-top: 10px; transition: all 0.5s;}
+#header > div.content-box > #gnb > ul > li.on > a::after {transform: rotate(0); margin-top: -10px;  }
+#header > div.content-box > #gnb > ul ul.sub{background-color: #f7f7f7;  overflow: hidden; height: 0; transition: height 0.3s;}
+#header > div.content-box > #gnb > ul ul.sub > li {}
+#header > div.content-box > #gnb > ul ul.sub > li:first-child  {padding-top: 15px;}
+#header > div.content-box > #gnb > ul ul.sub > li:last-child  {padding-bottom: 15px;}
+#header > div.content-box > #gnb > ul ul.sub > li > a {font-size: 17px; font-weight: 700; color: #000; padding:3px 40px; display: block;}
+#header > div.content-box > #gnb > ul ul.sub > li.on > a {color: #23afe3; transition: all 0.3s;}
+
+
+/* 언어 선택 버튼 */
+#header div.language-box {position: absolute; left: 25px; top: 22px;}
+#header div.language-box > div.box {}
+#header div.language-box > div.box > ul {overflow: hidden;}
+#header div.language-box > div.box > ul > li {float: left;}
+#header div.language-box > div.box > ul > li + li {margin-left: 20px;}
+#header div.language-box > div.box > ul > li > a {font-size: 17px; font-weight: 700; color: #000; display: block; height: 26px;}
+#header div.language-box > div.box > ul > li.on > a {border-bottom: 1px solid #000;}
+
+#header div.nav-hamburger {height: 100%;  position: absolute; right: 30px ; top: 0; z-index: 10000;}
 #header div.nav-hamburger > a {display: inline-block; width: 50px; height: 60px; line-height: 86px; position: relative; top: 12px; }
 #header div.nav-hamburger > a > span::before,
 #header div.nav-hamburger > a > span::after {content: '';}
 #header div.nav-hamburger > a > span::before,
 #header div.nav-hamburger > a > span::after,
 #header div.nav-hamburger > a > span {display: inline-block; width: 35px; height: 3px; background-color: #fff; position: absolute; right: 0;}
-#header div.nav-hamburger > a > span {top: 50%; transform: translate(0, -50%);}
-#header div.nav-hamburger > a > span::after {top: -10px;}
-#header div.nav-hamburger > a > span::before {bottom: -10px;}
+#header div.nav-hamburger.on > a > span::before,
+#header div.nav-hamburger.on > a > span::after,
+#header div.nav-hamburger.on > a > span {background-color: #000; transition: all 0.3s;}
+#header div.nav-hamburger > a > span {top: 50%; transform: translate(0, -50%);  transition: all 0.3s;}
+#header div.nav-hamburger > a > span::after {top: -10px;  transition: all 0.3s;}
+#header div.nav-hamburger > a > span::before {bottom: -10px;  transition: all 0.3s;}
+
+/* 햄버거 버튼 변화 */
+#header div.nav-hamburger.open > a > span {background-color: transparent; transition: all 0.3s;}
+#header div.nav-hamburger.open > a > span::after {top: 0px; background-color: #000; transform: rotate(-45deg);}
+#header div.nav-hamburger.open > a > span::before {bottom: 0px;background-color: #000; transform: rotate(45deg);}
+
+/* 햄버거 버튼 배경 */
+#header div.bg-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; z-index: 3; opacity: 0;}
+#header.navopen div.bg-overlay {opacity: 0.3;  background-color: #000;}
+
 
 /* footer */
 #footer {background-color:#fff; padding: 15px 30px 60px;}
