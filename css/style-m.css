@@ -117,8 +117,8 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header div.nav-hamburger.open > a > span::before {bottom: 0px;background-color: #000; transform: rotate(45deg);}
 
 /* 햄버거 버튼 배경 */
-#header div.bg-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; z-index: 3; opacity: 0;}
-#header.navopen div.bg-overlay {opacity: 0.3;  background-color: #000;}
+#header div.bg-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; z-index: 3; opacity: 0; display: none;}
+#header.navopen div.bg-overlay {opacity: 0.3;  background-color: #000; display: block;}
 
 
 /* footer */
@@ -177,6 +177,7 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #main-visual > div.container-box > div.slide-inner > ul.slide-layers > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
 #main-visual > div.container-box > div.slide-inner > ul.slide-layers > li > img {width: 100%;}
 
+
 #main-visual > div.container-box > a {position: absolute; bottom: 4.5%; display: block; background-color: green;}
 #main-visual > div.container-box > a.prev,
 #main-visual > div.container-box  > a.next {display: block;  width: 46px; height: 46px; border-radius: 100%; background: url(../img/icon_slide_next_w.png) center no-repeat; background-size: 7px; z-index: 100; right: 3.5%;}
@@ -195,7 +196,7 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #main-visual div.main-text p.big-txt > b * {display: block;}
 #main-visual div.main-text.active p.big-txt > b * {animation: text-show 1s ease 0s 1 normal forwards;}
 
-/* 애니메이션 */
+/* 애니메이션 : text */
 @keyframes text-show {
     from {
       transform: translateY(140%) rotate(5deg);
@@ -204,6 +205,17 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
       transform: translateY(0) rotate(0);
     }
   }
+
+/* 애니메이션 : 이미지 */
+@keyframes img-show {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
   
 /* spc group */
 #spc-group {background-color: #fff; padding: 50px 0; overflow: hidden;}

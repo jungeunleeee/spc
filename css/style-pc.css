@@ -148,6 +148,8 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 #footer section.footer-brands > div.button > p {background-color: #fff;width: 317px; height: 65px; box-sizing: border-box; line-height: 65px; text-align: left; position: relative; border-radius: 100px;  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%); position: relative;} 
 #footer section.footer-brands > div.button > p > a {font-size: 18px; font-weight: 700; color: #000; display: block;  padding: 0 40px; border-radius: 100px;}
 #footer section.footer-brands > div.button > p > a > i {position: absolute; top: 50%; transform: translateY(-50%); right: 30px;}
+#footer section.footer-brands > div.button > p > a > i:first-child {display: block;}
+#footer section.footer-brands > div.button > p > a > i:last-child {display: none;}
 #footer section.footer-brands > div.button > ul {position: absolute; bottom: 100%; left: 0; width: 100%; background-color: #fff; height: auto; max-height: 200px; padding: 20px 0; overflow-y: scroll; border-radius: 25px; display: none;}
 #footer section.footer-brands > div.button > ul > li {}
 #footer section.footer-brands > div.button > ul > li:hover > a {color: #000;}
@@ -158,8 +160,10 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 /* main */
 #main-visual {width: 100%;  margin: 0 auto;  position: relative;}
 #main-visual > div.container-box {width: 100%; position: relative; box-sizing: content-box;  overflow: hidden;}
+
 #main-visual > div.container-box::before {content: ''; display: block; width: 100%; height: 120%; background-color: #23afe3; z-index: 35; position: absolute; left: 50%; top: -10%; border-radius: 100%; transform: scaleX(0); -webkit-transition: all 0.5s ease-in-out;}
 #main-visual > div.container-box::after {content: ''; display: block; width: 100%; height: 120%; background-color: #1e2432; z-index: 35; position: absolute; left: auto; right: 50%; top: -10%; border-radius: 100%; transform: scaleX(0); -webkit-transition: all 0.5s ease-in-out; }
+
 #main-visual > div.container-box >  div.slide-inner {position: relative;}
 #main-visual > div.container-box >  div.slide-inner > p.dummy {}
 #main-visual > div.container-box >  div.slide-inner > p.dummy > img {opacity: 0; width: 100%; display: block; }
@@ -196,6 +200,7 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 #main-visual > div.container-box > a.prev:hover::after {transform: translateX(20px);}
 #main-visual > div.container-box > a.next:hover::after {transform: translateX(-20px);}
 
+/* main-visual 효과 */
 #main-visual > div.container-box.arrow-on-r:before{transform:scaleX(0);}
 #main-visual > div.container-box.arrow-go-r:before{transform:scaleX(0.25);}
 #main-visual > div.container-box.arrow-on-l:after{transform:scaleX(0);}

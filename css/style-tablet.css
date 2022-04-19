@@ -68,7 +68,7 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header > div.content-box > h1 > a img {margin-top: 20px; max-width: 115px;}
 
 /* nav :#gnb */
-#header > div.content-box > #gnb {width: 350px; padding: 88px 0; height: 100vh; background-color: #fff; position: fixed; right: -100%; top: 0; text-align: left; overflow-y: scroll; z-index: 10000; transition: all 0.5s;}
+#header > div.content-box > #gnb {width: 350px; padding: 88px 0; height: 100vh; background-color: #fff; position: fixed; right: -100%; top: 0; text-align: left; overflow-y: auto; z-index: 10000; transition: all 0.5s;}
 #header > div.content-box > #gnb.close {right: 0; transition: all 0.5s;}
 #header > div.content-box > #gnb::after {content: ''; width: 100%; height: 1px; background-color: #d1d1d1; position: absolute; left: 0; top: 88px;}
 #header > div.content-box > #gnb > ul {}
@@ -77,7 +77,7 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header > div.content-box > #gnb > ul > li > a {font-size: 21px; font-weight: 700; color: #000; padding:22px 25px 0; display: block; position: relative; }  
 #header > div.content-box > #gnb > ul > li > a::after {content:''; width: 14px;height: 9px; position: absolute; right: 25px; top: 50%; transform: translate(0, -50%) rotate(180deg); background: url('../img/footer_dropdown.png') center no-repeat; background-size: 100%; margin-top: 10px; transition: all 0.5s;}
 #header > div.content-box > #gnb > ul > li.on > a::after {transform: rotate(0); margin-top: -10px;  }
-#header > div.content-box > #gnb > ul ul.sub{background-color: #f7f7f7;  overflow: hidden; height: 0; transition: height 0.3s;}
+#header > div.content-box > #gnb > ul ul.sub{background-color: #f7f7f7;  overflow: hidden; height: 0; transition: height 0.5s;}
 #header > div.content-box > #gnb > ul ul.sub > li {}
 #header > div.content-box > #gnb > ul ul.sub > li:first-child  {padding-top: 15px;}
 #header > div.content-box > #gnb > ul ul.sub > li:last-child  {padding-bottom: 15px;}
@@ -114,8 +114,8 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #header div.nav-hamburger.open > a > span::before {bottom: 0px;background-color: #000; transform: rotate(45deg);}
 
 /* 햄버거 버튼 배경 */
-#header div.bg-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; z-index: 3; opacity: 0;}
-#header.navopen div.bg-overlay {opacity: 0.3;  background-color: #000;}
+#header div.bg-overlay {position: fixed; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; z-index: 3; opacity: 0; display: none;}
+#header.navopen div.bg-overlay {opacity: 0.3;  background-color: #000; display: block;}
 
 
 /* footer */
@@ -194,8 +194,8 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 #main-visual > div.container-box >  div.slide-inner > ul.slide-layers > li.on {display: block;} 
 #main-visual > div.container-box >  div.slide-inner >  ul.slide-layers > li > img {width: 100%;}
 #main-visual > div.container-box > a.prev,
-#main-visual > div.container-box  > a.next {display: block; position: absolute; right: 33px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 100%; border: 1px solid rgba(255, 255, 255, 0.3); background: url(../img/icon_slide_next_w.png) center no-repeat; background-size: 7px; z-index: 100;}
-#main-visual > div.container-box > a.prev {visibility: visible; background: url(../img/icon_slide_prev_w.png) center no-repeat; background-size: 7px; left: 33px;}
+#main-visual > div.container-box  > a.next {display: block; position: absolute; right: 33px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 100%; border: 1px solid rgba(255, 255, 255, 0.3); background: url(../img/icon_slide_next_w.png) center no-repeat; background-size: 7px; z-index: 100; transition: all 0.3s;}
+#main-visual > div.container-box > a.prev {visibility: visible; background: url(../img/icon_slide_prev_w.png) center no-repeat; background-size: 7px; left: 33px; }
 #main-visual > div.container-box > a:hover {border-color: #fff;}
 #main-visual > div.container-box > a.prev:hover::after {transform: translateX(20px);}
 #main-visual > div.container-box > a.next:hover::after {transform: translateX(-20px);}
@@ -234,7 +234,8 @@ margin: 0 0 0.2em;}
 #main-visual > ul.sns > li > a {display: block; margin-top: 10px; position: relative;}
 #main-visual > ul.sns > li > a::after {content:''; width: 100%; height: 100%; background-color: #fece00; position: absolute; left: 0; top: 0; transition: 0.3s; opacity: 0; transform: scale(0.7); border-radius: 100px;}
 #main-visual > ul.sns > li > a:hover::after {opacity: 0.2; transform: scale(1);}
-#main-visual > ul.sns > li > a > img {width: 46px; position: relative; }
+#main-visual > ul.sns > li > a > img {width: 46px; position: relative;}
+
 
 /* spc group */
 #spc-group {background-color: #fff; padding: 110px 0; overflow: hidden;}

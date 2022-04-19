@@ -1193,7 +1193,7 @@
 
   <script>
     'use strict';
-
+// GNB
     // 모바일 : 햄버거 버튼
     $('#header .nav-hamburger').on('click', function () {
       $(this).toggleClass('open');
@@ -1257,7 +1257,7 @@
 
 
     // pc에서의 gnb
-    $('#header').on('mouseenter', function() {
+    $('#header').on('mouseenter focusin', function() {
       var windowWidth = $(window).width();
       if(windowWidth >= 1320) {
         $('#header ul.sub').css({'height' : '200px'});
@@ -1266,7 +1266,7 @@
       }
     });
 
-    $('#header').on('mouseleave', function() {
+    $('#header').on('mouseleave focusout', function() {
       var windowWidth = $(window).width();
       if(windowWidth >= 1320) {
         $('#header ul.sub').css({'height' : '0px'});
@@ -1274,6 +1274,42 @@
         $('#header span.global').css({'opacity' : 0});
       }
     });
+
+    // main-visual 
+    prevnextBtn();
+    function prevnextBtn() {
+  $('#main-visual > div.container-box > a.next').on('mouseenter', function () {
+    $('#main-visual > div.container-box').addClass('arrow-go-r');
+  });
+
+  $('#main-visual > div.container-box > a.next').on('mouseleave', function () {
+    $('#main-visual > div.container-box').removeClass('arrow-go-r');
+  });
+
+  $('#main-visual > div.container-box > a.prev').on('mouseenter', function () {
+    $('#main-visual > div.container-box').addClass('arrow-go-l');
+  });
+
+  $('#main-visual > div.container-box > a.prev').on('mouseleave', function () {
+    $('#main-visual > div.container-box').removeClass('arrow-go-l');
+  });
+}
+
+// main-visual: 이미지 사진 넘어가기
+  var numSlide = $('#main-visual ul.slide-layers > li').length;
+  var slideNow = 0;
+  var slideNext = 0;
+  var slidePrev = 0;
+
+  $('#main-visual ul.indicator > li > a').on('click', function() {
+    var index = $('#main-visual ul.indicator > li').index($(this).parent());
+    // alert(index);
+    $('#main-visual ul.indicator > li').removeClass('on');
+    $('#main-visual ul.indicator > li:eq('+ index +')').addClass('on');
+    $('#main-visual ul.slide-layers > li').removeClass('on');
+    $('#main-visual ul.slide-layers > li:eq('+ index +')').addClass('on');
+  });
+
 
 
     // function headerGnb() {
