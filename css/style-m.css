@@ -170,12 +170,14 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
 /* main-visual */
 #main-visual {position: relative;}
 #main-visual > div.container-box {position: relative;}
-#main-visual > div.container-box > div.slide-inner {position: relative;}
+#main-visual > div.container-box > div.slide-inner {position: relative; overflow: hidden;}
 #main-visual > div.container-box > div.slide-inner > p.dummy {}
-#main-visual > div.container-box > div.slide-inner > p.dummy > img {width: 100%;}
-#main-visual > div.container-box > div.slide-inner > ul.slide-layers {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-#main-visual > div.container-box > div.slide-inner > ul.slide-layers > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-visual > div.container-box > div.slide-inner > p.dummy > img {width: 100%; vertical-align: middle;}
+#main-visual > div.container-box > div.slide-inner > ul.slide-layers > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
+#main-visual > div.container-box > div.slide-inner > ul.slide-layers > li.show {animation: show-slide 2s ease 0s 1 normal forwards; display: block;}
+#main-visual > div.container-box > div.slide-inner > ul.slide-layers > li.hide {animation: hide-slide 2s ease 0s 1 normal forwards; display: block;}
 #main-visual > div.container-box > div.slide-inner > ul.slide-layers > li > img {width: 100%;}
+#main-visual > div.container-box > div.slide-inner > ul.slide-layers > li:nth-child(3) > img {width: auto; height: 100%;}
 
 
 #main-visual > div.container-box > a {position: absolute; bottom: 4.5%; display: block; background-color: green;}
@@ -207,14 +209,15 @@ a.scrolltop {display: block; width: 60px; height: 60px; border: 1px solid #AFAFA
   }
 
 /* 애니메이션 : 이미지 */
-@keyframes img-show {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+@keyframes show-slide {
+  0% {opacity: 0; transform: rotate(-3deg) scale(0.9);}
+  100% {opacity: 1; transform: rotate(0deg) scale(1);}
 }
+@keyframes hide-slide {
+  0% {opacity: 1; transform: rotate(0deg) scale(1);}
+  100% {opacity: 0; transform: rotate(3deg) scale(1.1);}
+}
+
 
   
 /* spc group */

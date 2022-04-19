@@ -131,7 +131,7 @@
         <div class="container-box">
           <div class="slide-inner">
             <p class="dummy">
-              <img src="img/main-slide-01.jpg" alt="main-slide-01" class="pc-tablet" />
+              <img src="img/spc-banner-3.png" alt="main-slide-01" class="pc-tablet" />
               <img src="img/main_slide_01_m.jpg" alt="main-slide-01" class="mobile" />
             </p>
             <ul class="slide-layers">
@@ -1296,19 +1296,84 @@
 }
 
 // main-visual: 이미지 사진 넘어가기
-  var numSlide = $('#main-visual ul.slide-layers > li').length;
-  var slideNow = 0;
-  var slideNext = 0;
-  var slidePrev = 0;
+    setImageSlide(1, true, 3000);
 
-  $('#main-visual ul.indicator > li > a').on('click', function() {
-    var index = $('#main-visual ul.indicator > li').index($(this).parent());
-    // alert(index);
-    $('#main-visual ul.indicator > li').removeClass('on');
-    $('#main-visual ul.indicator > li:eq('+ index +')').addClass('on');
-    $('#main-visual ul.slide-layers > li').removeClass('on');
-    $('#main-visual ul.slide-layers > li:eq('+ index +')').addClass('on');
-  });
+    function setImageSlide(first, status, speed) {
+      var numSlide = $('#main-visual ul.slide-layers > li').length;
+      var slideNow = 0;
+      var slideNext = 0;
+      var slidePrev = 0;
+      var slideFirst = first;
+      var timerId = '';
+      var timerSpeed = speed;
+      var isTimerOn = true;
+      var onAnimation = status;
+
+
+      showSlide(slideFirst);
+      $('#main-visual ul.indicator > li > a').on('click', function() {
+        var index = $('#main-visual ul.indicator > li').index($(this).parent());
+        showSlide(index + 1);
+      });
+
+      $('#main-visual a.prev').on('click', function() {
+        showSlide(slidePrev);
+      });
+
+      $('#main-visual a.next').on('click', function() {
+        showSlide(slideNext);
+      });
+
+      function startTimer() {
+        timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
+      }
+
+      function stopTimer() {
+        clearTimeout(timerId); 
+      }
+
+      function resetTimer() {
+        clearTimeout(timerId);
+        if(isTimerOn === true) {
+          timerId = setTimeout(function() {
+            showSlide(slideNext);
+          }, timerSpeed);
+        }
+      }
+
+      function showSlide(n) {
+        resetTimer();
+        // 이미지 변화: transition
+        if (slideNow === n || onAnimation === true) return false;
+        resetTimer();
+        if(slideNow === 0) {
+          $('#main-visual ul.slide-layers > li:eq('+ (n - 1) +')').addClass('on');
+        } else {
+          onAnimation = true;
+          $('#main-visual ul.slide-layers > li:eq('+ (slideNow - 1) +')').removeClass().addClass('hide').one('animationend', function() {
+            $(this).removeClass();
+            onAnimation = false
+          });
+          $('#main-visual ul.slide-layers > li:eq('+ (n - 1) +')').addClass('show');
+        }
+
+        // 인디케이터 변화
+        $('#main-visual ul.indicator > li').removeClass('on');
+        $('#main-visual ul.indicator > li:eq('+ (n - 1) +')').addClass('on');
+        $('#main-visual ul.slide-layers > li').removeClass('on');
+        $('#main-visual ul.slide-layers > li:eq('+ (n-1) +')').addClass('on');
+
+        // slide번호
+        slideNow = n;
+        slidePrev = (n === 1) ? numSlide : (n - 1);
+        slideNext = (n === numSlide) ? 1 : (n + 1);
+      }
+    }
+    
+
+
+  
+
 
 
 

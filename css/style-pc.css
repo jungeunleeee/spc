@@ -208,7 +208,7 @@ div.content-box > p.control-small > a.next {right: -15px; left: auto;  }
 
 #main-visual > div.container-box > ul.indicator {position: absolute; left: 31.7%; bottom: 24%; display: block;  overflow: hidden;}
 #main-visual > div.container-box > ul.indicator > li {float: left; margin: 0 17px;}
-#main-visual > div.container-box > ul.indicator > li.on > a {opacity: 1; background-color: #fece00;}
+#main-visual > div.container-box > ul.indicator > li.on > a {opacity: 1; background-color: #fece00; transition: all 0.3s;}
 #main-visual > div.container-box > ul.indicator > li > a {display: block; width: 10px; height: 10px; border-radius: 500px; background-color: #fff; opacity: 0.5;}
  p.txt-ani > b {display: block; overflow: hidden; line-height: 1.1; 
 margin: 0 0 0.2em;}
