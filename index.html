@@ -8,9 +8,6 @@
   <meta name="apple-mobile-web-app-title" content="SPC" />
   <title>SPC</title>
   <meta name="description" content="SPC 웹사이트" />
-
-  <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
-  <!-- <link rel="stylesheet" href="fa/css/all.min.css" /> -->
   <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1320.0px)" />
   <link rel="stylesheet" href="css/style-tablet.css" media="screen and (min-width: 768px) and (max-width: 1319.9px)" />
   <link rel="stylesheet" href="css/style-m.css" media="screen and (min-width:500px) and (max-width:767.9px)">
@@ -20,7 +17,7 @@
   <!-- js -->
   <script src="https://kit.fontawesome.com/882832d0ff.js" crossorigin="anonymous"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/euni.js"></script>
+  <!-- <script src="js/euni.js"></script> -->
 </head>
 
 <body class="main">
@@ -118,7 +115,7 @@
           <div class="bg"></div>
         </nav>
 
-        <div class="nav-hamburger mobile-tablet ">
+        <div class="nav-hamburger mobile-tablet">
           <a href="#"><span></span></a>
         </div>
       </div>
@@ -1255,6 +1252,14 @@
       }
     });
 
+    //main-visual: 이미지 슬라이드 실행
+    var windowWidth = $(window).width();
+    if(windowWidth >= 1320) {
+      setImageSlide('#main-visual', 1, true, 3000);
+    } else {
+      mobileImageSlide();
+    }
+
 
     // pc에서의 gnb
     $('#header').on('mouseenter focusin', function() {
@@ -1263,6 +1268,8 @@
         $('#header ul.sub').css({'height' : '200px'});
         $(this).addClass('open');
         $('#header span.global').css({'opacity' : 1});
+      } else {
+        return false;
       }
     });
 
@@ -1295,81 +1302,201 @@
   });
 }
 
-// main-visual: 이미지 사진 넘어가기
-    setImageSlide(1, true, 3000);
+// main-visual : 이미지 슬라이드 넘어가기
+function setImageSlide(selector, first, status, speed) {
+  $(selector).each(function() {
+    var $selector = $(this);
+    var numSlide = $selector.find('.slide-layers > li').length;
+    var slideNow = 0;
+    var slidePrev = 0;
+    var slideNext = 0;
+    var slideFirst = first;
+    var timerId = '';
+    var timerSpeed = speed;
+    var isTimerOn = status;
+    var onAnimation = false;
 
-    function setImageSlide(first, status, speed) {
-      var numSlide = $('#main-visual ul.slide-layers > li').length;
-      var slideNow = 0;
-      var slideNext = 0;
-      var slidePrev = 0;
-      var slideFirst = first;
-      var timerId = '';
-      var timerSpeed = speed;
-      var isTimerOn = true;
-      var onAnimation = status;
+    showSlide(slideFirst);
+
+    $selector.find('.indicator li a').on('click', function() {
+      var index = $selector.find('.indicator li').index($(this).parent());
+      showSlide(index + 1);
+    });
+
+    $selector.find('a.prev').on('click', function() {
+      showSlide(slidePrev);
+    });
+
+    $selector.find('a.next').on('click', function() {
+      showSlide(slideNext);
+    });
 
 
-      showSlide(slideFirst);
-      $('#main-visual ul.indicator > li > a').on('click', function() {
-        var index = $('#main-visual ul.indicator > li').index($(this).parent());
-        showSlide(index + 1);
-      });
+    function startTimer() {
+      timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
+      isTimerOn = true;
+    }
 
-      $('#main-visual a.prev').on('click', function() {
-        showSlide(slidePrev);
-      });
+    function stopTimer() {
+      clearTimeout(timerId);
+      isTimerOn = false;
+    }
 
-      $('#main-visual a.next').on('click', function() {
-        showSlide(slideNext);
-      });
-
-      function startTimer() {
+    function resetTimer() {
+      clearTimeout(timerId);
+      if (isTimerOn === true) {
         timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
       }
-
-      function stopTimer() {
-        clearTimeout(timerId); 
-      }
-
-      function resetTimer() {
-        clearTimeout(timerId);
-        if(isTimerOn === true) {
-          timerId = setTimeout(function() {
-            showSlide(slideNext);
-          }, timerSpeed);
-        }
-      }
-
-      function showSlide(n) {
-        resetTimer();
-        // 이미지 변화: transition
-        if (slideNow === n || onAnimation === true) return false;
-        resetTimer();
-        if(slideNow === 0) {
-          $('#main-visual ul.slide-layers > li:eq('+ (n - 1) +')').addClass('on');
-        } else {
-          onAnimation = true;
-          $('#main-visual ul.slide-layers > li:eq('+ (slideNow - 1) +')').removeClass().addClass('hide').one('animationend', function() {
-            $(this).removeClass();
-            onAnimation = false
-          });
-          $('#main-visual ul.slide-layers > li:eq('+ (n - 1) +')').addClass('show');
-        }
-
-        // 인디케이터 변화
-        $('#main-visual ul.indicator > li').removeClass('on');
-        $('#main-visual ul.indicator > li:eq('+ (n - 1) +')').addClass('on');
-        $('#main-visual ul.slide-layers > li').removeClass('on');
-        $('#main-visual ul.slide-layers > li:eq('+ (n-1) +')').addClass('on');
-
-        // slide번호
-        slideNow = n;
-        slidePrev = (n === 1) ? numSlide : (n - 1);
-        slideNext = (n === numSlide) ? 1 : (n + 1);
-      }
     }
-    
+
+    function showSlide(n) {
+      // animation이 작동할 때 슬라이드
+      if (slideNow === n || onAnimation === true) return false;
+      resetTimer();
+      if (slideNow === 0) {
+        $selector.find('.slide-layers > li:eq(' + (n - 1) + ')').addClass('on');
+      } else {
+        onAnimation = true;
+        $selector.find('.slide-layers > li:eq(' + (slideNow - 1) + ')').removeClass().addClass('hide').one('animationend', function() {
+          $(this).removeClass();
+          onAnimation = false;
+        });
+        $selector.find('.slide-layers > li:eq(' + (n - 1) + ')').addClass('show');
+      }
+
+      // indicator 변화
+      $selector.find('ul.indicator > li').removeClass('on');
+      $selector.find('.indicator > li:eq(' + (n - 1) + ')').addClass('on');
+
+      // 현재 슬라이드 번호
+      slideNow = n;
+      slidePrev = (n === 1) ? numSlide : (n - 1);
+      slideNext = (n === numSlide) ? 1 : (n + 1);
+    }
+
+  });
+}
+
+// mobile main-visual:이미지 슬라이드
+
+
+function mobileImageSlide() {
+  var numSlide = $('#main-visual ul.slide-layers > li').length;
+  var slideNow = 0;
+  var slidePrev = 0;
+  var slideNext = 0;
+
+  // 이미지 나열하기
+  $('#main-visual ul.slide-layers > li').each(function(i) {
+    $(this).css({'left' : (i * 100) + '%', 'display' : 'block'});
+  });
+
+  // event
+  $('#main-visual ul.indicator > li > a').on('click', function() {
+    var index = $('#main-visual ul.indicator > li').index($(this).parent());
+    showSlideMobile(index + 1);
+  });
+
+  $('#main-visual a.prev').on('click', function() {
+    showSlideMobile(slidePrev);
+  });
+
+  $('#main-visual a.next').on('click', function() {
+    showSlideMobile(slideNext);
+  });
+
+  function showSlideMobile(n) {
+    // 이미지 슬라이드
+    $('#main-visual ul.slide-layers').css({'left' : (- (n - 1) * 100) + '%', 'transition' : 'left 0.3s'});
+    // indicator
+    $('#main-visual ul.indicator > li').removeClass('on');
+    $('#main-visual ul.indicator > li:eq('+ (n - 1) +')').addClass('on');
+
+    // 현재 슬라이드 번호
+    slideNow = n;
+    slidePrev = (n === 1) ? numSlide : (n - 1);
+    slideNext = (n === numSlide) ? 1 : (n + 1);
+    console.log(slidePrev + ' / ' + slideNow + ' / ' + slideNext);
+  }
+}
+
+
+
+
+
+
+
+// main-visual:이미지 슬라이드
+// var numSlide = $('#main-visual ul.slide-layers > li').length;
+// var slideNow = 0;
+// var slideNext = 0;
+// var slidePrev = 0;
+// var slideFirst = 1;
+// var timerId = '';
+// var timerSpeed = 3000;
+// var isTimerOn = true;
+// var onAnimation = true;
+
+
+// showSlide(slideFirst);
+// $('#main-visual ul.indicator > li > a').on('click', function() {
+//   var index = $('#main-visual ul.indicator > li').index($(this).parent());
+//   showSlide(index + 1);
+// });
+
+// $('#main-visual a.prev').on('click', function() {
+//   showSlide(slidePrev);
+// });
+
+// $('#main-visual a.next').on('click', function() {
+//   showSlide(slideNext);
+// });
+
+// function startTimer() {
+//   timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
+//   isTimerOn = true;
+// }
+
+// function stopTimer() {
+//   clearTimeout(timerId); 
+//   isTimerOn = false;
+// }
+
+// function resetTimer() {
+//   clearTimeout(timerId);
+//   if(isTimerOn === true) {
+//     timerId = setTimeout(function() {
+//       showSlide(slideNext);
+//     }, timerSpeed);
+//   }
+// }
+
+// function showSlide(n) {
+//   // 이미지 변화: transition
+//   resetTimer();
+//   if(slideNow === 0) {
+//     $('#main-visual ul.slide-layers > li:eq('+ (n - 1) +')').addClass('on');
+//   } else {
+//     onAnimation = true;
+//     $('#main-visual ul.slide-layers > li:eq('+ (slideNow - 1) +')').removeClass().addClass('hide').one('animationend', function() {
+//       $(this).removeClass();
+//       onAnimation = false;
+//     });
+
+//     $('#main-visual ul.slide-layers > li:eq('+ (n - 1) +')').addClass('show');
+//   }
+
+//   // 인디케이터 변화
+//   $('#main-visual ul.indicator > li').removeClass('on');
+//   $('#main-visual ul.indicator > li:eq('+ (n - 1) +')').addClass('on');
+
+//   // slide번호
+//   slideNow = n;
+//   slidePrev = (n === 1) ? numSlide : (n - 1);
+//   slideNext = (n === numSlide) ? 1 : (n + 1);
+//   console.log(slidePrev + '/' + slideNow + '/' + slideNext);
+// }
+
 
 
   
